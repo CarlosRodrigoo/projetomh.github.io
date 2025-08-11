@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seguranca da Informaçao</title>
+
+  <style>
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    a {
+      color: #2980b9;
+    }
+
+        background-color: #f0f0f0; /* azul claro */
+        color: #333333; /* Tom de azul escuro para o texto */
+      }
+      h1 {
+        color: #007bff; /* Cor azul para títulos */
+      }
+      .button {
+        background-color: #28a745; /* Cor preto para botões */
+        color: white;
+      }
+
+ul li{
+  text-align: justify;
+}
+  
+  h2 {
+    color: #333; /* azul claro para o texto */
+    background-color: #f0f0f0; /* Fundo branco claro */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-family: sans-serif; /* Fonte legível */
+    text-align: center; /* Alinhamento do texto */
+  }
+#securityTip {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  max-width: 250px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 9999;
+}
+
+#securityTip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight {
+  background-color: yellow;
+  transition: background-color 1s ease;
+}
+  </style>
+
+  
+</head>
+<body>
+  <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+    <div class="container">
+    <h1>Seguranca da informaçao</h1>
+    <img src="https://www.guardti.com.br/blog/wp-content/uploads/2019/12/original-94af273956a7ea76e06391d67e430916.jpg"><br>
+    <p>A segurança da informação é um componente indispensável para a proteção de dados sensíveis e a preservação da integridade de sistemas corporativos, especialmente em um cenário digital cada vez mais vulnerável a ameaças como roubo de dados, vazamentos e ataques cibernéticos. A implementação de práticas robustas de segurança não apenas garante a privacidade e confiança dos usuários e clientes, mas também evita uma série de prejuízos financeiros, operacionais e reputacionais que podem resultar de incidentes de segurança.</p><br>
+
+<p>Para alcançar um nível adequado de proteção, as organizações devem adotar uma abordagem holística que envolve o uso de tecnologias avançadas, como criptografia de ponta, firewalls de última geração, sistemas de monitoramento contínuo e autenticação multifatorial. Essas medidas visam garantir que as informações sejam acessíveis exclusivamente a indivíduos ou sistemas autorizados, preservando sua confidencialidade, integridade e disponibilidade. A segurança não é apenas sobre proteção contra acessos não autorizados, mas também sobre a prevenção de alterações indevidas nos dados e a garantia de que a informação estará disponível no momento certo.</p><br>
+    <p>No contexto digital, garantir a segurança da informação vai além de simplesmente proteger dados contra acessos não autorizados. Significa implementar controles rigorosos que definem quem tem permissão para acessar determinadas informações, como essas informações podem ser utilizadas (evitando usos indevidos ou não autorizados) e quais medidas de proteção são aplicadas para garantir que os dados permaneçam íntegros, sem alterações ou corrupção, e resistam a falhas técnicas ou ataques externos, como vírus ou hackers. Esse conjunto de práticas visa assegurar que a informação esteja disponível apenas para quem realmente necessita, preservando sua confidencialidade, autenticidade e continuidade operacional.</p><br>
+
+    <h4> os cinco pilares fundamentais </h4>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpXC14P_NbdyPfvab9H7WY8IxmZ0MkgKBlTA&s"><br/>
+   <h4> Confidencialidade </h4>
+   <p>A confidencialidade tem como principal objetivo garantir que os dados sejam acessados exclusivamente por indivíduos ou sistemas autorizados. Isso envolve o uso de controles de acesso rigorosos, como senhas fortes, autenticação multifatorial e permissões específicas, que restringem a visualização e manipulação das informações apenas às pessoas que realmente necessitam delas para o desempenho de suas funções. Além disso, a confidencialidade também abrange a proteção dos dados durante sua transmissão e armazenamento, garantindo que informações sensíveis não sejam divulgadas ou acessadas de forma indevida, seja por hackers, malware ou por vazamentos internos acidentais ou mal-intencionados.</p><br>
+<p>✅ Exemplo: dados bancários ou dados de clientes que não podem ser acessados por qualquer pessoa.</p>
+<p>✅ Como proteger: uso de senhas fortes, autenticação em dois fatores, criptografia de dados. </p>
+<p> integridade- A integridade na segurança da informação refere-se à garantia de que os dados permanecem precisos, completos e não alterados ao longo de seu ciclo de vida, seja em repouso, durante a transmissão ou enquanto estão sendo processados. Em outras palavras, é a capacidade de assegurar que as informações não sejam modificadas de maneira não autorizada ou acidental, mantendo sua veracidade e consistência.</p><br>
+
+<p>Aqui estão alguns aspectos importantes da integridade na segurança da informação:</p><br>
+
+<p>Proteção contra alterações não autorizadas: A integridade exige que os dados sejam protegidos contra modificações indevidas, sejam elas causadas por ataques cibernéticos, falhas humanas ou erros de sistemas. Isso envolve, por exemplo, o uso de mecanismos de controle de acesso que garantem que somente usuários ou sistemas autorizados possam modificar os dados.</p><br>
+
+<p>Ferramentas de verificação: Para garantir a integridade, é comum utilizar checksums, hashes e assinaturas digitais, que são métodos que geram um valor único para um conjunto de dados. Caso os dados sejam alterados de qualquer forma, o valor do hash ou checksum será alterado, alertando sobre uma possível violação de integridade.</p><br>
+
+<p>Monitoramento e auditoria: A integridade também envolve a monitorização constante dos dados e sistemas, além da realização de auditorias periódicas. Registros de auditoria (logs) ajudam a rastrear qualquer tentativa de modificação, fornecendo um histórico completo das alterações realizadas e assegurando que a conformidade e a integridade sejam mantidas.</p><br>
+
+<p>Backup e recuperação: Manter backups regulares e testar planos de recuperação é uma medida importante para garantir a integridade dos dados em caso de incidentes. Se os dados forem corrompidos ou comprometidos, a recuperação a partir de uma cópia de segurança pode restaurar a integridade original.</p><br>
+
+<p>Criptografia: Embora a criptografia seja frequentemente associada à confidencialidade, ela também desempenha um papel na integridade. Por meio de técnicas como a assinatura digital e a criptografia de mensagens, é possível garantir que a informação não seja alterada durante a transmissão e que qualquer modificação nos dados seja detectada.</p><br>
+<p> A integridade garante que as informações sejam verdadeiras e completas, sem alterações indevidas.</p><br>
+✅ Exemplo: impedir que um documento seja modificado sem autorização. <br>
+✅ Como proteger: assinaturas digitais, backups, controle de alterações em sistemas. </p>
+<img src="https://images.prismic.io/voitto-blog/6f68430c-504c-49d3-9db9-2e1eb74270f9_pilares+da+seguran%C3%A7a+da+informa%C3%A7%C3%A3o.jpg"></br>
+<h4> Disponibilidade </h4>
+<p>A disponibilidade na segurança da informação garante que os dados e sistemas estejam sempre acessíveis e funcionais quando necessários, sem interrupções ou falhas imprevistas. Isso significa que as informações devem estar disponíveis para os usuários autorizados a qualquer momento, independentemente de eventuais incidentes, como ataques, falhas de hardware, desastres naturais ou outros tipos de problemas técnicos.</p><br>
+
+<p>Para garantir a disponibilidade, são implementadas uma série de medidas preventivas e estratégias de recuperação, como:</p><br>
+
+<p>Redundância: A criação de cópias de sistemas e dados em diferentes locais ou dispositivos, assegurando que, caso uma parte do sistema falhe, outra cópia possa ser acessada de forma rápida e eficiente, sem perda de dados ou de funcionalidade.</p><br>
+
+<p>Backup regular: A realização de backups periódicos de dados críticos permite que, em caso de falha, perda ou corrupção de informações, seja possível restaurá-las rapidamente, minimizando o impacto de um incidente.</p><br>
+
+<p>Proteção contra ataques DDoS: Ataques de negação de serviço distribuída (DDoS), que tentam sobrecarregar os sistemas e torná-los inacessíveis, são uma ameaça comum à disponibilidade. Ferramentas e soluções específicas são utilizadas para mitigar e bloquear esses ataques, garantindo que os sistemas permaneçam acessíveis.</p><br>
+
+<p>Monitoramento contínuo: Sistemas de monitoramento em tempo real são fundamentais para detectar rapidamente falhas ou incidentes que possam comprometer a disponibilidade, permitindo que as equipes de TI tomem ações corretivas imediatas.</p><br>
+
+<p>Planos de continuidade de negócios (BCP): A implementação de um plano de continuidade é essencial para garantir que, em situações extremas,A  como desastres naturais ou falhas de infraestrutura, os sistemas possam ser restaurados rapidamente e a operação seja retomada com o mínimo de interrupção.</p><br>
+
+<p>Escalabilidade: A capacidade de aumentar ou diminuir os recursos de um sistema, de acordo com a demanda, também contribui para a disponibilidade. Em momentos de alta carga, sistemas escaláveis podem adicionar mais capacidade para atender a todos os usuários sem comprometer o desempen</p><br>
+✅ Exemplo: um site de banco que não pode ficar fora do ar. <br>
+✅ Como proteger: servidores de backup, sistemas redundantes, monitoramento 24 horas</p>
+<img src="https://gruporedes.global/wp-content/uploads/2023/06/pilares-da-seguranca-da-informacao.jpg"></br>
+<h4> Autenticidade </h4>
+<p>A autenticidade na segurança da informação assegura que os dados ou comunicações provenham de uma fonte confiável e não foram alterados ou falsificados durante o processo. Ela valida a identidade de quem está transmitindo ou acessando as informações,garantindo que a origem seja legítima e que o conteúdo não tenha sido modificado de maneira indevida.</p>
+<br>
+✅ Exemplo: um e-mail legítimo do banco, e não de um golpista. <br>
+✅ Como proteger: certificados digitais, sistemas de verificação de identidade</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp7BVrsvJ_J1HcAYd1IQ18vOe5cbbk3Cwx-2Fh9n0lfLeJPRkiwtnDS-ulACES1f8scFw&usqp=CAU"></br>
+<h4>Irretratabilidade (ou Não Repúdio) </h4>
+✅ Exemplo: não poder negar uma assinatura digital em um contrato eletrônico. <br>
+✅ Como proteger: registros de log, certificados digitais, sistemas de auditoria.
+</p>
+<h4> 5 dicas úteis</h4>
+<ul>
+<li><b>Dica 1:</b>Se você ainda pensa que pode clicar em qualquer link na internet, fique sabendo que clicar em links pode ser perigoso. Os cibercriminosos usam links maliciosos para ataques de phishing ou infecções por malwares. Clicar nesses links pode expor você a várias ameaças de segurança, desde roubo de identidade até a apropriação de informações confidenciais. </li>
+<li><b>Dica 2:</b>Phishing (pronunciado: fishing) é um ataque que tenta roubar seu dinheiro ou a sua identidade fazendo com que você revele informações pessoais, tais como números de cartão de crédito, informações bancárias ou senhas em sites que fingem ser legítimos. Criminosos cibernéticos normalmente fingem ser empresas confiáveis, amigos ou pessoas conhecidas em uma mensagem de email falsa, que contém um link para um site de phishing.</li>
+<li><b>Dica 3:</b>Por que um Antivírus?
+Defesa proativa: Um antivírus age como um escudo, identificando e neutralizando ameaças antes que possam comprometer a segurança do seu sistema.
+Proteção em tempo Real: Funcionando constantemente em segundo plano, ele verifica arquivos e atividades online em tempo real, garantindo uma defesa ativa contra ameaças.
+Filtros de email e navegação: Muitos antivírus oferecem recursos de filtragem de email e navegação, bloqueando links maliciosos e anexos perigosos que podem ser vetores de ataque.
+Suporte técnico: Sistemas atualizados garantem suporte técnico eficiente e de qualidade, tanto pelo fabricante, quanto pela equipe de TI que pode ser interna ou terceirizada.</li>
+<p><li><b>Dica 4:</b>É crucial compreender que o conceito central de troca de informações nas plataformas sociais não incentiva um estado de cautela, contribuindo para que muitas pessoas se tornem menos vigilantes em ambientes virtuais.
+
+Alguns dos perigos ligados à divulgação excessiva de informações incluem e não se limitam a:
+
+Roubo de identidade: um dos riscos mais sérios do compartilhamento excessivo de informações pessoais é o roubo de identidade. Quando detalhes como nome completo, data de nascimento, local de trabalho e histórico educacional ou até documentos como carteira de habilitação ou CPF estão disponíveis publicamente, os criminosos podem usar essas informações para cometer fraudes, abrir contas falsas e realizar atividades ilegais em nome da vítima.</p></li>
+
+</ul>
+  <ul>
+  <p><li>Segurança fisica é parte da segurança, que por meio de barreiras físicas ativas e passivas, projetadas para dissuadir, impedir, dificultar, detectar e responder a acessos não autorizados e indícios de sinistros, busca promover e manter a segurança física das pessoas, instalações, equipamentos e demais ativos da organização.</p></li>
+  <li>A Segurança logica permite que o acesso seja baseado nas necessidades específicas de cada usuário para realizar suas tarefas, fazendo a identificação por meio de senha e login. Assim, nenhum funcionário poderá executar funções que não sejam de seu cargo. Para aprimorar esses mecanismos, é importante sempre manter sistemas e protocolos operacionais atualizados.Esse tipo de proteção controla o acesso a aplicativos, dados, sistemas operacionais, senhas e arquivos de log por meio de firewalls de hardwares e softwares, criptografia, antivírus e outras aplicações contra hackers e possíveis invasões às fontes internas da empresa.</li>
+  <li>A segurança de rede é uma categoria de práticas e tecnologias que mantêm as redes internas protegidas contra ataques e violações de dados. Ela inclui controle de acesso, prevenção de ataques cibernéticos, detecção de malware e outras medidas de segurança.A segurança de rede é um campo amplo. Abaixo estão apenas algumas das tecnologias que uma organização pode usar para proteger sua rede. Para reduzir a complexidade, a maioria das organizações tenta contar com o menor número possível de fornecedores para segurança de rede; muitas empresas procuram fornecedores que ofereçam várias dessas tecnologias juntas.
+    <li>Criptografia é a prática de proteger informações transformando-as em um formato ilegível para pessoas não autorizadas, de modo que apenas quem tem a chave correta possa acessá-las de forma legível. Em outras palavras, ela envolve o uso de algoritmos matemáticos para embaralhar dados de maneira que, mesmo que sejam interceptados, não possam ser compreendidos sem a chave apropriada.</li>
+<p> 
+  <ul>  
+  <li> Referencias:https://www.spcbrasil.org.br/blog/seguranca-da-informacao</li>
+    <li>https://www.nic.br/noticia/na-midia/os-perigos-do-compartilhamento-excessivo-de-informacoes-pessoais-em-redes-sociais/</li>
+
+</ul>
+  <p> Na tela será exibido boas dicas de Segurança!</p>
+  <div id="securityTip"></div>
+
+
+  </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - 2º Tec A - Grupo de Segurança da Informação</p>
+  </footer>    
+
+
+  <script>
+      const tips = [
+    { text: "🔒 Use senhas fortes e diferentes para cada serviço.", keyword: "senha" },
+    { text: "📧 Cuidado com links suspeitos — podem ser phishing.", keyword: "phishing" },
+    { text: "💾 Faça backup regular dos seus arquivos importantes.", keyword: "backup" },
+    { text: "🛡️ Mantenha seu antivírus sempre atualizado.", keyword: "antivírus" },
+    { text: "📱 Ative a autenticação em dois fatores (2FA).", keyword: "autenticação" }
+  ];
+
+  const tipBox = document.getElementById('securityTip');
+  let index = 0;
+
+  function highlightText(keyword) {
+    const paragraphs = document.querySelectorAll("main p, main li");
+    paragraphs.forEach(p => {
+      if (p.textContent.toLowerCase().includes(keyword.toLowerCase())) {
+        p.classList.add("highlight");
+        setTimeout(() => p.classList.remove("highlight"), 3000);
+      }
+    });
+  }
+
+  function showTip() {
+    const currentTip = tips[index];
+    tipBox.textContent = currentTip.text;
+    tipBox.classList.add('show');
+    highlightText(currentTip.keyword);
+    setTimeout(() => tipBox.classList.remove('show'), 4000);
+    index = (index + 1) % tips.length;
+  }
+
+  setInterval(showTip, 6000);
+  showTip();
+  </script>
+</body>
+</html>

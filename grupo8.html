@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Montagem e Manutenção de Computadores</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+     section { 
+      background:#fafafa; 
+      padding:12px 14px; border-radius:6px; margin-bottom:14px; 
+      border:1px solid #eee; }
+    
+    img.illustration { 
+      max-width:100%; 
+      height:auto; 
+      display:block; 
+      place-items: center;
+      text-align: center;
+      margin:10px 0; border-radius:4px; }
+.img-padrao {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+    .row { 
+      display:flex; 
+      gap:12px; 
+      align-items:flex-start; flex-wrap:wrap; 
+    }
+    .icon { 
+    width:36px; 
+    height:36px; 
+    vertical-align:middle; margin-right:8px; 
+    }
+    .manut-detalhada { background:#fffef6; 
+    }
+    .small-note { 
+      font-size:0.95em; 
+      color:#444; 
+      margin-top:8px; 
+    }
+    .step{
+  background-color:#e1f0ff;
+  border-left:5px solid #007BFF;
+  padding:10px 15px;
+  margin-bottom:12px;
+  font-weight:bold;
+}
+
+.highlight{
+  color:#007BFF;
+}
+
+.note{
+  color:#6c757d;
+}
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+  
+  </style>
+
+  
+</head>
+<body>
+   <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h3>Montagem e Manutenção dos Computadores</h3>
+
+      <h3>Montagem de Computadores:</h3>
+
+      <p>1. Reconhecimento das peças:
+      Familiarize-se com os componentes do computador, como placa-mãe, processador, memória RAM, placa de vídeo, armazenamento (SSD/HDD), fonte de alimentação, gabinete e periféricos.</p>
+
+      <img class="illustration" src="https://img.freepik.com/fotos-gratis/tecnico-masculino-trabalhando-no-computador-quebrado_23-2147922177.jpg" alt="manutenção">
+
+      <h3>Manutenção de Computadores:</h3>
+      <p>1. Manutenção preventiva:
+      Realize limpeza regular da poeira, verifique as conexões, atualize softwares e drivers, e monitore a temperatura dos componentes.
+      2. Manutenção corretiva:
+      Caso ocorram problemas, diagnostique a causa e substitua peças defeituosas, como disco rígido com defeito ou placa de vídeo com falha.</p>
+    </section>
+    <section id="manutencao-detalhada" class="manut-detalhada">
+      <h3><span style="display:inline-flex;align-items:center;"><!-- ícone wrench+shield (SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill="#0b4a6f" d="M22 12v6c0 1.1-.9 2-2 2h-1v-3.2c0-.7-.6-1.3-1.3-1.3H8.5c-.7 0-1.3.6-1.3 1.3V20H6c-1.1 0-2-.9-2-2v-2.2c0-1.4.5-2.8 1.4-3.9l7.1-7.1C13.3 3.5 14.6 3 16 3h2c1.1 0 2 .9 2 2v1c0 1.4-.5 2.7-1.5 3.7l-1.1 1.1c-.4.4-.4 1 0 1.4l2.6 2.6c1 1 1 2.6 0 3.6z"/>
+        </svg>
+        Manutenção preventiva e corretiva</span></h3>
+
+      <div class="row">      
+        <div style="flex:1; min-width:220px;">
+          <h4 style="margin:6px 0;">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#1e8a49" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM10 13.5l-2.5-2.5 1.41-1.41L10 10.67l4.09-4.09L15.5 8l-5.5 5.5z"/>
+            </svg>
+            Manutenção preventiva
+          </h4>
+          <p class="small-note"><strong>Definição:</strong> conjunto de ações planejadas e periódicas para evitar falhas e prolongar a vida útil dos equipamentos.</p>
+          <ul>
+            <li>Limpeza física (remoção de poeira).</li>
+            <li>Verificação e reaperto de conectores e cabos.</li>
+            <li>Atualização de sistema operacional, drivers e antivírus.</li>
+            <li>Monitoramento de temperatura e checagem de ventoinhas.</li>
+            <li>Backups periódicos e verificação das unidades de armazenamento.</li>
+          </ul>
+        </div>
+
+        <div style="flex:1; min-width:220px;">
+          <h4 style="margin:6px 0;">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#c84b31" d="M22.7 19.3l-6.4-6.4c.4-1.1.4-2.3-.1-3.4-.6-1.4-1.9-2.6-3.3-3.2 0 0 .1 0 .1-.1L11 2 5 8l4.4 4.4c-.1.1-.1.1-.1.1-.6 1.4-.6 2.9.2 4.2l-2.2 2.2c-1 .9-.9 2.6.2 3.5.5.4 1.1.6 1.7.6.6 0 1.2-.2 1.7-.6l2.2-2.2c1.2.8 2.7.9 4.1.3.9-.4 1.6-1.1 2-2l3.1-3.1c.7-.7.7-1.9 0-2.6z"/>
+            </svg>
+            Manutenção corretiva
+          </h4>
+          <p class="small-note"><strong>Definição:</strong> ações para diagnosticar e corrigir falhas já ocorridas a fim de restaurar o funcionamento normal.</p>
+          <ul>
+            <li>Diagnóstico da causa (hardware/software).</li>
+            <li>Substituição de peças defeituosas (HD, SSD, RAM, fonte, placa).</li>
+            <li>Remoção de malware e reinstalação do sistema operacional quando necessário.</li>
+            <li>Recuperação de dados quando possível e testes pós-serviço.</li>
+          </ul>
+        </div>
+      </div>
+      <section style="text-align: center; padding: 20px; background-color: #f9fafc;">
+            <h2>Tipos de Manutenção</h2>
+            <img src="https://fv5-4.files.fm/thumb_show.php?i=ntc6gr9v59&view&v=1&PHPSESSID=fcd2fccfb131856c7011abb0a927dda8cec1f836" alt="manutencao_Preventiva_X_Corretiva" class="img-padrao"/>
+            <div style="max-width: 600px; margin: 20px auto; text-align: left; font-size: 14px; color: #333;">
+                <p><strong>Manutenção preventiva:</strong> realizada de forma programada para evitar falhas ou problemas futuros, garantindo o bom funcionamento dos sistemas e equipamentos.</p>
+                <p><strong>Manutenção corretiva:</strong> realizada após a ocorrência de falhas, com o objetivo de restaurar o funcionamento adequado de um sistema ou equipamento.</p>
+            </div>
+        </section>
+    </section>
+
+    <section>
+      <p>Boas práticas de manutenção e melhoria de desempenho referem-se a um conjunto de técnicas e estratégias que visam otimizar a eficiência e a confiabilidade dos equipamentos, máquinas e sistemas de uma organização. Isso inclui a implementação de processos de manutenção preventiva, preditiva e corretiva, bem como a utilização de ferramentas de gestão e monitoramento para garantir a disponibilidade, confiabilidade e desempenho dos ativos.</p>
+
+      <p> Atualização de Drivers:
+      Importância: Drivers são softwares que permitem a comunicação entre o sistema operacional e o hardware. Drivers desatualizados podem causar problemas de desempenho, incompatibilidades e até mesmo falhas no sistema.</p>
+
+      <p>Para otimizar o desempenho e realizar manutenções eficazes, é crucial adotar boas práticas que abrangem desde a organização e planejamento até a comunicação e o feedback contínuo. É importante focar em metas claras, comunicação eficaz, e uma cultura de melhoria contínua, tanto para a manutenção de equipamentos quanto para o desenvolvimento profissional e da equipe.</p>
+
+      <p>A troca de um disco rígido (HD) por um Solid State Drive (SSD) é uma excelente maneira de melhorar o desempenho do seu computador, com benefícios como maior velocidade, maior resistência a impactos e menor consumo de energia. Para garantir a melhor experiência e durabilidade do seu SSD, siga algumas dicas de manutenção e otimização.</p>
+
+      <p> Para melhorar o desempenho e a memória RAM do seu computador, algumas boas práticas incluem otimizar o uso da memória, fechar programas desnecessários, manter o sistema operacional e drivers atualizados, e considerar um upgrade de RAM. Realizar limpeza regular do disco rígido, desfragmentar o disco, e remover arquivos temporários também são ações importantes. Além disso, é crucial manter o computador em temperatura adequada e verificar a saúde dos componentes de hardware.</p>
+
+      <p>  Para manter e melhorar o desempenho através do monitoramento da temperatura, é crucial implementar práticas de manutenção preventiva e preditiva, utilizando tecnologias de monitoramento e ajustando a temperatura conforme necessário. Isso inclui inspeções regulares, limpeza, verificação de níveis de fluidos e componentes, além do uso de ferramentas como câmeras termográficas para identificar problemas potenciais.</p>
+
+      <p>Para manter e melhorar o desempenho através do monitoramento da temperatura, é crucial implementar práticas de manutenção preventiva e preditiva, utilizando tecnologias de monitoramento e ajustando a temperatura conforme necessário. Isso inclui inspeções regulares, limpeza, verificação de níveis de fluidos e componentes, além do uso de ferramentas como câmeras termográficas para identificar problemas potenciais.</p>
+    </section>
+
+    <header >
+      <h3>Guia Completo para Montar, Formatar e Otimizar seu PC</h3>
+      <p>Descubra como montar um computador do zero, formatar corretamente, realizar manutenções seguras e turbinar o desempenho da sua máquina.</p>
+    </header>
+
+    <section id="introducao" class="secao">
+      <h3>Introdução</h3>
+      <p>Montar e manter um PC não é exclusividade de técnicos. Com um pouco de atenção e os passos certos, qualquer pessoa pode montar, formatar e até otimizar o próprio computador. Este guia reúne as melhores práticas para cada etapa do processo.</p>
+    </section>
+
+    <section id="etapas-montagem" class="secao">
+      <h3>1. Etapas para Montar um PC do Zero</h3>
+      <article class="artigo">
+        <p>Antes de tudo, certifique-se de estar em um ambiente limpo e bem iluminado. Use pulseira antiestática ou descarregue a eletricidade tocando superfícies metálicas.</p>
+        <ul>
+          <li><strong>1. Escolha dos componentes:</strong> Placa-mãe, processador, RAM, armazenamento, gabinete, fonte, GPU (opcional).</li>
+          <li><strong>2. Preparação da placa-mãe:</strong> Instale o processador, cooler e a memória RAM.</li>
+          <li><strong>3. Instalação no gabinete:</strong> Fixe a placa-mãe e a fonte de alimentação.</li>
+          <li><strong>4. Conexões internas:</strong> Conecte HDs, SSDs, cabos SATA, fonte de energia e GPU (se houver).</li>
+          <li><strong>5. Verificação final:</strong> Confirme todas as conexões antes de ligar o PC pela primeira vez.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="formatacao" class="secao">
+      <h3>2. Formatação e Instalação do Sistema Operacional</h3>
+      <article class="artigo">
+        <p>A formatação é essencial para instalar ou reinstalar o sistema operacional. Siga os passos abaixo com atenção:</p>
+        <ul>
+          <li><strong>Backup:</strong> Salve arquivos importantes em nuvem ou HD externo.</li>
+          <li><strong>Criação do instalador:</strong> Use ferramentas como o <em>Rufus</em> para criar um pendrive bootável com o Windows ou Linux.</li>
+          <li><strong>Configuração da BIOS:</strong> Acesse a BIOS (geralmente com DEL ou F2) e defina o pendrive como primeiro dispositivo de boot.</li>
+          <li><strong>Instalação limpa:</strong> Siga as instruções do sistema para formatar a partição e instalar o sistema operacional.</li>
+          <li><strong>Drivers e atualizações:</strong> Após a instalação, baixe e instale todos os drivers necessários.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="manutencao" class="secao">
+      <h3>3. Manutenção e Limpeza Regular</h3>
+      <article class="artigo">
+        <p>A manutenção preventiva ajuda a evitar falhas e prolongar a vida útil do computador. Faça isso a cada 3 a 6 meses:</p>
+        <ul>
+          <li><strong>Limpeza física:</strong> Remova a poeira de ventoinhas, dissipadores e componentes com pincel ou ar comprimido.</li>
+          <li><strong>Verificação de cabos:</strong> Reorganize e confira conexões frouxas.</li>
+          <li><strong>Troca da pasta térmica:</strong> Recomendada a cada 1 ou 2 anos para manter o resfriamento eficiente.</li>
+          <li><strong>Atualizações:</strong> Mantenha o sistema, drivers e antivírus sempre atualizados.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="melhorias" class="secao">
+      <h3>4. Melhorias de Desempenho e Upgrades</h3>
+      <article class="artigo">
+        <p>Quer deixar o seu PC mais rápido e responsivo? Veja algumas dicas práticas:</p>
+        <ul>
+          <li><strong>Troque o HD por um SSD:</strong> Isso acelera o sistema de forma impressionante.</li>
+          <li><strong>Mais memória RAM:</strong> Ideal para multitarefa e desempenho em jogos ou softwares pesados.</li>
+          <li><strong>Organização do sistema:</strong> Remova programas inúteis e desative inicializações desnecessárias.</li>
+          <li><strong>Otimização com software:</strong> Use ferramentas como o CCleaner, Advanced SystemCare ou comandos nativos como <code>chkdsk</code> e <code>sfc /scannow</code>.</li>
+          <li><strong>Placa de vídeo dedicada:</strong> Se você joga ou edita vídeos, a adição de uma GPU dedicada melhora muito a performance.</li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - 2º Tec - Grupo de Montagem e Manutenção de Computadores</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+    const elementos = document.querySelectorAll('h3');
+
+    elementos.forEach(el => {
+      el.style.opacity = 0;
+      el.style.transition = 'opacity 1.5s ease-in-out';
+    });
+
+    // Força um delay para aplicar a transição
+    setTimeout(() => {
+      elementos.forEach(el => {
+        el.style.opacity = 1;
+      });
+    }, 100);
+  });
+  </script>
+</body>
+</html>

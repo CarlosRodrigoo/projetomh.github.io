@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SO e Redes de Computadores</title>
+
+  <style>
+      * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #000000;
+    }
+
+    header {
+      background: linear-gradient(to right, #1d0010, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  .logo{
+    color:#FFFFFF
+    font-size:24px;
+    font-weight:bold;
+  }
+  h3 {
+      color: #2980b9;
+  }
+  .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    a {
+      color: #1e4966;
+    }
+.comparacao {
+  display: flex;
+  flex-direction: row;
+}
+.coluna {
+  flex: 1; 
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+    .sistema {
+      flex: 1; 
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .sistema h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .sistema ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sistema ul li {
+      margin-bottom: 8px;
+    }
+#minhaImagem {
+  position: relative;
+  overflow: hidden; /* Para esconder o excesso da imagem quando aumentada */
+}
+
+#minhaImagem img {
+  max-width: 100%;
+  transition: transform 0.5s ease; /* Efeito de transição suave */
+}
+
+#minhaImagem:hover img {
+  transform: scale(1.2); /* Aumenta a imagem em 20% */
+}
+  </style>
+
+  
+</head>
+<body>
+   <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2º Técnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">2º Técnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html">História das Linguagens</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+<main>
+     <section>
+		<article class="container">
+            <h1>SISTEMAS OPERACIONAIS</h1>        
+            <img src="https://studymaps.com.br/wp-content/uploads/maps/0089/0q5e3k9q0d0h.jpg" alt="Sobre sistemas operacionais" id="minhaImagem" />
+            <h2>O que é sistemas operacionais:</h2>
+            <p>Um sistema operacional (SO) é um software fundamental que gerencia os recursos de hardware e software de um dispositivo computacional. Ele atua como uma ponte entre o usuário, os aplicativos e o hardware, possibilitando a execução de programas e o controle de tarefas. Sem um sistema operacional, o computador não poderia funcionar de maneira eficiente ou acessível para o usuário.</p>
+            <h2>Para o que serve o SO:</h2>
+            <p>As principais funções do sistema operacional incluem:</p>
+            <ul>
+                <li>Gerenciamento de processos: controla a execução de aplicativos.</li>
+                <li>Gerenciamento de memória: distribui e organiza o uso da memória RAM.</li>
+                <li>Controle de dispositivos: permite a comunicação com periféricos (teclado, mouse, impressoras).</li>
+                <li>Sistema de arquivos: organiza os dados em arquivos e diretórios.</li>
+                <li>Segurança e proteção: protege o sistema contra acessos não autorizados.</li>
+                <li>Interface com o usuário: oferece meios de controle, como interfaces gráficas (GUI) ou linha de comando (CLI).</li>
+            </ul>
+            <h3>Linux</h3>        
+            <img src="https://logos-world.net/wp-content/uploads/2020/09/Linux-Symbol.png" id="minhaImagem" alt="logo da linux" />    
+            <h4>PRINCIPAIS CARACTERÍSTICAS:</h4>
+            <p>O Linux, foi desenvolvido pelo finlandês Linus Torvalds, programador e entusiasta de tudo que envolve tecnologia, enquanto estudava no Departamento de Ciência da Computação da Universidade de Helsinki. Contou com a colaboração de inúmeros voluntários que utilizaram a plataforma Usenet. Seu desenvolvimento foi inspirado no Minix, e foi projetado sob a licença GPL, por isso o termo Linux é designado ao sistema operacional de utilização e distribuição livres. Seu emblema oficial é o famoso mascote Tux.</p>
+            <p>O nome Linux foi criado pelo administrador do site chamado ftp.funet.fi. Ari Lemmeke observou a disponibilidade em seu diretório FTP, o núcleo Linux e assim o batizou, embora inicialmente tenha recebido o nome de Freax.</p>
+            <p>Em 5 de Outubro do ano de 1991, Linus Torvalds disponibilizou a primeira versão do Linux (0.02). Logo no seu lançamento, somente programadores aderiam seu uso, pois só era possível usar linhas de comandos. Atualmente o sistema é mais difundido e inclusive utilizado por várias empresas. Pela estabilidade do Linux, é possível reconhecer a maioria dos periféricos, sem a necessidade da instalação de drivers específicos (rede, vídeo e som). Com a evolução da tecnologia, o software se tornou mais versátil e implementou o LibreOffice (compatível ao Pacote Office da Microsoft), utilizado por pequenas empresas. Além da evolução das interfaces como o GNOME e o KDE, conhecidos pela robustez e dinamismo.</p>
+            <p>Sua arquitetura é composta por um núcleo monolítico cujas funções são: gerenciar a memória, operar as entradas e saídas e o acesso aos arquivos. Outra característica do Linux é com relação aos drivers de dispositivos e suporte a rede, os quais podem ser compactadas e utilizadas como se fossem módulos ou bibliotecas (LKM em inglês Loadable Kernel Modules), separados pela parte principal, cujo carregamento pode ser ativado após a execução do núcleo.</p>
+            <p>O sistema operacional Linux possui o seu código fonte aberto permitindo que qualquer pessoa veja como o sistema funciona, corrija algum problema ou faça a sua sugestão sobre a sua melhoria.</p>
+            <p>Possui compatibilidade com perifércos de computador, placas de vídeo, etc. Suporte à placas, CD-ROMs e outros dispositivos de última geração e mais antigos. O Linux se destaca por sua estabilidade, sem problemas de travamentos de todo o sistema.</p>
+            <p>Demais características do Linux:</p>
+            <ul>
+                <li>Multitarefa real;</li>
+                <li>Multiusuário;</li>
+                <li>Suporte a nomes extensos de arquivos e pastas (255 caracteres);</li>
+                <li>Conectividade com outros tipos de plataformas como: Apple, Sun, Macintosh, Sparc, Alpha, PowerPC; ARM; Unix, Windows, DOS, etc.</li>
+                <li>Utiliza permissões de acesso à arquivos, pastas e programas em execução na memória RAM;</li>
+                <li>Proteção entre processos executados na memória RAM;</li>
+                <li>Modularização: O Linux somente carrega para a memória o que é utilizado durante o processamento, liberando totalmente a memória, assim que o programa/dispositivo é finalizado;</li>
+                <li>Não há a necessidade de se reiniciar o sistema após modificar a configuração de qualquer periférico de computador ou parâmetros da rede. Somente é necessário reiniciar o sistema no caso de uma instalação interna de um novo periférico, falha em algum hardware.</li>
+                <li>Não precisa de um processador potente para funcionar;</li>
+                <li>Não é vulverável a vírus de computador;</li>
+                <li>Suporte a diversos dispositivos e periféricos disponíveis no mercado, tanto os novos como os obsoletos.</li>
+                <li>O Linux é Case Sensitive, diferencia caracteres maiúsculos de caracteres minúsculos para nomeação de pastas e arquivos.</li>
+            </ul>
+            <h4>VANTAGENS:</h4>
+            <p><strong>Gratuito e de Código Aberto:</strong><br>O Linux é geralmente gratuito e seu código-fonte aberto permite que os usuários o personalizem e adaptem às suas necessidades.</p>
+            <p><strong>Estabilidade e Segurança:</strong><br>O Linux é conhecido por sua estabilidade e é menos suscetível a vírus e malware em comparação com outros sistemas operacionais.</p>
+            <p><strong>Flexibilidade:</strong><br>É possível personalizar o sistema de acordo com as preferências do usuário, além de poder ser executado em diferentes tipos de hardware, desde computadores antigos a dispositivos embarcados.</p>
+            <p><strong>Leveza e Eficiência:</strong><br>O Linux tende a ser mais leve e eficiente, exigindo menos recursos do sistema, o que pode ser útil em computadores mais antigos ou com hardware limitado.</p>
+            <p><strong>Comunidade e Suporte:</strong><br>Apesar de menos suporte profissional, o Linux possui uma vasta comunidade de usuários e desenvolvedores que oferecem suporte e ajuda através de fóruns e outras plataformas.</p>
+            <h4>DESVANTEGENS:</h4>
+            <p><strong>Curva de Aprendizagem:</strong><br>O Linux pode ter uma curva de aprendizado mais íngreme para usuários acostumados com sistemas mais amigáveis como o Windows, especialmente para tarefas complexas ou personalização avançada.</p>
+            <p><strong>Suporte a Hardware e Software:</strong><br>Embora o suporte a hardware tenha melhorado significativamente, ainda pode haver problemas de compatibilidade com alguns dispositivos e drivers, especialmente hardware mais antigo ou específico.</p>
+            <p><strong>Disponibilidade de Software:</strong><br>Embora o Linux tenha uma ampla gama de softwares gratuitos e de código aberto, a disponibilidade de alguns softwares proprietários, como o Photoshop ou jogos populares, pode ser limitada ou exigir soluções alternativas.</p>
+            <p><strong>Suporte Profissional Limitado:</strong><br>Em comparação com o Windows, o suporte profissional para o Linux pode ser menos difundido e mais focado em empresas e servidores, com menos suporte para usuários domésticos.</p>
+            <p><strong>Compatibilidade com Jogos:</strong><br>Embora o suporte a jogos no Linux esteja melhorando, a compatibilidade com alguns jogos pode ser um problema, especialmente com jogos mais antigos ou que dependem fortemente do hardware e do sistema operacional.</p>
+              
+            <h5>Ao escolher entre Linux e outros sistemas operacionais, é importante considerar suas necessidades e preferências. Se você busca um sistema gratuito, personalizável e seguro, o Linux pode ser uma ótima opção. No entanto, se você prioriza facilidade de uso e compatibilidade com uma ampla gama de softwares e jogos, o Windows ou o macOS podem ser melhores alternativas.</h5>
+            <h3>Windows</h3>       
+            <img src="https://logos-world.net/wp-content/uploads/2020/12/Windows-Emblem.png" alt="logo do Windows" id="minhaImagem"/>    
+
+            <h4>PRINCIPAIS CARACTERÍSTICAS:</h4>
+            <p>O Windows é um dos sistemas operacionais mais populares e amplamente utilizados em todo o mundo. Desenvolvido pela Microsoft, o Windows possui uma série de características que o tornam uma escolha popular tanto para usuários domésticos quanto para empresas. Neste artigo, vamos explorar algumas das principais características do Windows e como elas contribuem para a sua popularidade e sucesso.</p>
+            <p><strong>Interface Amigável</strong><br>Uma das principais características do Windows é a sua interface amigável. A Microsoft projetou o sistema operacional de forma intuitiva e fácil de usar, para que os usuários possam navegar facilmente pelo sistema e realizar suas tarefas com eficiência. A interface do Windows é baseada em ícones e menus, permitindo que os usuários acessem os aplicativos e configurações com apenas alguns cliques.</p>
+            <p>Além disso, o Windows apresenta uma barra de tarefas na parte inferior da tela, onde os usuários podem fixar programas e acessá-los rapidamente. A barra de tarefas também exibe as janelas abertas, facilitando a alternância entre os aplicativos em execução.</p>
+            <p><strong>Compatibilidade:</strong><br>Outra característica fundamental do Windows é a sua compatibilidade. O sistema operacional suporta uma ampla variedade de hardware e software, o que o torna uma escolha ideal para diferentes necessidades e requisitos. Os usuários podem instalar uma variedade de aplicativos e programas no Windows, desde jogos até softwares de produtividade.</p>
+            <p>Além disso, o Windows é compatível com uma vasta gama de periféricos, como impressoras, scanners, câmeras e dispositivos de armazenamento externo. Isso significa que os usuários podem conectar facilmente esses dispositivos ao seu computador e utilizá-los sem problemas.</p>
+            <p><strong>Segurança</strong><br>A segurança é uma prioridade para a Microsoft, e o Windows inclui recursos abrangentes para manter os usuários protegidos contra ameaças online. O sistema operacional possui um antivírus embutido e um firewall que ajudam a evitar a infecção por malware e a proteger os dados dos usuários.</p>
+            <p><strong>Personalização</strong><br>O Windows possui recursos avançados de personalização que permitem aos usuários adaptar o sistema operacional de acordo com suas preferências. É possível alterar a aparência do Windows, personalizar a área de trabalho, escolher temas e definir papéis de parede personalizados.</p>
+            <p>Além disso, o Windows oferece opções de acessibilidade para usuários com necessidades especiais, tornando o sistema operacional acessível a todos.</p>
+            <h4>VANTAGENS:</h4>
+            <ul>
+                <li><strong>Visual agradável:</strong> Com certeza uma das melhores vantagens do Windows, possui um visual agradável aos olhos dos usuários mais simplistas e até dos mais rigorosos, possui também grande quantidade de estilos diferenciados, além de que muito dele pode ser personalizado à sua maneira.</li>
+                <li><strong>Variedade de opções:</strong> O Windows também possui uma grande variedade de opções que facilitam a vida de seu usuário, desde o botão iniciar, pré-visualizações, grande número de atalhos, entre outros.</li>
+                <li><strong>Reconhecimento de drivers:</strong> O Windows atualmente reconhece uma enorme quantidade de drivers o que chega a ser muito atrativo aos usuários.</li>
+                <li><strong>Aplicativos:</strong> Os antigos sistemas operacionais Windows, não traziam um grande número de aplicativos logo quando eram instalados, porém a Microsoft vem tentando mudar isso, já que hoje em dia o Windows 7 traz um razoável número de aplicativos; já levando em conta a quantidade e a variedade de aplicativos ninguém supera o Windows, já que é o mais utilizado.</li>
+            </ul>
+            <h4>DESVANTEGENS:</h4>
+            <ul>
+                <li><strong>Preço:</strong> O preço é o que mais pesa na hora de uma compra (claro), e atualmente o Windows 7 custa entre 300 (os mais básicos) até 700 (os mais avançados) no site brasileiro da Microsoft, o preço pode ser até justo levando em conta a quantidade de investimento, mas por isso muitas pessoas utilizam versões piratas, entretanto acredito que se eles barateassem o preço mais pessoas comprariam, pois está quase no preço de um computador popular; além do mais, existem sistemas operacionais que são de graça.</li>
+                <li><strong>Segurança:</strong> Outro item que pesa muito é grande facilidade com que os “criminosos virtuais” se aproveitam de brechas no sistema Windows, um problema que não ocorre tanto com outros.</li>
+                <li><strong>Tamanho:</strong> O Windows Vista é um dos mais extensos sistemas operacionais, porém é algo que está mudando a partir do Windows 7, mas mesmo assim continua com grande extensão.</li>
+            </ul>
+
+            <h3>Android</h3>
+                
+            <img src="https://logospng.org/download/android/logo-android-4096.png" alt="Logo do Android" id="minhaImagem"/>
+              
+            <p>O Android é um sistema operacional móvel desenvolvido pela Google. Ele foi projetado principalmente para dispositivos móveis, como smartphones, tablets, smartwatches e smart TVs. O Android oferece uma plataforma aberta e flexível que permite aos fabricantes de dispositivos personalizarem e adaptarem o sistema operacional de acordo com suas necessidades.</p>
+            <p>A principal função do Android é fornecer um ambiente operacional completo para dispositivos móveis. Ele gerencia o hardware do dispositivo, como processadores, memória, tela sensível ao toque, câmera, sensores, conectividade e muito mais. O Android fornece uma interface de usuário intuitiva e interativa, permitindo que os usuários acessem aplicativos, serviços e recursos do dispositivo.</p>
+            <p>Através do Google Play Store, os usuários podem baixar e instalar uma ampla variedade de aplicativos, jogos, livros, filmes e músicas em seus dispositivos Android. O sistema operacional também oferece recursos de comunicação, como chamadas telefônicas, mensagens de texto e videochamadas.</p>
+            <p>O Android também é integrado com os serviços da Google, como Google Search, Google Maps, Gmail, YouTube e Google Drive, entre outros. Isso permite que os usuários acessem e aproveitem os serviços e recursos do Google diretamente em seus dispositivos Android.</p>
+            <p>Além disso, o Android suporta recursos avançados, como reconhecimento de voz, assistentes virtuais (como o Google Assistant), notificações push, armazenamento em nuvem, sincronização de dados, compartilhamento de arquivos, segurança aprimorada e muito mais.</p>
+            <h5>Em resumo, o Android serve como um sistema operacional móvel completo, oferecendo aos usuários uma ampla gama de recursos, conectividade, entretenimento, produtividade e personalização em seus dispositivos móveis. Ele permite que os usuários personalizem seus dispositivos de acordo com suas preferências e tenham acesso a uma ampla variedade de aplicativos e serviços.</h5>
+
+            <h4>VANTAGENS:</h4>
+            <p><strong>Sistema operacional de código aberto:</strong><br>O Android é baseado em uma plataforma de código aberto, o que significa que o código-fonte está disponível gratuitamente para desenvolvedores e fabricantes. Isso permite uma ampla personalização e adaptação do sistema operacional de acordo com as necessidades específicas de cada dispositivo.</p>
+            <p><strong>Ecossistema e loja de aplicativos:</strong><br>O Android possui um ecossistema robusto e uma ampla variedade de aplicativos disponíveis na Google Play Store. Os usuários têm acesso a milhões de aplicativos, jogos, livros, músicas e filmes, fornecendo uma experiência rica e diversificada.</p>
+            <p><strong>Variedade de dispositivos:</strong><br>O Android é usado em uma ampla variedade de dispositivos, desde smartphones e tablets até TVs, smartwatches e dispositivos de realidade virtual. Isso oferece aos usuários uma variedade de opções em termos de fabricantes, modelos e recursos, permitindo que eles escolham o dispositivo que melhor se adapte às suas necessidades e orçamento.</p>
+
+            <h4>DESVANTEGENS:</h4>
+            <ul>
+                <li><strong>Falta de padronização:</strong> Pelo fato de o Android ser um sistema aberto, ele acaba permitindo que cada desenvolvedor faça o que deseja. Com isso, cada um segue seus próprios padrões e desenvolve seus aplicativos do seu modo. Diferente do iOS e Windows Phone, no Android tudo parece que é descompassado e desorganizado. Às vezes falta simetria ou similaridade dentro do sistema. O que acaba afetando a beleza da interface deixando com um ar um pouco de amadorismo. Não que isso seja culpa da Google, mas sim da falta de controle que a empresa tem sobre seus parceiros e contribuidores.</li>
+                <li><strong>Falta de otimização:</strong> A vantagem do Android em ter uma vasta gama de dispositivos ao seu favor dá uma maior liberdade de escolha aos usuários, mas por outro lado gera uma maior dificuldade ao desenvolvedores de aplicativos. Diferente do iOS e Windows Phone que utilizam a mesma arquitetura em praticamente todos os seus modelos. No Android, temos componentes da Intel, Qualcomm, NVIDIA, MediaTek, Samsung, etc. Então, otimizar um aplicativo no Android é uma tarefa árdua e muitas vezes algum jogo ou aplicativo não funciona como deveria em alguns modelos. Isso acaba gerando uma má fama ao sistema.</li>
+                <li><strong>Fragmentação:</strong> O maior ponto fraco do Android é sua fragmentação. Atualmente o sistema encontra-se dividido em pedaços. Mais de 50% dos usuários ainda usam a versão JellyBean do sistema. E mais de 20% utiliza ainda o Ice Cream Sandwich e Gingerbread. Versões com 2 anos ou mais de mercado. O KitKat ainda possui baixa utilização, não chegando nem a 10% dos smartphones Android. Isso mostra que as fabricantes estão atualizando lentamente os seus produtos. E isso, quando elas atualizam. Muitos dispositivos Android nunca nem recebem uma atualização sequer. Essa situação parece que não mudará tão cedo.</li>
+                <li><strong>Aplicativos desnecessários:</strong> A Play Store conta uma quantidade absurda de aplicativos, mas muitos deles são inúteis ou repetidos. Você sempre encontra vários aplicativos que fazem exatamente a mesma coisa sem oferecer nenhum diferencial. Muitas vezes você tem aquela sensação que eles só estão lá para fazer volume. Isso não tira o mérito dos excelentes aplicativos que existem para o Android, mas a falta de um filtro mais rigoroso da Google acaba permitindo que qualquer app de má qualidade seja lançado em sua loja de aplicativos.</li>
+            </ul>
+
+            <h2>Importância dos SO:</h2>
+            <p>O sistema operacional é o componente fundamental que mantém o computador em funcionamento. Ele gerencia todos os recursos, garantindo que o hardware e os aplicativos trabalhem de forma eficiente. Em resumo, é a base sobre a qual todo o sistema depende para operar corretamente.</p>
+        </article>
+        <article>
+            <h1>Comparação de Sistemas Operacionais</h1>
+            <div class="comparacao">
+                <div class="sistema">
+                    <h2>Windows</h2>
+                    <ul>
+                        <li>Interface gráfica familiar</li>
+                        <li>Ampla compatibilidade de software</li>
+                        <li>Licença paga</li>
+                        <li>Bom suporte para jogos</li>
+                    </ul>
+                </div>
+				<div class="sistema">
+                    <h2>Linux</h2>
+                    <ul>
+                        <li>Gratuito e de código aberto</li>
+                        <li>Alta personalização</li>
+                        <li>Menor consumo de recursos</li>
+                        <li>Comunidade ativa</li>
+                    </ul>
+				</div>
+				<div class="sistema">
+					<h2>Android</h2>
+					<ul>
+						<li>Interface gráfica familiar</li>
+						<li>Ampla compatibilidade de software</li>
+						<li>Licença paga</li>
+						<li>Bom suporte para jogos</li>
+					</ul>
+				</div>
+            </div>
+        </article>
+		
+        <section>
+            <h1>REDES DE COMPUTADORES</h1>
+            <h2>O que é uma rede de computadores:</h2>
+            <p>Uma rede de computadores é um conjunto de dispositivos eletrônicos, como computadores, servidores, impressoras e outros, interconectados para permitir a comunicação e o compartilhamento de recursos entre si. Essa interconexão pode ser física, utilizando cabos e dispositivos de rede, ou sem fio, utilizando tecnologias como Wi-Fi.</p>
+                
+            <img src="https://static-public.klickpages.com.br/uploads/media/file/2948115/1_-_redes_e_internet_-_parte_1_-_1.1.1.png" alt="Mapa-mental sobre redes de computadores" id="minhaImagem" />
+            <h2>Tipos de redes:</h2>
+            <h3>LAN:</h3>
+            <p>As chamadas Local Area Networks, ou Redes Locais, interligam computadores presentes dentro de um mesmo espaço físico. Isso pode acontecer dentro de uma empresa, de uma escola ou dentro da sua própria casa, sendo possível a troca de informações e recursos entre os dispositivos participantes.</p>
+            <h3>WAN:</h3>
+            <p>A Wide Area Network, ou Rede de Longa Distância, vai um pouco além da MAN e consegue abranger uma área maior, como um país ou até mesmo um continente.</p>
+            <h3>MAN:</h3>
+            <p>Imaginemos, por exemplo, que uma empresa possui dois escritórios em uma mesma cidade e deseja que os computadores permaneçam interligados. Para isso existe a Metropolitan Area Network, ou Rede Metropolitana, que conecta diversas Redes Locais dentro de algumas dezenas de quilômetros.</p>
+            <h3>PAN:</h3>
+            <p>As redes do tipo PAN, ou Redes de Área Pessoal, são usadas para que dispositivos se comuniquem dentro de uma distância bastante limitada. Um exemplo disso são as redes Bluetooth e UWB.</p>
+                
+            <h2>Dispositivos de redes:</h2>
+            <p>Dispositivos de rede são equipamentos que viabilizam e controlam o tráfego de dados entre computadores conectados. Eles desempenham funções essenciais como segurança, conectividade e gerenciamento da rede. Por exemplo, firewalls criam barreiras contra acessos não autorizados; roteadores Wi-Fi gerenciam conexões sem fio, largura de banda e segurança. Outros serviços incluem cache de dados, atribuição de endereços IP e tradução de endereços de rede (NAT).</p>
+        </section>
+	 </section>
+ </main>
+    <footer>
+        <p>&copy; 2025 - 2º Tec A - Grupo de Sistemas Operacionais e Redes de Computadores</p>
+    </footer>
+    
+    
+
+  <script>
+    
+alert(
+  "Bem-vindo ao nosso site! Esperamos que você possa aprender mais e mais sobre Sistemas Operacionais e Redes de Computadores.");
+  const imagem = document.getElementById('minhaImagem');
+
+imagem.addEventListener('mouseover', () => {
+  imagem.style.transform = 'scale(1.2)';
+});
+
+imagem.addEventListener('mouseout', () => {
+  imagem.style.transform = 'scale(1)';
+});
+  </script>
+</body>
+</html>

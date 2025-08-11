@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>internet e suas funcionalidades</title>
+
+  <style>
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+#box{
+   width:300px;
+height:100px;
+background-color:#c9c5c5;
+border-radius: 20px;
+	}
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1f2b3d;
+      color: #080808;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: rgb(248, 243, 243);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+     .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    a {
+      color: #2980b9;
+    }
+ .destaque {
+    background-color: #3498db; /* Exemplo de destaque */
+    font-weight: bold; /* Exemplo de destaque */
+  }  
+ 
+  </style>
+
+  
+</head>
+<body>
+    <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+<div class="container">
+<header>
+  <p> <h1>Como surgiu a internet</h1> </p>
+  </header>
+
+  <p><br>A internet nasceu durante a Guerra Fria, na década de 1960, como um projeto militar dos Estados Unidos. O objetivo era criar uma rede de comunicação que continuasse funcionando mesmo que parte dela fosse destruída em um ataque. Essa rede deveria permitir a troca de informações entre diferentes locais de forma descentralizada.</p></br><p>Em 1969, foi criada a ARPANET (Advanced Research Projects Agency Network), a primeira rede de computadores interligados. No início, ela conectava apenas quatro universidades norte-americanas, permitindo que pesquisadores compartilhassem dados e recursos à distância. A comunicação entre os computadores era feita por meio de pacotes de dados, tecnologia que continua sendo usada até hoje.</br> 
+  <div style="text-align: center;">
+  <p> <img src= 'https://cdn.pixabay.com/animation/2022/11/16/11/48/11-48-42-43_512.gif' </p>
+  <h1>Evolução da internet </h1>
+  <b><p>Anos 60-70:</p></b> Surgimento da ARPANET e desenvolvimento de protocolos de comunicação. 
+<b><p>Anos 80:</p></b> Expansão da internet para o ambiente acadêmico e de pesquisa no Brasil. 
+<b><p>Anos 90:</p></b> Popularização da internet com a criação de provedores comerciais e a expansão para o público geral. 
+<p><b>Anos 2000-presente:</p></b> Crescimento exponencial do número de usuários e desenvolvimento de novas tecnologias e aplicações. 
+<b><p>A Internet no Brasil:</p></b>
+<p><li>A internet chegou ao Brasil em 1988, com a conexão de universidades e centros de pesquisa.</li></p> 
+<li>A RNP (Rede Nacional de Ensino e Pesquisa) foi criada para ampliar o acesso à internet no meio acadêmico.</li> 
+<li>A partir de 1995, o acesso comercial à internet foi liberado no Brasil, marcando o início da popularização da rede no país.</li>
+<li>Atualmente, a internet é uma ferramenta essencial no dia a dia das pessoas e organizações no Brasil.</li> 
+
+
+<header>
+  <h1>Como a internet funciona</h1>
+  </header>
+  <div style="text-align: center;">
+  <p><br>A internet é uma rede global que conecta milhões de computadores, smartphones, servidores e outros dispositivos ao redor do mundo, permitindo a troca de informações em tempo real. Ela funciona por meio de um conjunto de tecnologias e protocolos que garantem que os dados possam ser enviados e recebidos de forma rápida e organizada.</br>  Graças a essa estrutura, a internet permite não apenas a navegação em sites, mas também o envio de e-mails, o compartilhamento de arquivos, chamadas de vídeo e diversas outras formas de comunicação. Tudo isso acontece em frações de segundo, criando a sensação de que estamos conectados de forma instantânea com qualquer lugar do planeta.</P>
+  <header>
+  <h1>Ferramenta essencias da internet</h1>
+  </header>
+  <p><br>As ferramentas essenciais da internet incluem navegadores web para acesso, ferramentas de busca para encontrar informações, plataformas de e-mail para comunicação, ferramentas de produtividade como Google Drive e Microsoft OneDrive para colaboração, e redes sociais para interação e marketing.</br> As ferramentas essenciais da internet incluem navegadores web para acesso, ferramentas de busca para encontrar informações, plataformas de e-mail para comunicação, ferramentas de produtividade como Google, instagram e whatsapp para colaboração, e redes sociais para interação e marketing. </p>
+  <b><h1>Utilidades</h1></b>
+  <li>A utilidade do Google é vasta, abrangendo desde a busca por informações até ferramentas de produtividade e comunicação. </li>
+  <li>O Instagram é uma plataforma de mídia social focada em compartilhamento de fotos e vídeos, que permite aos usuários interagir através de curtidas, comentários e mensagens diretas.</li>
+  <li>O WhatsApp é um aplicativo de mensagens que serve para diversas finalidades, principalmente para comunicação instantânea entre pessoas.</li>
+  </section>
+
+  <header>
+    <section>
+    <h2>Aplicação praticas da IA </h2>
+    </header>
+  <p onmouseover="destacar(this)" onmouseout="removerDestaque(this)"><br> A Inteligência Artificial (IA) é a área da computação que desenvolve sistemas capazes de simular a capacidade humana de raciocinar, aprender e tomar decisões. Atualmente, ela está presente em diversos setores, tornando processos mais rápidos, eficientes e inteligentes.</p></br><p onmouseover="destacar(this)" onmouseout="removerDestaque(this)">Uma das aplicações mais comuns é nos assistentes virtuais, como Alexa, Google Assistente e Siri, que entendem comandos de voz e realizam tarefas como tocar músicas, informar a previsão do tempo e controlar dispositivos domésticos. A IA também é amplamente usada em redes sociais, recomendando conteúdos personalizados com base no comportamento dos usuários.</br>
+  <header> 
+    <h1> IA e a internet e suas funçoes</h1>
+    </header>
+    <p onmouseover="destacar(this)" onmouseout="removerDestaque(this)"><br>A Internet é uma rede mundial de computadores interligados que permite a comunicação e o compartilhamento de informações entre pessoas, empresas, instituições e dispositivos em tempo real.</br> Ela surgiu a partir de um projeto militar dos Estados Unidos na década de 1960, conhecido como ARPANET, e se desenvolveu ao longo das décadas, tornando-se pública e comercial a partir dos anos 1990.
+
+Por meio da internet, é possível acessar sites, enviar e-mails, utilizar redes sociais, assistir vídeos, fazer compras, estudar, trabalhar remotamente e muito mais.</p>
+<div style="text-align: center;">
+ 
+    <p onmouseover="destacar(this)" onmouseout="removerDestaque(this)"><br>A inteligência artificial é um campo da ciência que se concentra na criação de computadores e máquinas que podem raciocinar, aprender e atuar de maneira que normalmente exigiria inteligência humana ou que envolve dados com escala maior do que as pessoas podem analisar.</br> </p>
+<p onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> A IA é um campo amplo que abrange muitas disciplinas diferentes, como ciência da computação, estatísticas e análises de dados, engenharia de hardware e software, linguística, neurociência e até mesmo filosofia e psicologia. </p>
+
+<header>
+<h1> Como a IA funciona ? </h1>
+</header>
+<p onmouseover="destacar(this)" onmouseout="removerDestaque(this)"><br> Embora as especificidades variem de acordo com as técnicas de IA, o princípio básico gira em torno dos dados. Os sistemas de IA aprendem e melhoram por meio da exposição a grandes quantidades de dados, identificando padrões e relações que os humanos podem não perceber.</br>
+Esse processo de aprendizado geralmente envolve algoritmos, que são conjuntos de regras ou instruções que orientam a análise e a tomada de decisões da IA. Em machine learning, um subconjunto conhecido da IA, algoritmos são treinados em dados rotulados ou não rotulados para fazer previsões ou categorizar informações.</p> 
+<div style="text-align: center;">
+<p> <img src= 'https://img1.picmix.com/output/stamp/normal/9/5/8/2/1522859_96f7f.gif' </p>
+<header>
+<h1>Qual obejetivo da inteligencia artificial ? </h1>
+</header>
+<p onmouseover="destacar(this)" onmouseout="removerDestaque(this)"><br>A Inteligência Artificial (IA) é um ramo da tecnologia que tem como objetivo criar sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana. Isso inclui aprender com experiências, reconhecer padrões, compreender a linguagem natural, tomar decisões e até mesmo resolver problemas complexos.</p></br>No aspecto técnico, a IA busca imitar e ampliar a capacidade de raciocínio, aprendizado e adaptação, permitindo que máquinas não apenas sigam comandos, mas também analisem situações e escolham as melhores ações. Já no aspecto prático, sua função é automatizar processos, aumentar a produtividade, reduzir erros, oferecer soluções inovadoras e auxiliar na tomada de decisões de forma mais rápida e precisa.</p></br>O propósito final da inteligência artificial é potencializar as capacidades humanas. Em vez de substituir completamente o trabalho das pessoas, a IA pode ser uma parceira estratégica, ajudando a resolver desafios e a abrir novas possibilidades em áreas como saúde, educação, segurança, indústria e comunicação.</p></br>
+<header>
+  </section>
+  <section>
+<h1> O papel da internet no ensino medio e aprendizado online.</h1>
+</header>
+<p><br>A relação entre educação e tecnologia tem se tornado cada vez mais intrínseca e transformadora, redefinindo os paradigmas do ensino e aprendizagem no cenário moderno.</br> </p>
+<p><br>A integração da tecnologia na educação é um fenômeno que transcende o mero uso de novos dispositivos em sala de aula, influenciando metodologias, acessibilidade e a natureza da interação educacional.</br></p>
+<p><br>A inserção de tecnologias digitais no ambiente educacional possibilitou a criação de um espaço de aprendizado mais dinâmico e interativo. Plataformas de aprendizagem online, softwares educacionais, realidade virtual e aumentada, e recursos multimídia, tornaram-se ferramentas fundamentais para o ensino. </br></p>
+<p><br>Essas tecnologias não apenas facilitam a apresentação de conteúdos de maneiras inovadoras, mas também promovem um ambiente de aprendizagem mais engajador e personalizado, atendendo às diversas necessidades e estilos de aprendizado dos estudantes.</br></p>
+<p><br>O impacto da tecnologia na educação também se reflete na democratização do acesso ao conhecimento. Com a internet, recursos educacionais de qualidade tornaram-se acessíveis a um número maior de pessoas, independentemente de sua localização geográfica ou contexto socioeconômico</br>. 
+<p><br>Além disso, a tecnologia na educação tem um papel crucial no desenvolvimento de habilidades pertinentes ao século XXI. Competências digitais, pensamento crítico, solução de problemas, colaboração e criatividade são habilidades cada vez mais necessárias no mercado de trabalho moderno.</br> </p>
+<div style="text-align: center;">
+ <p>  <img src='https://educacao.imaginie.com.br/wp-content/uploads/2020/12/Pagina-de-materiais-gratuitos.gif'</p>
+<p><br>O uso de tecnologias educacionais estimula o desenvolvimento dessas habilidades ao encorajar os estudantes a serem aprendizes ativos, críticos e inovadores.</br></p>
+<p><br>Contudo, o impacto da tecnologia na educação também apresenta desafios. Questões como a desigualdade no acesso às tecnologias, a necessidade de formação continuada de educadores para lidar com novas ferramentas, e preocupações com a segurança e privacidade dos dados são pontos críticos a serem abordados. </br></p>
+<p><br>Além disso, a dependência excessiva da tecnologia pode levar à superficialidade no aprendizado, se não for devidamente equilibrada com métodos pedagógicos sólidos e interação humana significativa.</p>
+<p>Em conclusão, a tecnologia transformou profundamente a educação moderna, trazendo inúmeras possibilidades e também desafios. </br></p>
+<p><br>Para maximizar seus benefícios, é essencial promover um uso equilibrado e crítico das tecnologias educacionais, garantindo que contribuam de forma efetiva para o desenvolvimento integral dos estudantes e para a equidade educacional. </br></p>
+<p><br>Assim, a integração entre educação e tecnologia continuará a ser um pilar fundamental na formação de indivíduos aptos a navegar e contribuir positivamente para o complexo cenário global.</br></p>
+
+
+ </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - 2º Tec A - Internet e Suas Funcionalidades</p>
+  </footer>    
+
+  <script>
+    function destacar(elemento) {
+  elemento.classList.add("destaque");
+}
+
+function removerDestaque(elemento) {
+  elemento.classList.remove("destaque");
+}
+  </script>
+</body>
+</html>

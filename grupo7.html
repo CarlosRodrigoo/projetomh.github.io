@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto Conhecendo a Informática - 2º Tec A e B</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+     h3{
+      color: royalblue;
+     }
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+     .salary{
+      color: rgb(18, 78, 102);
+     }
+     h2{
+      color: rgb(7, 49, 177);
+      font-size: 30px;
+     }
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    a {
+      color: #2980b9;
+    }
+#profissao {
+  color: royalblue;
+}
+ 
+  </style>
+
+  
+</head>
+<body>
+  <link rel="stylesheet" href="styles.css">
+
+    <header>
+        <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+    </header>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Início</a></li>
+            <li class="dropdown">
+                <a href="#">2º Técnico A ▾</a>
+                <div class="dropdown-content">
+                    <a href="grupo1.html">História da Informática</a>
+                    <a href="grupo2.html">Componentes do Computador</a>
+                    <a href="grupo3.html">Softwares Essenciais</a>
+                    <a href="grupo4.html">Sistemas e Redes</a>
+                    <a href="grupo5.html">Segurança da Informação</a>
+                    <a href="grupo6.html">Internet e IA</a>
+                    <a href="grupo7.html">Profissões TI</a>
+                    <a href="grupo8.html">Montagem e Manutenção</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">2º Técnico B ▾</a>
+                <div class="dropdown-content">
+                    <a href="grupo9.html">Eu na Programação</a>
+                    <a href="grupo10.html">História das Linguagens de Programação</a>
+                    <a href="grupo11.html">Jornada de Estudos</a>
+                    <a href="grupo12.html">Suporte Técnico</a>
+                    <a href="grupo13.html">Desenvolvimento de Sistema</a>
+                    <a href="grupo14.html">Banco de Questões</a>
+                    <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="container">
+            <h2 id="profissao">Profissões na Área da Informática</h2>
+            <p>A área da informática oferece diversas oportunidades de carreira. Abaixo, conheça algumas das profissões e seus salários médios no Brasil:</p>
+            <br></br>
+            <ul class="job-list">
+                <li>
+                    <h3 id="profissao">Desenvolvedor de Software</h3>
+                    <p>O desenvolvedor de software é responsável pela criação, implementação e manutenção de programas e aplicativos. Isso envolve a escrita de código, testes e debugging, além de trabalhar de perto com outras equipes para atender a requisitos específicos de usuários ou clientes. Os desenvolvedores utilizam diferentes linguagens de programação como Java, Python, C++, e muitas outras, dependendo do tipo de aplicação a ser desenvolvida.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 6.000 a R$ 12.000</p>
+                    <hr></hr> 
+                    <img src="https://athonedu.com.br/blog/wp-content/uploads/sites/2/2021/12/desenvolvedor-de-software.jpg" alt="Imagem Ilustrativa" width="300">
+                </li>
+ <br></br>
+                <li>
+                    <h3 id="profissao">Analista de Sistemas</h3>
+                    <p>O analista de sistemas é o profissional que conecta as necessidades do negócio com a tecnologia disponível. Ele trabalha analisando, projetando e implementando sistemas de TI que atendem às exigências empresariais, além de garantir que as soluções tecnológicas sejam eficientes e eficazes. Esse profissional também auxilia na análise de dados e no desenvolvimento de soluções de software que melhorem a produtividade e a operação das empresas.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 5.500 a R$ 11.000</p>
+                    <hr></hr>
+                     <img src="https://portalidea.com.br/cursos/bsico-de-analista-de-sistemas.webp" alt="Imagem Ilustrativa" width="300">
+                </li>
+    <br></br>
+                <li>
+                    <h3 id="profissao">Cientista de Dados</h3>
+                    <p>O cientista de dados é especializado em analisar grandes volumes de dados para encontrar padrões, tendências e insights que possam ajudar na tomada de decisões estratégicas. Ele utiliza técnicas de estatísticas avançadas, aprendizado de máquina e inteligência artificial para transformar dados brutos em informações valiosas para a organização. Trabalha frequentemente com ferramentas como Python, R, e SQL.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 8.000 a R$ 16.000</p>
+                     <hr></hr>
+                     <img src="https://s2-epocanegocios.glbimg.com/VtF-G0o5KGaBPmbJ4-14Vz_fM3k=/0x0:2121x1414/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e536e40f1baf4c1a8bf1ed12d20577fd/internal_photos/bs/2023/6/3/B0db9FQACaCGz3AxH8zQ/gettyimages-1458179196-1-.jpg" width="300">
+                </li>
+<br></br>
+                <li>
+                    <h3 id="profissao">Engenheiro de Computação</h3>
+                    <p>O engenheiro de computação atua no desenvolvimento de sistemas e dispositivos computacionais, tanto no lado de hardware quanto no de software. Ele trabalha projetando circuitos eletrônicos, sistemas embarcados e arquiteturas de computadores, além de desenvolver soluções inovadoras para integrar esses componentes. Esse profissional também participa da criação de software de baixo nível, como sistemas operacionais.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 7.500 a R$ 13.000</p>
+                    <hr></hr>
+                     <img src="https://athonedu.com.br/blog/wp-content/uploads/sites/2/2022/01/o-que-faz-um-engenheiro-da-computacao.jpg" width="300">
+                </li>
+<br></br>
+                <li>
+                    <h3 id="profissao">Administrador de Redes</h3>
+                    <p>O administrador de redes é responsável por gerenciar a infraestrutura de redes de computadores de uma organização. Seu trabalho inclui a configuração, manutenção e monitoramento de redes locais (LAN), redes de longa distância (WAN), e outras redes internas. Além disso, ele garante a segurança das redes, monitorando o tráfego de dados, implementando firewalls e soluções de criptografia para evitar invasões e ataques cibernéticos.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 4.500 a R$ 9.500</p>
+                    <hr></hr>
+                     <img src="https://academiatech.s3.amazonaws.com/wp-content/uploads/2023/07/redes-22072023-64bef24ac673c-1-1024x576.webp" width="300">
+                </li>
+<br></br>
+                <li>
+                    <h3 id="profissao">Especialista em Segurança da Informação</h3>
+                    <p>O especialista em segurança da informação atua na proteção dos dados e sistemas de uma organização contra ameaças cibernéticas. Ele desenvolve e implementa estratégias de defesa, como criptografia, firewalls, e monitoramento contínuo de sistemas. Este profissional é essencial para prevenir vazamentos de dados, ataques de hackers e garantir a conformidade com normas de segurança.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 7.000 a R$ 14.000</p>
+                    <hr></hr>
+                     <img src="https://estrategiacursosonline.com/wp-content/uploads/2024/08/Especializacao-em-Seguranca-da-Informacao.webp" alt="Imagem Ilustrativa" width="300">
+                </li>
+<br></br>
+                <li>
+                    <h3 id="profissao">Designer de Interface (UI/UX)</h3>
+                    <p>O designer de interface (UI) e o designer de experiência do usuário (UX) trabalham juntos para criar interfaces intuitivas e agradáveis em aplicativos e sites. Enquanto o UI se foca no design visual da interface, o UX se preocupa com a experiência do usuário, buscando sempre uma interação fluida e eficiente. Seu objetivo é garantir que os produtos sejam fáceis de usar e visualmente atrativos, otimizando a navegação e a funcionalidade.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 4.000 a R$ 8.000</p>
+                    <hr></hr>
+                     <img src="https://victorvision.com.br/wp-content/uploads/2022/01/papel-do-designer-de-interface-1024x674.jpg" width="300">
+                </li>
+<br></br>
+                <li>
+                    <h3 id="profissao">Especialista em Cloud Computing</h3>
+                    <p>O especialista em computação em nuvem (Cloud Computing) é responsável por projetar, gerenciar e otimizar soluções de infraestrutura em nuvem, utilizando plataformas como AWS, Microsoft Azure, ou Google Cloud. Ele garante que a empresa tenha acesso a recursos de computação escaláveis e eficientes, sem precisar de grande investimento em hardware físico. Além disso, lida com a migração de sistemas para a nuvem e a implementação de estratégias de backup e recuperação de dados.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 7.000 a R$ 13.000</p>
+                    <hr></hr>
+                     <img src="https://www.iped.com.br/_upload/content/2015/04/10/especialista-cloud-computing.jpg" width="300">
+                </li>
+<br></br>
+                <li>
+                    <h3 id="profissao">Scrum Master</h3>
+                    <p>O Scrum Master é o facilitador da metodologia ágil Scrum em equipes de desenvolvimento de software. Sua principal função é garantir que a equipe siga os princípios do Scrum, removendo obstáculos e promovendo um ambiente de colaboração eficiente. Além disso, ele facilita as reuniões diárias (stand-ups), as sprints e revisões de progresso, assegurando que os prazos sejam cumpridos e que a equipe esteja alinhada com os objetivos do projeto.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 7.000 a R$ 13.000</p>
+                    <hr></hr>
+                     <img src="https://www.remessaonline.com.br/blog/wp-content/uploads/2022/05/scrum-master.jpg" alt="Imagem Ilustrativa" width="300">
+                </li>
+<br></br>
+                <li>
+                    <h3 id="profissao">Técnico em Informática</h3>
+                    <p>O técnico em informática oferece suporte técnico aos usuários, realizando manutenção preventiva e corretiva em equipamentos de hardware e software. Ele é responsável por diagnosticar problemas, instalar e configurar sistemas operacionais, aplicativos, redes e periféricos, além de treinar os usuários no uso correto das tecnologias. Esse profissional também pode atuar em ambientes corporativos, cuidando da infraestrutura de TI.</p>
+                    <p class="salary"><strong>Salário médio:</strong> R$ 2.500 a R$ 4.500</p>
+                    <hr>
+                     <img src="https://i1.wp.com/www.colegiopraxis.com.br/wp-content/uploads/2021/04/inform.jpg?resize=1200%2C600&ssl=1" width="300">
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+    <p>&copy; 2025 - 2º Tec A - Grupo de Profissões de TI</p>
+  </footer>
+
+
+  <script>
+    // Adicionar uma classe CSS ao parágrafo
+document.getElementById("profissao").classList.add("destacado");
+
+document.getElementById("profissao").addEventListener("click", function() {
+  if (this.style.color === "royalblue") {
+    this.style.color = "#2c3e50";
+  } else {
+    this.style.color = "royalblue";
+  }
+});
+  </script>
+</body>
+</html>

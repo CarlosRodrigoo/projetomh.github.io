@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linha do Tempo da Informática</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+     padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       background-color: rgb(242, 242, 248); 
+      color: #333;
+      
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+   
+.titulo{
+  color: rgb(2, 83, 116);
+}
+.conceitos{
+  color:rgb(2, 83, 116);
+}
+.comosurgiu{
+  color: rgb(2, 83, 116);
+}
+.linha{
+  color:rgb(2, 83, 116);
+  font-size: 30px;
+}
+
+.desenvolvimento{
+  color: darkblue;
+}
+.informatica{
+  color:rgb(2, 83, 116);
+}
+.historia{
+  color: rgb(2, 83, 116);
+  font-size: 40px;
+}
+b{
+  color: rgb(21, 108, 143);
+     }
+p{
+  color: black;
+}
+.timeline{
+  color: darkslateblue;
+}
+.h3{
+  color:rgb(2, 83, 116);
+}
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+.details{
+  color:rgb(2, 83, 116);
+}
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    .conclusao{
+      color:rgb(2, 83, 116);
+    }
+    .refrencias{
+      color:rgb(2, 83, 116);
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+  text-align: justify; 
+}
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  .logo{
+    color:#FFFFFF
+    font-size:24px;
+    font-weight:bold;
+  }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.event {
+  background: #fff;
+  border-left: 6px solid #4e73df;
+  padding: 15px 20px;
+  width: 80%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.event:hover {
+  transform: scale(1.02);
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #444;
+}
+
+  </style>
+
+  
+</head>
+<body>
+  <header>
+    <h1>Projeto Conhecendo a Informática - 2º Técnico A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+
+  
+  
+<div class="conteiner">
+          <h1 class="historia">História da Informática</h1>
+         
+    <p>
+      Hoje em dia, a informática faz parte do nosso cotidiano, está presente em tarefas pessoais, escolares e profissionais. Mas para chegar ao nível de desenvolvimento e acessibilidade atual, a informática percorreu um longo caminho histórico.</p>
+      <br></br>
+    <p>
+      Neste resumo, você vai conhecer a origem e a evolução da informática, desde seus primeiros passos até os dias de hoje.</p>
+   <br></br>
+    <h1 class="informatica">O que é informática?</h1>
+    <p>
+      A palavra informática vem da junção de “informação” e “automática”. Ela se refere ao processo automático de tratamento de dados, utilizando sistemas computacionais.</p>
+    <br></br>
+      <p>É uma área que integra conhecimentos das ciências da informação e da computação, com foco nos processos de coleta, armazenamento, processamento, transmissão e uso de dados digitais.</p>
+      <br></br>
+      <h1 class="comosurgiu">Como surgiu?</h1>
+      <p>
+       A história da informática começa antes do surgimento do primeiro protótipo de um computador, na década de 1830. A informática teve seu início na história como uma precursora da revolução tecnológica, pois ela surgiu a partir de dificuldade ou necessidade de cálculos rápidos, quando um Francês denominado de Blaise Pascal, desenvolve a primeira máquina de calcular, a primeira calculadora, esta por sua vez foi desenvolvida para realizar cálculos de algoritmos.</p>
+<br></br>
+       <p>Neste momento se dá o, ponta pé inicial para o desenvolvimento da informática no mundo. </p>
+<br></br>
+    <h1 class="titulo">Os conceitos básicos mais importantes:</h1>
+    <p>
+    
+    <b>Hardware:</b> São os componentes físicos do computador, tudo o que pode ser tocado (ex: teclado, monitor, HD). 
+    <br></br>
+<p>
+  <b>Software:</b> São os programas e sistemas que executam tarefas no computador (ex: navegadores, editores de texto, jogos).</p> <br></br>
+<h3 class="conceitos">Outros conceitos importantes:</h3>
+
+<br> </br> <p><b>Sistema Operacional:</b> É o principal sorftware que controla o computador e permite a instalação de outros programas (ex: Windows, Linux, MacOS).</b></p> <br></br>
+<p><b>CPU (Unidade Central de Processamento): </b>Processa os dados e executa as instruções dos programas.</p> <br></br>
+<p> <b>Memória RAM:</b> Armazena temporariamente informações que estão em uso.</p> <br></br>
+<p><b>HD (Disco Rígido):</b>Local onde arquivos, fotos, vídeos e programas ficam armazenados.</p><br></br>
+<p><b>  Armazenamento portátil: </b>Dispositivos como pendrives e HDs externos que permitem salvar e transferir dados.</p> <br></br>
+<p><b>Monitor: </b>Tela que exibe as informações visuais do computador.</p> <br></br>
+<p><b>Navegador:</b>Programa para acessar a internet (ex: Chrome, Firefox).</p> <br></br>
+<p><b>  Nuvem:</b> Armazenamento de arquivos e uso de programas diretamente pela internet.</p> <br></br>
+<p><b>Periféricos:</b> Acessórios que ampliam as funcionalidades do computador (teclado, mouse, impressora, fone etc.). </p> <br></br>
+<b><p>Placa-mãe: </b>Componente que conecta todas as partes do computador entre si.</p> <br></br>
+
+
+  <h1 class= "linha" onclick="exibirAlerta()"> Linha do Tempo da Informática   </h1>
+  <hr class="divisao">
+  <br></br>
+  <div class="timeline">
+    <div class="event" onclick="toggleDetails(this)">
+      <h2>1642 - A primeira Calculadora</h2>
+      <p class="details">A primeira calculadora mecânica do mundo foi a Pascalina, inventada por Blaise Pascal em 1642. Essa máquina, também conhecida como máquina de Pascal ou calculadora de Pascal, permitia realizar operações de soma e subtração. A Pascalina foi criada para auxiliar o pai de Pascal, que era coletor de impostos, com os cálculos mais complexos. A máquina era composta por rodas dentadas, cada uma com algarismos de 0 a 9, que eram giradas manualmente para realizar as operações. 
+        <br></br>
+          Embora a Pascalina fosse capaz apenas de somar e subtrair, ela representou um marco importante na história da computação e abriu caminho para o desenvolvimento de máquinas de calcular mais avançadas. Além da Pascalina, o ábaco, um instrumento milenar utilizado para cálculos, também pode ser considerado uma forma primitiva de calculadora. O ábaco foi criado pelos chineses no século VI a.C. e utilizava contas deslizantes em fios paralelos para realizar operações de adição</p>
+       <img src="https://zonacuriosa.com/wp-content/uploads/2020/11/quem-inventou-a-calculadora-2-1152x691.jpg" alt="Imagem da La Pascaline">
+    </div>
+  <div class="event" onclick="toggleDetails(this)">
+   <h2>1830 - Máquina Analítica</h2>
+      <p class="details"> A Máquina Analítica foi um projeto de computador mecânico, proposto por Charles Babbage no século XIX. Considerada um precursor dos computadores modernos, ela incorporava elementos como unidade de processamento, memória e capacidade de programação por meio de cartões perfurados.
+      Apesar de nunca ter sido construída em sua totalidade por Babbage, a máquina influenciou o desenvolvimento da computação, sendo vista como um marco na história da tecnologia.
+        <br></br>
+    <b>Características da Máquina Analítica:</b>
+    <br></br>
+      <b>Conceito:</b> A máquina foi projetada para realizar cálculos complexos e sequências de instruções, de forma semelhante aos computadores modernos. 
+      <br></br>
+  <b>Unidade de Processamento:</b>Responsável por realizar operações aritméticas e lógicas.
+  <br></br>
+  <b>Memória:</b> Local para armazenar dados e resultados de cálculos.
+  <br></br>
+  <b> Unidade de Controle: </b>Gerencia a execução das instruções. 
+  <br></br>
+  <b>Programação:</b>As instruções eram inseridas por meio de cartões perfurados.</p>
+   <img src="https://www.velip.com.br/wp-content/uploads/2022/01/AnalyticalMachine_Babbage_London-1536x1476.jpg" alt="Imagem da Maquina Analitica>
+<div class="event" onclick="toggleDetails(this)">
+    </div>
+ <div class="event" onclick="toggleDetails(this)">
+      <h2>1936 - Máquina de Turing</h2>
+      <p class="details"> Em 1950, Alan Turing deu uma resposta a essa pergunta: um computador era capaz de “pensar” se seus resultados fossem tão convincentes que uma pessoa que interagisse com ele não pudesse distinguir suas respostas das de um ser humano real. Esse conceito, conhecido como o teste de Turing, ganhou relevância novamente hoje em dia, já que alguns afirmam que esta nova geração de IA de fato supera o teste de Turing.
+        <br></br>
+        A contribuição mais conhecida de Turing foi durante a Segunda Guerra Mundial, quando trabalhou em Bletchley Park, o centro britânico de decodificação de códigos. Turing desempenhou um papel crucial no deciframento dos códigos alemães, em particular a máquina Enigma, o que ajudou significativamente os Aliados.
+        Apesar de seus feitos, a vida de Turing foi marcada pela discriminação e perseguição devido à sua homossexualidade, que era ilegal naquela época no Reino Unido. Em 1952, foi processado por “indecência grave” e submetido à castração química. Tragicamente, Turing faleceu em 1954, aos 41 anos, em circunstâncias que sugerem um possível suicídio.
+        <br></br>
+      A importância de Turing na computação e inteligência artificial reside em sua conceituação da máquina de Turing, um modelo teórico que demonstrou a possibilidade de realizar qualquer cálculo computacional por meio de regras e armazenamento de dados. Este conceito é fundamental para entender o funcionamento dos computadores e teve uma influência significativa no desenvolvimento da inteligência artificial. Apesar das dificuldades pessoais que enfrentou, Alan Turing é lembrado como uma figura crucial na história da computação e criptografia.</p>
+         <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photo/15466369/image/d0818e63b17de6f2bcf2076b4c40a68e" alt="Imagem da Maquina Turing" >
+    </div>
+    <div class="event" onclick="toggleDetails(this)">
+      <h2>1946 - ENIAC </h2>
+      <p class="details">O Eniac (Electronic Numerical Integrator and Computer) foi desenvolvido pelo exército dos EUA e funcionava com uma espécie de calculadora gigante.
+      Em suma, o Eniac ficou conhecido como o primeiro computador do mundo por ter sido capaz de resolver questões que outras máquinas, até então, não eram capazes. Ele podia, por exemplo, fazer cálculos complexos que demandariam diversas pessoas trabalhando juntas ao mesmo tempo.
+      <br></br>
+• Desenvolvido por John Mauchly e John Eckert, foi usado pelo exército dos EUA durante a Segunda Guerra Mundial.
+<br></br>
+• Pesava cerca de 30 toneladas e ocupava 167 m². Mesmo assim, fazia até: o 5.000 adições por segundo o 357 multiplicações por segundo o 38 divisões por segundo • Armazenava apenas 20 palavras em memória.
+<br></br> • Foi desativado em 1955</p>
+ <img src="https://i0.wp.com/segredosdomundo.r7.com/wp-content/uploads/2020/08/eniac-historia-e-funcionamento-do-primeiro-computador-do-mundo-2.jpg?w=1000&quality=89&ssl=1" alt="Imagem da ENIAC" >
+    </div>
+     <div class="event" onclick="toggleDetails(this)">
+      <h2>1950 a 1970 - Terceira Revolução Industrial</h2>
+      <p class="details">A Terceira Revolução Industrial corresponde ao período após Segunda Guerra Mundial em que o aprimoramento e os novos avanços no campo tecnológico passaram a abranger o campo da ciência, integrando-o ao sistema produtivo. Essa fase da Revolução Industrial é também conhecida como Revolução Técnico-Científica-Informacional. 
+        <br></br>
+     As indústrias que desenvolveram alta tecnologia começaram a se sobressair em relação às indústrias que se destacavam nas fases anteriores da Revolução Industrial, como a metalurgia, siderurgia e a indústria de automóveis.Assumiram posição de destaque, nesse momento, a robótica, genética, informática, telecomunicações, eletrônica, entre outros. Os estudos desenvolvidos nessas áreas acabaram modificando todo o sistema produtivo, visto que o objetivo era produzir mais em menos tempo, empregando tecnologias avançadas e qualificando a mão de obra que assumiu a liderança em todas as etapas de produção, comercialização e gestão das empresas envolvidas na fabricação e comércio dos bens produzidos. 
+     <br></br>
+     Além de novas invenções, muitas criadas para servir à Segunda Guerra Mundial, houve também aprimoramento de invenções mais antigas. Tudo isso associado ao processo produtivo. Máquinas mais eficientes, instrumentos mais precisos e a introdução de robôs alteraram o modo de organização da indústria, possibilitando o aumento da produção e dos possíveis lucros, diminuindo os gastos com mão de obra, bem como diminuindo o tempo que se levaria até a fabricação do produto final.</p>
+<img src="https://www.vestibulandoweb.com.br/wp-content/uploads/2024/02/terceira-revolucao-industrial.jpg" alt="Imagem lustrativa da Terceira Revolução Industrial">
+    </div>
+  <br></br>
+   <div class="event" onclick="toggleDetails(this)">
+      <h2>1989 a 2020 - A Criação da Internet e do Web</h2>
+      <p class="details">O ano de 1989 marca a história da informática com a criação da internet. Em 1991, a internet começou a ser disponibilizada ao público pelo primeiro ISP, provedor de serviços de internet. Em 1993, a BBC iniciou a transmissão do primeiro vídeo transmitido pela internet, um dos mais importantes eventos tecnológicos da nossa história, que marca o início da era do fácil acesso.
+        <br></br>
+         Os anos de 90 também marcam o começo das empresas de internet como redes sociais e de empresas de messenger.
+      A capacidade da internet se elevou consideravelmente sobretudo que desde 2020, as pessoas podem criar seus redes e podem ver os vídeos das operações do espaço de diversas áreas onde viaja as espaçonaves. O início por muitos era a alegria de comprar produtos sem sair da casa do consumidor ou da empresa.
+      <br></br>
+       Outra tendência importante é o desenvolvimento da inteligência artificial. Esses sistemas podem executar tarefas complexas a serem concluídas rapidamente e por anos. Com certeza as máquinas passarão por uma ainda maior eficiência. Dentro de pouco tempo a vida humana passará por uma séria mudança, e sua segurança passará por alterações do nosso dia a dia. Daqui a anos ao que parece muitas obras humanas nas áreas de ciência, redes, manutenção nas redes que fazem uma comunicacão internet etc estarão sendo criadas pelo computador.
+      </p>
+<img src="https://tse3.mm.bing.net/th/id/OIP.E88oxbGoDrY24wA1NFu3RQHaE5?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3.jpg" alt="Imagem ilustrativa da criação da internet">
+    </div>
+  </div>
+  <br></br>
+  <h3 class="conclusao">Conclusão:</h3>
+<p>A informática não surgiu de repente, ela é fruto de séculos de descobertas, inovações e aprimoramentos. Desde a calculadora de Pascal até os supercomputadores e a computação em nuvem de hoje, cada passo contribuiu para a tecnologia que usamos diariamente. </p>
+<br></br>
+<h3 class="refrencias">Referências:</h3>
+<p><b>PORTAL EDUCAÇÃO.</b> História da informática: entenda como tudo começou. Disponível em: https://blog.portaleducacao.com.br/historia-da-informatica/. Acesso em: 27 jun. 2025.</p>
+<p><b>SIGNIFICADOS.</b> Informática – O que é, conceito e definição.Acesso em: 27 jun. 2025.</p>
+<p><b>SABER TECNOLOGIAS.</b> A História da Informática: evolução e impactos contínuos. Saber Tecnologias, publicado e atualizado em 31 mar. 2025. Disponível em: https://sabertecnologias.com.br/artigo/a-historia-da-informatica/. Acesso em: 07 ago. 2025.</p>
+
+
+
+  <script src="script.js"></script>
+
+  </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - 2º Tec - Grupo da Historia dos Computadores</p>
+  </footer>
+
+  <script>
+    function toggleDetails(element) {
+  const detail = element.querySelector('.details');
+  if (detail.style.display === 'block') {
+    detail.style.display = 'none';
+  } else {
+    detail.style.display = 'block';
+  }
+}
+function exibirAlerta() {
+  alert("clique na linha do tempo, para ver as informações");
+}
+
+
+
+  </script>
+</body>
+</html>

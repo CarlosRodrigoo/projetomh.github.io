@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partes de um Computador</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'open sons'Arial, Helvetica, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      
+    }
+
+ header {
+   background: linear-gradient(to right, #2c3e50, #3498db);
+   color: white;
+   padding: 20px;
+   text-align: center;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+.card {
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /*Para esconder o conteúdo que ultrapassa as bordas arredondadas*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /*Organiza os elementos em coluna*/
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /*Alinha os itens do conteúdo à esquerda*/
+}
+
+.card-content h2 {
+  margin-top: 0;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none; /*Remove o sublinhado do link*/
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    
+  </style>
+
+  
+</head>
+<body>
+  <header>
+  <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+</header>
+
+<nav>
+  <ul id="menu">
+    <li><a href="index.html">Início</a></li>
+    <li class="dropdown">
+      <a href="#">2ºTecnico A ▾</a>
+      <div class="dropdown-content">
+        <a href="grupo1.html">História da Informática</a>
+        <a href="grupo2.html">Componentes do Computador</a>
+        <a href="grupo3.html">Softwares Essenciais</a>
+        <a href="grupo4.html">Sistemas e Redes</a>
+        <a href="grupo5.html">Segurança da Informação</a>
+        <a href="grupo6.html">Internet e IA</a>
+        <a href="grupo7.html">Profissões TI</a>
+        <a href="grupo8.html">Montagem e Manutenção</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#">2ºTecnico B ▾</a>
+      <div class="dropdown-content">
+        <a href="grupo9.html">Eu na Programação</a>
+        <a href="grupo10.html">
+          História das Linguagens de Programação</a
+        >
+        <a href="grupo11.html">Jornada de Estudos</a>
+        <a href="grupo12.html">Suporte Técnico</a>
+        <a href="grupo13.html">Desenvolvimento de Sistema</a>
+        <a href="grupo14.html">Banco de Questões</a>
+        <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <section>
+    <h1>Componentes de Computador</h1>
+    <p>
+      Os principais componentes de um computador incluem:
+      Placa-mãe,processador,gabinete,memória RAM,cooler,fonte de
+      alimentação,disco-rigido, (HD ou SSD).
+    </p>
+    <h3>Placa mae</h3>
+    <p>
+      Placa-mãe é o nome dado a uma placa de circuito impresso que integra o
+      hardware de um computador. Ela contém slots (conexões) e conectores
+      específicos para processador (CPU), memória RAM, unidades de armazenamento
+      (SSD ou HD), placa de vídeo (GPU) e assim por diante.
+    </p>
+    <p>
+      Essa integração consiste em permitir que os componentes se comuniquem de
+      modo que o computador se torne funcional. É por intermédio da placa-mãe
+      que a CPU acessa os dados que estão na memória RAM, por exemplo.
+    </p>
+    <p>
+      As placas-mãe têm formatos e tamanhos variados. Isso vale principalmente
+      para as unidades que equipam notebooks, servidores, workstations,
+      celulares, tablets e outros equipamentos. Isso porque esses dispositivos
+      variam em dimensões, recursos e propósitos.
+    </p>
+    <p>
+      Este texto tem como base as placas-mãe para PCs. Nesse segmento, elas
+      seguem tamanhos e formatos padronizados (form factors), como ATX e
+      mini-ITX. ASRock, Asus, Gigabyte e MSI estão entre as principais
+      fabricantes de placas-mãe para PCs.
+    </p>
+    <p>
+      Neste ponto, vale destacar também que uma placa-mãe pode ser chamada de
+      motherboard (nome que aparecerá mais vezes neste texto), mainboard, mobo,
+      system board, entre outras denominações.
+    </p>
+    <ul>
+      <li>
+        Fonte:<a
+          href="https://www.hp.com/br-pt/shop/tech-takes/o-que-uma-placa-mae-faz" onclick="mostrarAlerta()" 
+          >Hp</a
+        >
+      </li>
+    </ul>
+    <br />
+    <h3>Processador</h3>
+    <p>
+      Um processador é o núcleo vital de todas as operações em seu Dell.
+      Simplificando, é a mente mestra que impulsiona todas as funcionalidades.
+      Se já se questionou como seu computador consegue executar diversas
+      tarefas, a resposta é o processador. Ele processa e executa instruções de
+      software, viabilizando uma ampla gama de atividades, desde abrir
+      navegadores até rodar aplicativos complexos.
+    </p>
+    <p>
+      Como funciona um processador? Vamos mergulhar mais fundo para entender
+      como um processador opera. Imagine-o como o maestro de uma orquestra.
+      Assim como um maestro interpreta partituras e guia os músicos, o
+      processador interpreta códigos de software e direciona os componentes do
+      seu computador para executar tarefas. Os núcleos do processador são
+      comparáveis a músicos individuais, cada um desempenhando uma parte única
+      para criar uma harmonia perfeita de operações.
+    </p>
+    <p>
+      Como o processador afeta o desempenho? Agora que compreendemos o papel de
+      um processador e seu funcionamento, é hora de entender como isso afeta seu
+      computador. O desempenho está diretamente relacionado à potência do
+      processador. Um processador ágil resulta em tarefas executadas mais
+      rapidamente, minimizando atrasos. De processadores mais de entrada, que
+      auxiliam nas atividades cotidianas, como navegar na web, a processadores
+      poderosos que aprimoram a eficiência e rapidez da sua experiência de uso
+      intenso, como em edição de vídeos e jogos.
+    </p>
+    <ul>
+      <li>
+        Fonte:
+        <a href="https://www.ibm.com/br-pt/think/topics/central-processing-unit" onclick="mostrarAlerta()" 
+          >ibm</a
+        >
+      </li>
+    </ul>
+    <br />
+    <h3>Gabinete</h3>
+    <p>
+      O gabinete de um computador, também conhecido como caixa do computador,
+      torre, unidade de sistema, base ou chassis, é o gabinete que contém a
+      maioria dos componentes de um computador (geralmente excluindo o monitor,
+      teclado e mouse). Ele é, em essência, a estrutura física que abriga todos
+      os componentes internos do Computador
+    </p>
+    <p>
+      O gabinete do computador desempenha um papel crucial na proteção e no
+      funcionamento eficiente do sistema. Ele protege os componentes internos do
+      computador contra danos físicos, poeira e outros elementos potencialmente
+      prejudiciais. Além disso, o gabinete do computador também desempenha um
+      papel importante no gerenciamento de calor e ventilação. Os componentes do
+      computador geram calor durante o funcionamento, e sem um gabinete adequado
+      para ajudar na dissipação de calor, os componentes podem superaquecer e
+      falhar.
+    </p>
+    <p>
+      Existem vários tipos de gabinetes de computador disponíveis no mercado,
+      cada um com suas próprias características e benefícios. Os gabinetes de
+      torre são os mais comuns e estão disponíveis em uma variedade de tamanhos,
+      incluindo mini torre, mid-torre e torre completa. Os gabinetes de mini
+      torre são compactos e ideais para espaços de trabalho menores, enquanto os
+      gabinetes de mid-torre são um pouco maiores e podem acomodar mais
+      componentes de hardware. Os gabinetes de torre completa são os maiores e
+      oferecem o máximo de espaço para hardware e melhor ventilação.
+    </p>
+    <p>
+      Além do tamanho, os gabinetes de computador também variam em termos de
+      design e estilo. Alguns gabinetes têm um design simples e minimalista,
+      enquanto outros têm um visual mais agressivo e gamer com iluminação LED e
+      janelas de vidro temperado que permitem ver os componentes internos. A
+      escolha do gabinete do computador depende em grande parte das preferências
+      pessoais do usuário e das necessidades específicas do sistema.
+    </p>
+    <ul>
+      <li>
+        Fonte:
+        <a href="https://cursa.app/pt/pagina/o-que-e-gabinete-de-computador" onclick="mostrarAlerta()" 
+          >Cursa</a
+        >
+      </li>
+    </ul>
+    <br />
+    <img src="https://static.mundomax.com.br/produtos/75700/100/1.webp" onclick="mostrarAlerta()" />
+    <h3>Memoria RAM</h3>
+    <p>
+      A memória de acesso randômico(pt-BR) ou de acesso aleatório(pt-PT?) (do
+      inglês Random Access Memory, conhecido pela abreviatura RAM),também
+      chamado de memória volátil de leitura e escrita, é uma memória temporária
+      computacional de acesso rápido; ou seja, é um local de armazenamento
+      temporário de informações digitais usada pelo processador para armazenar
+      informações temporariamente e que possui um acesso feito de forma
+      aleatória mais rápido que ao HD, DVD, pendrive (permite a rápida leitura e
+      escrita de informações), utilizada como memória primária em sistemas
+      eletrônicos digitais.[3] O termo acesso aleatório permite acessar qualquer
+      informação armazenada em qualquer momento.
+    </p>
+    <p>
+      Para que serve a memória RAM? A função da memória RAM é armazenar
+      temporariamente os dados e programas que estão sendo usados ativamente
+      pelo computador ou celular. Isso permite que o processador acesse as
+      informações rapidamente para executar várias tarefas e acessar diferentes
+      arquivos simultaneamente. Basicamente, a RAM garante que as informações
+      mais importantes estejam sempre disponíveis para o processador. Evitando a
+      lentidão ao buscar dados em armazenamentos mais lentos, resultando em um
+      desempenho ágil e eficiente do dispositivo.
+    </p>
+    <img
+      src="https://gpjinformatica.wordpress.com/wp-content/uploads/2016/12/memoriarampc.jpg"
+      alt="memoria ram" onclick="mostrarAlerta()" 
+    /><br />
+    <ul>
+      <li>
+        Fonte:
+        <a href="https://tecnoblog.net/responde/o-que-e-memoria-ram/" onclick="mostrarAlerta()" 
+          >tecnoblog</a
+        >
+      </li>
+    </ul>
+    <br />
+    <h3>Cooler</h3>
+    <p>Os computadores precisam manter uma temperatura constante e relativamente
+      baixa para operar corretamente, controlando as temperaturas com o uso de
+      vários ventiladores — seja aspirando o ar frio ou expelindo o ar quente.</p>
+    <p>Os coolers básicos (fans ou ventiladores) podem ficar entupidos com poeira
+      e outros detritos, atrapalhando seu funcionamento normal, especialmente em
+      ambientes comerciais, onde os computadores estão no chão e em áreas com mais sujeira.</p>
+    <p>Um ventilador barulhento que causa falhas nos PCs do escritório muitas
+      vezes pode ser consertado limpando o computador e certificando-se de que
+      nada está tocando as pás do ventilador do cooler.</p>
+    <img src="https://images.tcdn.com.br/img/img_prod/245284/cooler_p_processador_notus_led_vm_amd_tdp_100w_120mm_pac120ptlv_pc_yes_10010791_1_20201029105329.png" alt="Cooler de computador" onclick="mostrarAlerta()" />
+    <ul>
+      <li> Fonte: <a href="https://tecnoblog.net/responde/o-que-e-cooler-e-qual-a-sua-funcao-no-computador/" target="_blank" onclick="mostrarAlerta()" >Tecnoblog</a></li>
+    </ul>
+    <h3>Fonte de alimentação</h3>
+    <p>A fonte de alimentação, conhecida como PSU (do inglês <em>Power Supply Unit</em> ou Unidade de Alimentação de Energia), é o
+      componente que recebe a energia fornecida pela rede elétrica doméstica. </p>
+    <p> Ela é responsável por converter a voltagem da energia elétrica que chega
+      pelas tomadas em voltagens menores, capazes de ser suportadas pelos
+      componentes do computador. </p>
+    <p>Para identificar a fonte no seu computador, basta localizar o cabo ligado
+      à tomada e, no interior do gabinete, encontrar a peça que recebe esse
+      cabo. </p>
+    <p> Trata-se de um componente tão ou mais importante que outros, como
+      processador, memória, disco rígido (HD) ou placa-mãe. Sem a alimentação
+      adequada, os componentes podem ter desempenho reduzido, aquecimento
+      excessivo e até queimar.</p>
+    <p>Uma analogia: a placa-mãe é o sistema nervoso, o processador é o cérebro,
+      a corrente elétrica é o alimento e a fonte é o sistema digestivo. Se a
+      “alimentação” for inadequada, faltarão recursos para o bom funcionamento
+      do sistema. </p>
+    <ul>
+      <li>Fonte: <a href="https://www.techtudo.com.br/guia/2025/06/o-que-e-a-fonte-de-alimentacao-e-como-escolher-uma-para-o-seu-pc-edinfoeletro.ghtml" onclick="mostrarAlerta()" target="_blank">TechTudo</a></li>
+    </ul>
+    <h3>Disco Rígido</h3>
+    <p>O disco rígido (HDD) é um dispositivo de armazenamento que utiliza pratos revestidos magneticamente para gravar dados, como o sistema operacional, programas e arquivos do usuário. Um braço mecânico com uma cabeça de leitura/gravação se move sobre os pratos, acessando as informações enquanto eles giram em alta velocidade.</p>
+    <p>Como os dados não são gravados de forma sequencial, o HDD utiliza um sistema de indexação que permite localizar rapidamente os arquivos solicitados.</p>
+    <ul>
+      <li>Fonte:Informações do Site Techtudo</li>
+    </ul>
+    <h3>SSD x HD</h3>
+    <p>Os  SSDs (Solid State Drives) e o HD são tecnologias diferentes de armazenamento. Enquanto o HD usa discos magnéticos rotativos, o SSD utiliza memória flash, o que proporciona maior velocidade, durabilidade e eficiência energética.</p>
+    <p>O HD ainda é popular por oferecer grande capacidade de armazenamento com menor custo por gigabyte. Já o SSD se destaca pelo desempenho superior, maior confiabilidade e ausência de partes móveis, o que reduz falhas mecânicas.</p>
+    <ul>
+      <li>Fonte: Informações do Site Techtudo</li>
+    </ul>
+    <div class="card-grid">
+      <div class="card">
+        <img
+          src="https://q7informatica.com.br/wp-content/uploads/2024/08/placa-mae-h61-bright_f.jpg" onclick="mostrarAlerta()" 
+          alt="Imagem 1"
+        />
+        <h3>Card 1</h3>
+        <p>
+          A placa-mãe, também conhecida como motherboard, é a placa principal de
+          um computador, responsável por conectar e interligar todos os seus
+          componentes. Ela age como uma espinha dorsal, permitindo a comunicação
+          e o funcionamento coordenado de elementos como processador, memória
+          RAM, placa de vídeo, disco rígido (HD), entre outros.
+        </p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img
+          src="https://cdn.awsli.com.br/2500x2500/2547/2547358/produto/241886335/processador-intel-core-i5-6500-3-2-ghz-6-mb-65w-1151-1--8plyjeeavz.png" onclick="mostrarAlerta()" 
+          alt="Imagem 2"
+        />
+        <h3>Card 2</h3>
+        <p>
+          Um processador, também conhecido como Unidade Central de Processamento
+          (CPU), é o componente central de um computador responsável por
+          executar as instruções de programas e realizar operações lógicas e
+          aritméticas. Ele atua como o "cérebro" do dispositivo, processando
+          dados e controlando o funcionamento de outras partes do sistema.
+        </p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <img
+          src="https://static.mundomax.com.br/produtos/75700/100/1.webp" onclick="mostrarAlerta()" 
+          alt="Imagem 3"
+        />
+        <h3>Card 3</h3>
+        <p>
+          O gabinete possui a importante função de proteger os componentes
+          internos de um computador de batidas, calor, luz, umidade e poeira.
+          Isso porque a maioria dos componentes eletrônicos internos de um
+          computador são bem sensíveis e precisam desta proteção.
+        </p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <img
+          src="https://www.sos.com.br/Lib/Redimensiona.ashx?img=noticia/20191002091002584.jpg&w=768&h=600"
+          alt="Imagem 4" onclick="mostrarAlerta()" 
+        />
+        <h3>Card 4</h3>
+        <p>
+          A memória RAM é uma categoria de memória volátil que armazena dados
+          temporariamente para acesso rápido pelo processador. Ela salva os
+          dados e instruções que a CPU precisa acessar de forma imediata,
+          garantindo agilidade na execução de tarefas.
+        </p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <img
+          src="https://images.kabum.com.br/produtos/fotos/153650/cooler-fan-rise-mode-black-120mm-rm-bk-01-fb_1643635247_gg.jpg" onclick="mostrarAlerta()" 
+          alt="Imagem 5"
+        />
+        <h3>Card 5</h3>
+        <p>
+          Os computadores precisam manter uma temperatura constante e
+          relativamente baixa para operar corretamente e controlar as
+          temperaturas com o uso de vários ventiladores, ou aspirando o ar frio
+          ou expelindo o ar quente.
+        </p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMHRVQ2szwb6EVvxSr11W2HKh3VPhAPJg9A&s"
+          alt="Imagem 6" onclick="mostrarAlerta()" 
+        />
+        <h3>Card 6</h3>
+        <p>
+          A principal função da fonte de alimentação é garantir que todos os
+          componentes internos do computador recebam a energia necessária para
+          funcionar. Ela alimenta o processador, a memória RAM, a placa-mãe, a
+          placa de vídeo, as portas USB, entre outros. Componentes externos,
+          como o monitor e a impressora, têm suas próprias fontes de alimentação
+          e não dependem da fonte do computador.
+        </p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <img
+          src="https://br.crucial.com/content/dam/crucial/articles/pc-users/why-is-my-laptop-so-slow-/hard-disk-drive.jpg.transform/large-jpg/img.jpg"
+          alt="Imagem 7" onclick="mostrarAlerta()" 
+        />
+        <h3>Card 7</h3>
+        <p>
+          O disco rígido (HDD) é um dispositivo de armazenamento magnético que
+          utiliza discos giratórios revestidos com material magnético para
+          gravar e ler dados. Essencial para computadores e servidores, os HDDs
+          são conhecidos por sua capacidade ampla e custo relativamente baixo
+          por gigabyte em comparação a alternativas como SSDs. No entanto,
+          possuem partes móveis que limitam sua velocidade e resistência a
+          impactos, características que podem afetar sua durabilidade.
+        </p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <img
+          src="https://falati.com.br/wp-content/uploads/2024/08/diferenca-entre-ssd-e-hdd.png" onclick="mostrarAlerta()" 
+          alt="Imagem 8"
+        />
+        <h3>Card 8</h3>
+        <p>
+          Qual a diferença entre HD e SSD? A tecnologia de armazenamento de
+          dados evolui bastante, e hoje utilizamos dois formatos básicos: os
+          HDs, que suportam grandes volumes, e os SSDs, mais velozes.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 - 2º Tec A- Grupo sobre as partes de um computador!</p>
+</footer>
+
+
+  <script>
+    // Alerta ao clicar no botão "Saiba mais"
+function mostrarAlerta() {
+  alert('Você clicou em um link externo ou imagem do site!');
+}
+
+// Efeito adicional: mudar a cor de fundo do card ao passar o mouse
+const card = document.getElementById('card');
+
+card.addEventListener('mouseenter', () => {
+  card.style.backgroundColor = '#e8f8ff';
+});
+
+card.addEventListener('mouseleave', () => {
+  card.style.backgroundColor = 'white';
+});
+
+
+
+  </script>
+</body>
+</html>
