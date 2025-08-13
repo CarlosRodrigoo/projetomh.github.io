@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banco de Questões da Area de TI</title>
+
+  <style>
+    * {
+	  box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
+	}
+	body {
+	  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	  background-color: #f0f2f5;
+	  color: #333;
+	}
+	header {
+	  background: linear-gradient(to right, #2c3e50, #3498db);
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	nav {
+	  background-color: #1f2d3d;
+	  display: flex;
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  padding: 10px 0;
+	}
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+	  text-align: justify;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+	.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+	}
+	#introducao, #banco-de-dados, #desenvolvimento, #logica{
+	padding:5px 20px 5px 20px;
+	margin:20px;
+	justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+	border-left: 5px solid #1a3e72;
+	}
+
+   .question, .questao { 
+	margin-bottom: 10px; 
+	padding: 15px; 
+	border: 1px solid #ccc; 
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+	border-left: 5px solid #1a3e72;
+    transition: all 0.3s ease;
+    }
+	.correct { 
+	background-color: #d4edda; 
+	}
+	.wrong { 
+	background-color: #f8d7da; }
+	.gabarito { 
+		display: none; 
+		margin-top: 20px; 
+		padding: 10px; 
+		background-color: #f1f1f1; 
+		border-radius: 5px; 
+	}
+	.submit-btn { 
+		margin-top: 20px; 
+		padding: 10px 15px; 
+		font-size: 16px; 
+		cursor: pointer; }
+  .toolbar { 
+	margin-top: 10px; }
+    
+    .question:hover {
+        transform: scale(1.01);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-color: #aaa;
+    }
+    
+    label {
+        display: block;
+        margin: 5px 0;
+        cursor: pointer;
+    }
+    #gabarito {
+        display: none;
+        margin-top: 20px;
+        background: #e9f7ef;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #b2dfdb;
+    }
+    #gabarito h2 {
+        margin-top: 0;
+        color: #155724;
+    }
+    button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+	<h1 style="color: #3498db; text-align:center;">Bem-vindo ao Banco de Questões sobre TI</h1>
+    
+    <section id="introducao">
+    <h2>Introdução</h2>
+    <p>No cenário atual, a <strong>Tecnologia da Informação (TI)</strong> é indispensável para praticamente todas as áreas da sociedade. Empresas, instituições de ensino, órgãos públicos e até atividades do cotidiano dependem de sistemas informatizados para funcionar de forma ágil, segura e eficiente. Nesse contexto, dominar os fundamentos de <strong>desenvolvimento de sistemas</strong>, <strong>lógica de programação</strong> e <strong>banco de dados</strong> se torna essencial para qualquer profissional que deseja se destacar no mercado de trabalho.</p>
+
+    <p>Este site foi criado como um <strong>banco de questões interativo</strong>, reunindo perguntas objetivas e contextualizadas sobre temas-chave da área de TI. Ele é voltado tanto para estudantes que buscam reforçar seu aprendizado, quanto para profissionais que desejam revisar conceitos para provas, entrevistas técnicas ou certificações.</p>
+
+    <p>O objetivo principal é oferecer um ambiente prático e dinâmico, onde seja possível testar conhecimentos, compreender melhor conceitos técnicos e, ao mesmo tempo, desenvolver habilidades de raciocínio lógico e solução de problemas.</p>
+</section>
+
+<section id="desenvolvimento">
+    <h2>Desenvolvimento de Sistemas</h2>
+    <p>O <strong>desenvolvimento de sistemas</strong> é a área responsável por criar, implementar e manter softwares, desde aplicações simples até plataformas corporativas complexas. Envolve várias etapas, como levantamento de requisitos, análise, modelagem, programação, testes e implantação.</p>
+    <p>Nesse processo, é fundamental compreender conceitos como <em>arquitetura de software</em> (como o sistema é estruturado), <em>ciclo de desenvolvimento</em> (as fases do projeto), <em>metodologias ágeis</em> (formas de gerenciar e acelerar o desenvolvimento, como Scrum e Kanban) e <em>UML</em> (linguagem padrão para modelar sistemas). As questões dessa área ajudam o estudante a entender não apenas a programação, mas também todo o planejamento e organização necessários para entregar um software funcional e de qualidade.</p>
+</section>
+
+<section id="logica">
+    <h2>Lógica de Programação e PEOO</h2>
+    <p>A <strong>lógica de programação</strong> é o alicerce de todo desenvolvimento de software. Ela consiste na habilidade de criar um conjunto organizado de instruções para resolver problemas de forma eficiente. Estudar lógica permite compreender estruturas de decisão (condicionais), repetições (laços), variáveis, funções e o fluxo de execução de um programa.</p>
+    <p>A <strong>Programação Estruturada</strong> organiza o código em blocos lógicos e sequenciais, enquanto a <strong>Programação Orientada a Objetos (POO)</strong> introduz conceitos mais avançados, como <em>classes</em>, <em>objetos</em>, <em>herança</em>, <em>encapsulamento</em> e <em>polimorfismo</em>. Esses paradigmas facilitam a manutenção, a reutilização e a escalabilidade dos sistemas. As questões dessa parte ajudarão a diferenciar os dois estilos de programação e entender quando aplicar cada um.</p>
+</section>
+
+<section id="banco-de-dados">
+    <h2>Banco de Dados</h2>
+    <p>Um <strong>banco de dados</strong> é essencial para armazenar, organizar e manipular informações de forma estruturada e segura. Ele está presente em praticamente todos os sistemas, desde sites e aplicativos até sistemas corporativos de grande porte.</p>
+    <p>O estudo dessa área envolve compreender conceitos como <em>modelagem de dados</em> (representação das informações e seus relacionamentos), <em>normalização</em> (organização dos dados para evitar redundâncias), <em>integridade</em> (garantia de consistência das informações) e a linguagem <em>SQL</em> (Structured Query Language), utilizada para criar, consultar e modificar dados. Ao dominar esses conhecimentos, o profissional se torna capaz de desenvolver sistemas robustos, seguros e capazes de lidar com grandes volumes de informação.</p>
+</section>
+
+<div class="container">
+		<form id="quizForm">
+		  <!-- =========================
+			   1) DESENVOLVIMENTO DE SISTEMAS (12 questões: 1–12)
+		  ========================= -->
+		  <h2>Questões de Desenvolvimento de Sistemas</h2>
+
+		  <div class="question" data-gabarito="B">
+			<p><strong>1.</strong> Em um sistema de agendamento de consultas médicas, qual a principal função de um <em>servidor de aplicação</em>?</p>
+			<label><input type="radio" name="q1" value="A"> a) Armazenar arquivos de imagem e PDF</label><br>
+			<label><input type="radio" name="q1" value="B"> b) Executar a lógica do sistema e intermediar o acesso a dados</label><br>
+			<label><input type="radio" name="q1" value="C"> c) Servir somente páginas HTML estáticas</label><br>
+			<label><input type="radio" name="q1" value="D"> d) Gerenciar cabos e switches da rede</label>
+		  </div>
+
+		  <div class="question" data-gabarito="A">
+			<p><strong>2.</strong> Em uma arquitetura multicamadas para um portal de universidade, qual camada interage diretamente com o(a) estudante?</p>
+			<label><input type="radio" name="q2" value="A"> a) Camada de apresentação</label><br>
+			<label><input type="radio" name="q2" value="B"> b) Camada de negócio</label><br>
+			<label><input type="radio" name="q2" value="C"> c) Camada de dados</label><br>
+			<label><input type="radio" name="q2" value="D"> d) Camada física</label>
+		  </div>
+		<div class="question" data-gabarito="D">
+			<p><strong>3.</strong> Uma startup de delivery decidiu usar microsserviços. Qual motivação faz mais sentido para essa escolha?</p>
+			<label><input type="radio" name="q3" value="A"> a) Evitar qualquer tipo de comunicação entre times</label><br>
+			<label><input type="radio" name="q3" value="B"> b) Garantir que tudo rode no mesmo processo</label><br>
+			<label><input type="radio" name="q3" value="C"> c) Impedir que a aplicação escale de forma independente</label><br>
+			<label><input type="radio" name="q3" value="D"> d) Permitir escalar partes específicas (pagamento, rotas) de forma independente</label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>4.</strong> No desenvolvimento de um app de biblioteca, em qual fase do ciclo de vida acontece a implementação do código?</p>
+			<label><input type="radio" name="q4" value="A"> a) Análise de requisitos</label><br>
+			<label><input type="radio" name="q4" value="B"> b) Projeto de software</label><br>
+			<label><input type="radio" name="q4" value="C"> c) Codificação</label><br>
+			<label><input type="radio" name="q4" value="D"> d) Validação com usuários</label>
+		  </div>
+		  <div class="question" data-gabarito="D">
+			<p><strong>5.</strong> Após a implantação de um ERP escolar, a equipe corrige bugs e aplica melhorias. Essa atividade caracteriza a fase de:</p>
+			<label><input type="radio" name="q5" value="A"> a) Levantamento</label><br>
+			<label><input type="radio" name="q5" value="B"> b) Design de interface</label><br>
+			<label><input type="radio" name="q5" value="C"> c) Teste unitário</label><br>
+			<label><input type="radio" name="q5" value="D"> d) Manutenção</label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>6.</strong> Em uma esteira de CI/CD, qual é o objetivo do <em>deploy automatizado</em>?</p>
+			<label><input type="radio" name="q6" value="A"> a) Entregar novas versões de forma consistente e com menos erros humanos</label><br>
+			<label><input type="radio" name="q6" value="B"> b) Aumentar o tempo de compilação</label><br>
+			<label><input type="radio" name="q6" value="C"> c) Substituir os testes de integração</label><br>
+			<label><input type="radio" name="q6" value="D"> d) Impedir que haja <em>rollback</em> quando necessário</label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>7.</strong> No Scrum de um projeto de e-commerce, qual artefato mantém a lista priorizada de funcionalidades do produto?</p>
+			<label><input type="radio" name="q7" value="A"> a) Sprint Backlog</label><br>
+			<label><input type="radio" name="q7" value="B"> b) Product Backlog</label><br>
+			<label><input type="radio" name="q7" value="C"> c) Definition of Done</label><br>
+			<label><input type="radio" name="q7" value="D"> d) Burndown Chart</label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>8.</strong> A reunião diária de 15 minutos para alinhamento das tarefas em andamento é chamada de:</p>
+			<label><input type="radio" name="q8" value="A"> a) Sprint Review</label><br>
+			<label><input type="radio" name="q8" value="B"> b) Daily Scrum</label><br>
+			<label><input type="radio" name="q8" value="C"> c) Retrospectiva</label><br>
+			<label><input type="radio" name="q8" value="D"> d) Sprint Planning</label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>9.</strong> Em um fluxo Kanban para suporte técnico, limitar o WIP (Work In Progress) significa:</p>
+			<label><input type="radio" name="q9" value="A"> a) Definir um número fixo de membros no time</label><br>
+			<label><input type="radio" name="q9" value="B"> b) Proibir tarefas urgentes</label><br>
+			<label><input type="radio" name="q9" value="C"> c) Restringir a quantidade de itens simultâneos em cada coluna</label><br>
+			<label><input type="radio" name="q9" value="D"> d) Eliminar reuniões de acompanhamento</label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>10.</strong> Em um sistema de matrícula, qual diagrama UML mostra a interação entre objetos ao longo do tempo (mensagens trocadas)?</p>
+			<label><input type="radio" name="q10" value="A"> a) Diagrama de sequência</label><br>
+			<label><input type="radio" name="q10" value="B"> b) Diagrama de Classe</label><br>
+			<label><input type="radio" name="q10" value="C"> c) Diagrama de casos de uso</label><br>
+			<label><input type="radio" name="q10" value="D"> d) Diagrama de estados</label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>11.</strong> Em um diagrama de casos de uso para um app de biblioteca, os <em>atores</em> representam:</p>
+			<label><input type="radio" name="q11" value="A"> a) Somente usuários internos do sistema</label><br>
+			<label><input type="radio" name="q11" value="B"> b) Somente entidades do banco de dados</label><br>
+			<label><input type="radio" name="q11" value="C"> c) Entidades externas (pessoas ou sistemas) que interagem com o sistema</label><br>
+			<label><input type="radio" name="q11" value="D"> d) Fluxos internos de controle do código</label>
+		  </div>
+		  <div class="question" data-gabarito="D">
+			<p><strong>12.</strong> O diagrama de classes de um sistema acadêmico representa principalmente:</p>
+			<label><input type="radio" name="q12" value="A"> a) O fluxo de dados em tempo real</label><br>
+			<label><input type="radio" name="q12" value="B"> b) O desenho da rede física</label><br>
+			<label><input type="radio" name="q12" value="C"> c) As telas e layouts de UI</label><br>
+			<label><input type="radio" name="q12" value="D"> d) As classes, seus atributos, métodos e relacionamentos</label>
+		  </div>
+
+		  <!-- =========================
+			   2) LÓGICA DE PROGRAMAÇÃO (12 questões: 13–24)
+		  ========================= -->
+		  <h2>Questões de Lógica de Programação</h2>
+
+		  <div class="question" data-gabarito="A">
+			<p><strong>13.</strong> Em um caixa eletrônico, um algoritmo pode ser definido como:</p>
+			<label><input type="radio" name="q13" value="A"> a) Sequência finita de passos para resolver um problema</label><br>
+			<label><input type="radio" name="q13" value="B"> b) Um software específico de banco</label><br>
+			<label><input type="radio" name="q13" value="C"> c) Um tipo especial de variável</label><br>
+			<label><input type="radio" name="q13" value="D"> d) Um arquivo de configuração</label>
+		  </div>
+		  <div class="question" data-gabarito="D">
+			<p><strong>14.</strong> Para treinar a equipe, o analista desenhou um fluxograma do processo de emissão de boletos. Um fluxograma é:</p>
+			<label><input type="radio" name="q14" value="A"> a) Um diagrama UML de classes</label><br>
+			<label><input type="radio" name="q14" value="B"> b) Um código-fonte em C</label><br>
+			<label><input type="radio" name="q14" value="C"> c) Uma consulta SQL</label><br>
+			<label><input type="radio" name="q14" value="D"> d) Representação gráfica de um algoritmo</label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>15.</strong> Num sistema de caixa, ao sacar R$ 200, o “processamento” corresponde a:</p>
+			<label><input type="radio" name="q15" value="A"> a) Ler o cartão e a senha (entrada)</label><br>
+			<label><input type="radio" name="q15" value="B"> b) Exibir o saldo na tela (saída)</label><br>
+			<label><input type="radio" name="q15" value="C"> c) Calcular a combinação de cédulas para o valor solicitado</label><br>
+			<label><input type="radio" name="q15" value="D"> d) Imprimir o comprovante (saída)</label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>16.</strong> Em um app de saúde, se <code>temperatura &gt; 38</code> deve exibir “Febre”. Que estrutura usar?</p>
+			<label><input type="radio" name="q16" value="A"> a) Sequência</label><br>
+			<label><input type="radio" name="q16" value="B"> b) If</label><br>
+			<label><input type="radio" name="q16" value="C"> c) Laço</label><br>
+			<label><input type="radio" name="q16" value="D"> d) Função</label>
+		  </div>
+		  <div class="question" data-gabarito="D">
+			<p><strong>17.</strong> Um menu de atendimento (1–Financeiro, 2–Suporte, 3–Comercial) é melhor implementado com:</p>
+			<label><input type="radio" name="q17" value="A"> a) if</code> encadeado para cada caractere</label><br>
+			<label><input type="radio" name="q17" value="B"> b) Laço <code>while</code></label><br>
+			<label><input type="radio" name="q17" value="C"> c) Função recursiva</label><br>
+			<label><input type="radio" name="q17" value="D"> d) <code>switch/case</code> (ou equivalente)</label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>18.</strong> No trecho <code>if (idade &gt;= 18 &amp;&amp; temDocumento)</code>, o operador <code>&amp;&amp;</code> significa:</p>
+			<label><input type="radio" name="q18" value="A"> a) Ambas as condições devem ser verdadeiras</label><br>
+			<label><input type="radio" name="q18" value="B"> b) Um software específico de banco</label><br>
+			<label><input type="radio" name="q18" value="C"> c) Um tipo especial de variável</label><br>
+			<label><input type="radio" name="q18" value="D"> d) Um arquivo de configuração</label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>19.</strong> Para imprimir recibos numerados de 1 a 10, a melhor estrutura é:</p>
+			<label><input type="radio" name="q19" value="A"> a) <code>while</code></label><br>
+			<label><input type="radio" name="q19" value="B"> b) <code>For</code></label><br>
+			<label><input type="radio" name="q19" value="C"> c) <code>do...while</code></label><br>
+			<label><input type="radio" name="q19" value="D"> d) <code>foreach</code></label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>20.</strong>Para validar login e garantir que o bloco execute pelo menos uma vez, usa-se:</p>
+			<label><input type="radio" name="q20" value="A"> a) <code>while</code></label><br>
+			<label><input type="radio" name="q20" value="B"> b) <code>For</code></label><br>
+			<label><input type="radio" name="q20" value="C"> c) <code>do...while</code></label><br>
+			<label><input type="radio" name="q20" value="D"> d) <code>repeat...until</code></label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>21.</strong> Em um chat, o sistema lê mensagens até o usuário digitar “sair”. Qual laço usar?</p>
+			<label><input type="radio" name="q21" value="A"> a) <code>while</code></label><br>
+			<label><input type="radio" name="q21" value="B"> b) <code>for</code></label><br>
+			<label><input type="radio" name="q21" value="C"> c) <code>loop</code> infinito</label><br>
+			<label><input type="radio" name="q21" value="D"> d) <code>switch</code></label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>22.</strong> Uma função que apenas exibe um relatório e não retorna valor costuma ser declarada como:</p>
+			<label><input type="radio" name="q22" value="A"> a) <code>null</code></label><br>
+			<label><input type="radio" name="q22" value="B"> b) <code>void</code></label><br>
+			<label><input type="radio" name="q22" value="C"> c) <code>returnless</code></label><br>
+			<label><input type="radio" name="q22" value="D"> d) <code>empty</code></label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>23.</strong> Em “passagem por valor” de parâmetros, significa que:</p>
+			<label><input type="radio" name="q23" value="A"> a) Uma cópia do valor é passada à função</label><br>
+			<label><input type="radio" name="q23" value="B"> b) O endereço de memória é passado</label><br>
+			<label><input type="radio" name="q23" value="C"> c) Uma referência é compartilhada</label><br>
+			<label><input type="radio" name="q23" value="D"> d) O valor original sempre é alterado</label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>24.</strong> Variáveis declaradas dentro de uma função só existem naquela função. Isso é exemplo de:</p>
+			<label><input type="radio" name="q24" value="A"> a) Escopo global</label><br>
+			<label><input type="radio" name="q24" value="B"> b) Polimorfismo</label><br>
+			<label><input type="radio" name="q24" value="C"> c) Escopo local</label><br>
+			<label><input type="radio" name="q24" value="D"> d) Herança</label>
+		  </div>
+
+		 
+		  <!-- =========================
+			   3) PROGRAMAÇÃO ORIENTADA E ESTRUTURADA A OBJETOS (12 questões: 25–36)
+		  ========================= -->
+		  <h2>Questões de Programação Orientada e Estruturada a Objetos</h2>
+
+		  <!-- Exemplo questão -->
+		  <div class="question" data-gabarito="C">
+			<p><strong>25.</strong> Em um sistema de locadora, uma classe “Filme” costuma ser composta por:</p>
+			<label><input type="radio" name="q25" value="A"> a) Variáveis e listas</label><br>
+			<label><input type="radio" name="q25" value="B"> b) Funções e condições</label><br>
+			<label><input type="radio" name="q25" value="C"> c) Atributos e métodos</label><br>
+			<label><input type="radio" name="q25" value="D"> d) Somente dados públicos</label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>26.</strong> Criar um novo objeto “Cliente” a partir da classe “Cliente” é um exemplo de:</p>
+			<label><input type="radio" name="q26" value="A"> a) Instanciação</label><br>
+			<label><input type="radio" name="q26" value="B"> b) Encapsulamento</label><br>
+			<label><input type="radio" name="q26" value="C"> c) Agregação</label><br>
+			<label><input type="radio" name="q26" value="D"> d) Abstração</label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>27.</strong> Uma “função” definida dentro de uma classe é chamada de:</p>
+			<label><input type="radio" name="q27" value="A"> a) Procedimento</label><br>
+			<label><input type="radio" name="q27" value="B"> b) Método</label><br>
+			<label><input type="radio" name="q27" value="C"> c) Bloco</label><br>
+			<label><input type="radio" name="q27" value="D"> d) Função global</label>
+		  </div>
+		  <div class="question" data-gabarito="D">
+			<p><strong>28.</strong> O construtor da classe “Pedido” é usado principalmente para:</p>
+			<label><input type="radio" name="q28" value="A"> a) Compilar o programa</label><br>
+			<label><input type="radio" name="q28" value="B"> b) Herdar outra classe</label><br>
+			<label><input type="radio" name="q28" value="C"> c) Sobrescrever métodos</label><br>
+			<label><input type="radio" name="q28" value="D"> d) Inicializar o estado do objeto</label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>29.</strong> Em um sistema de frota, “Carro” <em>é um</em> “Veículo”. Esse relacionamento representa:</p>
+			<label><input type="radio" name="q29" value="A"> a) Herança</label><br>
+			<label><input type="radio" name="q29" value="B"> b) Composição</label><br>
+			<label><input type="radio" name="q29" value="C"> c) Agregação</label><br>
+			<label><input type="radio" name="q29" value="D"> d) Associação</label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>30.</strong> Na hierarquia “Pessoa &rarr; Aluno”, é correto dizer que:</p>
+			<label><input type="radio" name="q30" value="A"> a) A superclasse herda a subclasse</label><br>
+			<label><input type="radio" name="q30" value="B"> b) A subclasse herda e pode estender o comportamento da superclasse</label><br>
+			<label><input type="radio" name="q30" value="C"> c) Não há compartilhamento de atributos</label><br>
+			<label><input type="radio" name="q30" value="D"> d) O polimorfismo fica desativado</label>
+		  </div>
+		  <div class="question" data-gabarito="B">
+			<p><strong>31.</strong> Em muitas linguagens, a palavra-chave para acessar membros da superclasse dentro da subclasse é:</p>
+			<label><input type="radio" name="q31" value="A"> a) <code>this</code></label><br>
+			<label><input type="radio" name="q31" value="B"> b) <code>super</code></label><br>
+			<label><input type="radio" name="q31" value="C"> c) <code>extends</code></label><br>
+			<label><input type="radio" name="q31" value="D"> d) <code>parenthesis</code></label>
+		  </div>
+		  <div class="question" data-gabarito="D">
+			<p><strong>32.</strong> Quando uma subclasse redefine um método da superclasse, com a mesma assinatura e outro comportamento, temos:</p>
+			<label><input type="radio" name="q32" value="A"> a) Overload (sobrecarga)</label><br>
+			<label><input type="radio" name="q32" value="B"> b) Encapsulamento</label><br>
+			<label><input type="radio" name="q32" value="C"> c) Associação</label><br>
+			<label><input type="radio" name="q32" value="D"> d) Override (sobrescrita)</label>
+		  </div>
+		  <div class="question" data-gabarito="A">
+			<p><strong>33.</strong> Uma vantagem da POO em sistemas grandes é:</p>
+			<label><input type="radio" name="q33" value="A"> a) Maior reutilização e menor acoplamento via abstrações</label><br>
+			<label><input type="radio" name="q33" value="B"> b) Uso obrigatório de variáveis globais</label><br>
+			<label><input type="radio" name="q33" value="C"> c) Proibição de testes automatizados</label><br>
+			<label><input type="radio" name="q33" value="D"> d) Eliminação de funções</label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>34.</strong> Para um script pequeno e linear (ex.: renomear arquivos), uma abordagem adequada costuma ser:</p>
+			<label><input type="radio" name="q34" value="A"> a) Somente herança múltipla</label><br>
+			<label><input type="radio" name="q34" value="B"> b) Arquitetura em microsserviços</label><br>
+			<label><input type="radio" name="q34" value="C"> c) Programação estruturada (funções e sequência)</label><br>
+			<label><input type="radio" name="q34" value="D"> d) Usar obrigatoriamente três camadas</label>
+		  </div>
+		  <div class="question" data-gabarito="C">
+			<p><strong>35.</strong> Em POO, “encapsulamento” significa:</p>
+			<label><input type="radio" name="q35" value="A"> a) Compartilhar todos os atributos como públicos</label><br>
+			<label><input type="radio" name="q35" value="B"> b) Separar o código por arquivos</label><br>
+			<label><input type="radio" name="q35" value="C"> c) Ocultar detalhes internos e expor apenas uma interface</label><br>
+			<label><input type="radio" name="q35" value="D"> d) Usar apenas variáveis imutáveis</label>
+		  </div>
+		  <div class="question" data-gabarito="D">
+			<p><strong>36.</strong> A programação estruturada caracteriza-se por:</p>
+			<label><input type="radio" name="q36" value="A"> a) Uso obrigatório de classes</label><br>
+			<label><input type="radio" name="q36" value="B"> b) Herança e polimorfismo</label><br>
+			<label><input type="radio" name="q36" value="C"> c) Somente recursão</label><br>
+			<label><input type="radio" name="q36" value="D"> d) Ênfase em sequência, decisões e laços sem classes</label>
+		  </div>
+
+		  <!-- =========================
+			   4) BANCO DE DADOS (14 questões: 37–50)
+		  ========================= -->
+		  <h2>Questões de Banco de Dados</h2>
+
+		  <div class="question" data-gabarito="C">
+			<p><strong>37.</strong> Em um sistema de biblioteca, um SGBD é:</p>
+			<label><input type="radio" name="q37" value="A"> a) Um hardware dedicado</label><br>
+			<label><input type="radio" name="q37" value="B"> b) Uma planilha de cálculos</label><br>
+			<label><input type="radio" name="q37" value="C"> c) Um Sistema Gerenciador de Banco de Dados</label><br>
+			<label><input type="radio" name="q37" value="D"> d) Um protocolo de rede</label>
+		  </div>
+		<div class="question" data-gabarito="A">
+		  <p><strong>38.</strong> No modelo relacional, os dados são organizados principalmente em:</p>
+		  <label><input type="radio" name="q38" value="A"> a) Tabelas</label><br>
+		  <label><input type="radio" name="q38" value="B"> b) Gráficos</label><br>
+		  <label><input type="radio" name="q38" value="C"> c) Pastas</label><br>
+		  <label><input type="radio" name="q38" value="D"> d) Filas</label>
+		</div>
+
+		<!-- Modelagem -->
+		<div class="question" data-gabarito="C">
+		  <p><strong>39.</strong> O MER (Modelo Entidade-Relacionamento) é:</p>
+		  <label><input type="radio" name="q39" value="A"> a) Uma linguagem de programação</label><br>
+		  <label><input type="radio" name="q39" value="B"> b) Um tipo de índice</label><br>
+		  <label><input type="radio" name="q39" value="C"> c) Um diagrama que representa entidades e seus relacionamentos</label><br>
+		  <label><input type="radio" name="q39" value="D"> d) Um backup incremental</label>
+		</div>
+
+		<div class="question" data-gabarito="D">
+		  <p><strong>40.</strong> Em um relacionamento 1:N (Departamento–Funcionário), a chave estrangeira fica:</p>
+		  <label><input type="radio" name="q40" value="A"> a) No lado 1 (Departamento)</label><br>
+		  <label><input type="radio" name="q40" value="B"> b) Em ambas as tabelas</label><br>
+		  <label><input type="radio" name="q40" value="C"> c) Em nenhuma tabela</label><br>
+		  <label><input type="radio" name="q40" value="D"> d) No lado N (Funcionário)</label>
+		</div>
+
+		<div class="question" data-gabarito="D">
+		  <p><strong>41.</strong> Um relacionamento N:N entre “Aluno” e “Disciplina” no MER gera, no modelo relacional:</p>
+		  <label><input type="radio" name="q41" value="A"> a) Uma coluna booleana</label><br>
+		  <label><input type="radio" name="q41" value="B"> b) Uma view materializada</label><br>
+		  <label><input type="radio" name="q41" value="C"> c) Uma chave primária composta nas duas tabelas originais</label><br>
+		  <label><input type="radio" name="q41" value="D"> d) Uma tabela associativa (de junção)</label>
+		</div>
+
+		<!-- SQL -->
+		<div class="question" data-gabarito="A">
+		  <p><strong>42.</strong> Para listar todos os registros de uma tabela “produtos”, o comando correto é:</p>
+		  <label><input type="radio" name="q42" value="A"> a) <code>SELECT * FROM produtos;</code></label><br>
+		  <label><input type="radio" name="q42" value="B"> b) <code>SHOW ALL produtos;</code></label><br>
+		  <label><input type="radio" name="q42" value="C"> c) <code>GET produtos;</code></label><br>
+		  <label><input type="radio" name="q42" value="D"> d) <code>DISPLAY produtos;</code></label>
+		</div>
+
+		<div class="question" data-gabarito="B">
+		  <p><strong>43.</strong> Para inserir um novo registro na tabela “clientes”, usa-se:</p>
+		  <label><input type="radio" name="q43" value="A"> a) <code>ADD INTO clientes ...</code></label><br>
+		  <label><input type="radio" name="q43" value="B"> b) <code>INSERT INTO clientes ...</code></label><br>
+		  <label><input type="radio" name="q43" value="C"> c) <code>PUT clientes ...</code></label><br>
+		  <label><input type="radio" name="q43" value="D"> d) <code>MERGE clientes ...</code></label>
+		</div>
+
+		<div class="question" data-gabarito="C">
+		  <p><strong>44.</strong> Ao alterar o e-mail de um cliente específico, qual cláusula é essencial para não atualizar toda a tabela?</p>
+		  <label><input type="radio" name="q44" value="A"> a) <code>ORDER BY</code></label><br>
+		  <label><input type="radio" name="q44" value="B"> b) <code>GROUP BY</code></label><br>
+		  <label><input type="radio" name="q44" value="C"> c) <code>WHERE</code></label><br>
+		  <label><input type="radio" name="q44" value="D"> d) <code>JOIN</code></label>
+		</div>
+
+		<div class="question" data-gabarito="D">
+		  <p><strong>45.</strong> Para combinar linhas de “pedidos” com “clientes” baseando-se no <code>cliente_id</code>, usa-se uma operação:</p>
+		  <label><input type="radio" name="q45" value="A"> a) <code>UNION</code></label><br>
+		  <label><input type="radio" name="q45" value="B"> b) <code>INTERSECT</code></label><br>
+		  <label><input type="radio" name="q45" value="C"> c) <code>EXCEPT</code></label><br>
+		  <label><input type="radio" name="q45" value="D"> d) <code>JOIN</code></label>
+		</div>
+
+		<!-- Chaves -->
+		<div class="question" data-gabarito="C">
+		  <p><strong>46.</strong> A chave primária (PK) em “clientes” deve:</p>
+		  <label><input type="radio" name="q46" value="A"> a) Aceitar valores nulos</label><br>
+		  <label><input type="radio" name="q46" value="B"> b) Permitir duplicidade</label><br>
+		  <label><input type="radio" name="q46" value="C"> c) Identificar unicamente cada registro (não nula e única)</label><br>
+		  <label><input type="radio" name="q46" value="D"> d) Ser sempre um texto</label>
+		</div>
+
+		<div class="question" data-gabarito="C">
+		  <p><strong>47.</strong> A chave estrangeira (FK) em “pedidos”:</p>
+		  <label><input type="radio" name="q47" value="A"> a) Cria automaticamente índices em todas as colunas</label><br>
+		  <label><input type="radio" name="q47" value="B"> b) Substitui a chave primária</label><br>
+		  <label><input type="radio" name="q47" value="C"> c) Referencia a PK de outra tabela para manter relacionamento</label><br>
+		  <label><input type="radio" name="q47" value="D"> d) Impede completamente exclusões</label>
+		</div>
+
+		<!-- Normalização -->
+		<div class="question" data-gabarito="A">
+		  <p><strong>48.</strong> A 1ª Forma Normal (1FN) exige que:</p>
+		  <label><input type="radio" name="q48" value="A"> a) Os atributos tenham valores atômicos (sem repetições/colunas multivaloradas)</label><br>
+		  <label><input type="radio" name="q48" value="B"> b) Não existam chaves estrangeiras</label><br>
+		  <label><input type="radio" name="q48" value="C"> c) Todas as colunas sejam numéricas</label><br>
+		  <label><input type="radio" name="q48" value="D"> d) Cada tabela tenha ao menos três chaves</label>
+		</div>
+
+		<div class="question" data-gabarito="B">
+		  <p><strong>49.</strong> A 3ª Forma Normal (3FN) pode ser entendida como:</p>
+		  <label><input type="radio" name="q49" value="A"> a) Permitir dependência parcial de chave</label><br>
+		  <label><input type="radio" name="q49" value="B"> b) Eliminar dependências transitivas em atributos não chave</label><br>
+		  <label><input type="radio" name="q49" value="C"> c) Impedir o uso de chaves compostas</label><br>
+		  <label><input type="radio" name="q49" value="D"> d) Eliminar todas as FKs</label>
+		</div>
+
+		<!-- Integridade -->
+		<div class="question" data-gabarito="D">
+		  <p><strong>50.</strong> A integridade referencial garante:</p>
+		  <label><input type="radio" name="q50" value="A"> a) Somente a performance das consultas</label><br>
+		  <label><input type="radio" name="q50" value="B"> b) Que não existam dois índices na mesma tabela</label><br>
+		  <label><input type="radio" name="q50" value="C"> c) Que os dados nunca precisem de backup</label><br>
+		  <label><input type="radio" name="q50" value="D"> d) Consistência entre chaves primárias e estrangeiras (relacionamentos válidos)</label>
+		</div><br/>
+
+
+		  <button type="submit" class="submit-btn">Enviar Respostas</button>
+		</form>
+	</div><br/><hr>
+	<section class="container">
+		<div class="toolbar">
+		  <button id="toggle">Mostrar gabarito</button>
+		</div><br/><br/>
+	</section>
+		<div class="gabarito" id="gabarito">
+		  <br/>
+		  <h3>Gabarito</h3>
+		  <p>
+			1. B | 2. A | 3. D | 4. C | 5. D | 6. A | 7. B | 8. B | 9. C | 10. A | 
+			11. C | 12. D | 13. A | 14. D | 15. C | 16. B | 17. D | 18. A | 19. B | 20. C | 
+			21. A | 22. B | 23. A | 24. C | 25. C | 26. A | 27. B | 28. D | 29. A | 30. B | 
+			31. B | 32. D | 33. A | 34. C | 35. C | 36. D | 37. C | 38. A | 39. C | 40. D | 
+			41. D | 42. A | 43. B | 44. C | 45. D | 46. C | 47. C | 48. A | 49. B | 50. D
+		  </p>
+		</div>
+	
+  <footer>
+    <p>&copy; 2025 - 2º Tec B - Grupo Banco de Questões</p>
+  </footer> 
+<script>
+const form = document.getElementById('quizForm');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const questions = document.querySelectorAll('.question');
+  questions.forEach(q => {
+    const gabarito = q.dataset.gabarito;
+    const selecionado = q.querySelector('input[type="radio"]:checked');
+    q.classList.remove('correct','wrong');
+    if(selecionado){
+      if(selecionado.value === gabarito){
+        q.classList.add('correct');
+      } else {
+        q.classList.add('wrong');
+      }
+    } else {
+      q.classList.add('wrong');
+    }
+  });
+});
+
+document.getElementById('toggle').addEventListener('click', function() {
+  const gabaritoDiv = document.getElementById('gabarito');
+  gabaritoDiv.style.display = gabaritoDiv.style.display === 'none' ? 'block' : 'none';
+});
+</script>
+
+</body>
+</html>

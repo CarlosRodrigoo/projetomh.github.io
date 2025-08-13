@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desenvolvimento de Sistema</title>
+
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  background-color: #1f2d3d;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#menu li {
+  position: relative;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #34495e;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+#menu a:hover {
+  background-color: hsl(207, 71%, 51%);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2c3e50;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  background-color: #f0f2f5;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #1abc9c;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+main {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #1f2d3d;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+   header {
+text-align:left;
+padding: auto;
+   }
+/* CSS FLEXBOX 1 */
+.flex {
+  display: wrap;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+.flex > div {
+  flex: 1 1 200px;
+}
+.flex > p {
+  flex: 1 1 200px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.box-card {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    cursor: pointer;
+}
+.box-card img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.box-card:hover {
+    animation: rotate3d 8s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    backface-visibility: visible;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #ffffff, #fdfdfd);
+    border: 2px solid #646cff;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.face::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    top: -100%;
+    left: -100%;
+    transition: all 0.5s ease;
+    transform: translateZ(20px);
+}
+
+.face::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.face:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.face:hover::after {
+    opacity: 1;
+}
+
+.front {
+    transform: translateZ(100px);
+    border-color: #646cff;
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+    border-color: #00bcd4;
+}
+
+.right {
+    transform: translateX(100px) rotateY(90deg);
+    border-color: #4caf50;
+}
+
+.left {
+    transform: translateX(-100px) rotateY(-90deg);
+    border-color: #ff4081;
+}
+
+.top {
+    transform: translateY(-100px) rotateX(90deg);
+    border-color: #ffc107;
+}
+
+.bottom {
+    transform: translateY(100px) rotateX(-90deg);
+    border-color: #9c27b0;
+}
+
+@keyframes rotate3d {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+    25% {
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: rotateX(270deg) rotateY(270deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .box-card {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .front { transform: translateZ(75px); }
+    .back { transform: translateZ(-75px) rotateY(180deg); }
+    .right { transform: translateX(75px) rotateY(90deg); }
+    .left { transform: translateX(-75px) rotateY(-90deg); }
+    .top { transform: translateY(-75px) rotateX(90deg); }
+    .bottom { transform: translateY(75px) rotateX(-90deg); }
+}
+
+    .container-imagem {
+      text-align: center;
+    }
+.destaque {
+    background-color: yellowgreen; /* Exemplo de destaque */
+    font-weight: bold; /* Exemplo de destaque */
+  }
+    
+  </style>
+
+  
+</head>
+<body>
+  <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+<br>
+
+
+<main>
+    <section class="flex">
+       <h1 onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> As etapas de um desenvolvimento de sistemas </h1>
+       <br>
+       <br>
+<div class="container">
+  <div class="box-card">
+    <div class="face front"><img src="https://t5y4w6q9.delivery.rocketcdn.me/wp-content/uploads/2023/09/ciclo-de-vida-do-desenvolvimento-de-software-sldc-300x252.png"></div>
+    <div class="face back"><img src="https://t5y4w6q9.delivery.rocketcdn.me/wp-content/uploads/2023/09/ciclo-de-vida-do-desenvolvimento-de-software-sldc-300x252.png"></div>
+    <div class="face right"><img src="https://t5y4w6q9.delivery.rocketcdn.me/wp-content/uploads/2023/09/ciclo-de-vida-do-desenvolvimento-de-software-sldc-300x252.png"></div>
+    <div class="face left"><img src="https://t5y4w6q9.delivery.rocketcdn.me/wp-content/uploads/2023/09/ciclo-de-vida-do-desenvolvimento-de-software-sldc-300x252.png"></div>
+    <div class="face top"><img src="https://t5y4w6q9.delivery.rocketcdn.me/wp-content/uploads/2023/09/ciclo-de-vida-do-desenvolvimento-de-software-sldc-300x252.png"></div>
+    <div class="face bottom"><img src="https://t5y4w6q9.delivery.rocketcdn.me/wp-content/uploads/2023/09/ciclo-de-vida-do-desenvolvimento-de-software-sldc-300x252.png"></div>
+  </div>
+</div>
+<br>
+
+    <h3 onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> O que é o desenvolvimento de sistemas? </h3>
+    <p> O desenvolvimento de sistemas é um processo que envolve a criação de softwares para atender às necessidades das empresas. Onde esse processo começa com a análise das necessidades dos usuários e da empresa, e a partir daí, os desenvolvedores trabalham na criação do design do sistema, codificação, testes e documentação. A meta final é implantar o software e garantir sua operação contínua.
+
+      <p> Os desenvolvedores usam ferramentas e tecnologias específicas para criar o software, como linguagens de programação e frameworks, e podem trabalhar dentro de uma equipe ou terceirizar o desenvolvimento para uma empresa especializada.
+    </p>
+  <section class="flex">
+<h1 onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> Como funciona o Desenvolvimento de Sistemas? </h1>
+<p> O desenvolvimento de sistemas é uma área que se dedica à criação de soluções informatizadas para atender às necessidades específicas de usuários ou organizações.</p>
+<p>  O desenvolvimento de sistemas geralmente segue um processo padrão, que envolve várias etapas, desde a concepção do sistema até sua implantação e manutenção.</p> 
+  <p> Um exemplo prático que ajuda a esclarecer o que é desenvolvimento de sistemas é a criação de uma ferramenta online que permite que os usuários possam  fazer reservas digitais para hotéis, voos ou eventos.</p>
+
+<p> Aqui, trata-se de um sistema que integra informações em tempo real e facilita o processo de reserva por meio da tecnologia. </p>
+  </section>
+<section class="flex">
+<h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> Quais são as fases do SDLC? </h2>
+<p> O Ciclo de Desenvolvimento de Software é um modelo composto por sete fases: Análise de Requisitos, Estudo de Viabilidade, Design, Codificação, Teste, Instalação, Deploy e Manutenção.
+
+Cada fase sua serve para orientar e proporcionar flexibilidade para adaptar e executar o projeto de acordo com o objetivo do cliente.
+
+Por isso, as fases mostram tarefas-chave, no cronograma e na entrega, para garantir a qualidade do software e que o prazo seja cumprido. Desta forma, o SDLC permite gerenciar todas as atividades de forma ágil e precisa.</p>
+</section>
+<section class="flex">
+<h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> Fase 1: Analise de requisitos </h2>
+<p> Essa primeira fase do SDLC é uma visão geral e das diretrizes do projeto/software.
+  Todas as partes interessadas incluindo assim clientes, vendedores, especialistas do setor, desenvolvedores de software, analistas de negócios e gerentes de projetos. Devem juntar informações necessarias para o que será construido. Lembre-se de ser preciso quando descrever os requisitos, pois quanto mais detalhado for, melhor. </p>
+</section>
+<section class="flex">
+  <h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> Fase 2: Estudo de viabilidade de produto </h2>
+  <p> Um estudo de viabilidade é uma imagem clara do projeto. Esta etapa do SDLC é uma das fases mais importantes e às vezes pode ser executada simultaneamente à primeira etapa. È importante que todas as partes interessadas tenham consciencia e saibam o contexto econômico, técnico, jurídico e de programação deste projeto, porque isso pode alterar o escopo ou demonstrar se o software vai funcionar ou não. </p>
+</section>
+<section class="flex">
+<h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)">Fase 3: Design </h2>
+<p> O design da inicio com a análise dos requisitos do sistema, onde os desenvolvedores conseguem entender as necessidades dos usuários e da organização. Com base nisso, os desenvolvedores criam um design que inclui a arquitetura do sistema, a interface do usuário, os componentes e as funcionalidades. 
+
+O planejamento da configuração ajuda os desenvolvedores a entenderem como o sistema deve ser construído e programado, como ele deve funcionar e como os diferentes componentes do sistema devem interagir. Isso permite que os desenvolvedores possam criar um plano para o desenvolvimento do software e trabalharem de uma forma mais eficiente e pratico. </p>
+
+<h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)">Fase 4: Codificação </h2>
+<p> A fase de codificação no ciclo de vida de desenvolvimento de software (SDLC) é quando engenheiros e desenvolvedores começam a trabalhar e converter o design do software em código tangível.
+
+Esta fase de desenvolvimento visa desenvolver um software funcional, eficiente e fácil de usar. Os desenvolvedores utilizam uma linguagem de programação apropriada, Java ou outra, para escrever o código, guiados pelo SDD e pelas diretrizes de codificação.
+
+Outro aspecto fundamental desta fase são as revisões regulares de código. Os membros da equipe examinam cuidadosamente o trabalho uns dos outros para identificar quaisquer bugs ou inconsistências. Essas avaliações meticulosas mantêm altos padrões de código, garantindo a confiabilidade e a robustez do software. Esta fase também inclui testes internos preliminares para confirmar a funcionalidade básica do software.
+
+Ao final desta fase, um software funcional ganha vida. Ele incorpora os esforços de planejamento, análise e design das etapas anteriores. Embora possa não ser perfeito, representa um passo significativo em direção a uma solução de software valiosa.<p>
+
+  <h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)">Fase 5: Modelagem UML</h2>
+<p>Os diagramas UML ilustram os aspectos qualificáveis de um sistema que podem ser descritos visualmente, como relacionamentos, comportamento, estrutura e funcionalidade. Por exemplo, um diagrama de classe descreve a estrutura do sistema ou os detalhes de uma implementação, enquanto um diagrama de seqüência mostra a interação entre objetos com o tempo.
+
+Em um diagrama UML, os elementos de diagrama representam visualmente os classificadores em um sistema ou aplicativo. Esses classificadores são representações em diagrama de um elemento de origem. Diagramas UML fornecem visualizações de elementos de origem; no entanto, elementos de diagramas não têm valor semântico.
+
+Os diagramas UML podem ajudar arquitetos e desenvolvedores de sistema a entender, colaborar e desenvolver um aplicativo. Arquitetos e gerenciadores de alto nível podem usar diagramas UML para visualizar todo o sistema ou projeto e separar aplicativos em componentes menores para desenvolvimento.<p>
+
+<h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)">Fase 6: implementação e implantação</h2>
+<p>O que é implantação?
+A implantação é a etapa inicial de um projeto, na qual o sistema ou software é instalado e configurado em um ambiente específico. Essa etapa envolve a preparação do ambiente de produção, a instalação dos componentes necessários e a configuração de parâmetros e opções de acordo com as necessidades do projeto. A implantação também pode incluir a migração de dados de sistemas antigos para o novo sistema, garantindo a continuidade das operações.
+
+O que é implementação?
+Por outro lado, a implementação é a etapa em que o sistema ou software é efetivamente utilizado pelos usuários finais. Nessa fase, ocorre a personalização do sistema de acordo com as necessidades específicas de cada usuário ou departamento. A implementação envolve a configuração de funcionalidades, a definição de permissões de acesso, a criação de fluxos de trabalho e a integração com outros sistemas, entre outras atividades. É nessa etapa que o sistema começa a ser utilizado para realizar as tarefas e processos para os quais foi projetado.</p>
+  <h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)"> Fase 7: Manutenção </h2>
+<p> No Ciclo de Vida de Desenvolvimento de Software, a fase de manutenção é caracterizada por assistência e melhoria constantes, o que ira garantir um melhor funcionamento e longevidade possíveis do software e assegura que ele atenda às expectativas do cliente.
+
+O foco principal é a adaptação às necessidades em constante mudança do software. Essa adaptação envolve responder ao feedback do usuário, resolver problemas inesperados e atualizar o software com base na evolução das necessidades dos usuários. É um processo contínuo de aprimoramento e adaptação, semelhante ao de um jardineiro cuidando do seu jardim.
+
+As tarefas de manutenção envolvem atualizações frequentes de software, implementação de patches e correção de bugs. O suporte ao usuário também é um componente crucial, oferecendo ajuda e orientação aos usuários que enfrentam dificuldades com o software.
+
+A fase de manutenção também considera estratégias de longo prazo, como, por exemplo, atualizar ou substituir o software. Essa decisão depende do ciclo de vida do software e do progresso tecnológico. Assim como um proprietário que pensa em reformar ou vender sua casa, o software pode precisar de uma reformulação completa ou ser descontinuado para permanecer relevante e valioso. </p>
+<br>
+    <div class="container-imagem">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWnbSyfbiPBFmf4RBpte31oex2zxKq1Rv9nLkY02dLDlrT3JAGq2LUWObn7h4zjMElaQ8&usqp=CAU" alt="Desenvolvimento de sistemas">
+    </div>
+<br>
+<h2 onmouseover="destacar(this)" onmouseout="removerDestaque(this)">Como os profissionais atuam nas fases do SDLC</h2>
+
+
+  <p><strong>Profissionais envolvidos:</strong> Analistas de Negócios, Analistas de Sistemas</p>
+  <p>Esses profissionais entrevistam os usuários e partes interessadas, documentam o que o sistema precisa fazer e transformam essas necessidades em requisitos claros.</p>
+  <p><em>Exemplo:</em> Um analista define que o sistema deve permitir reservas online com login seguro.</p>
+
+  <p><strong>Profissionais envolvidos:</strong> Gerentes de Projeto, Analistas Financeiros, Arquitetos de Software</p>
+  <p>Essa equipe avalia se o projeto é viável financeiramente, tecnicamente e legalmente, criando relatórios e projeções.</p>
+  <p><em>Exemplo:</em> Um gerente decide se vale mais a pena desenvolver ou comprar um sistema pronto.</p>
+
+ 
+  <p><strong>Profissionais envolvidos:</strong> Arquitetos de Software, Designers UX/UI, Desenvolvedores Sênior</p>
+  <p>Eles criam a estrutura técnica, os fluxos e a experiência visual do sistema, preparando tudo para os programadores.</p>
+  <p><em>Exemplo:</em> Um designer cria a interface do app enquanto o arquiteto planeja a estrutura do banco de dados.</p>
+
+
+  <p><strong>Profissionais envolvidos:</strong> Desenvolvedores Front-End, Back-End, Full Stack</p>
+  <p>Esses profissionais implementam o sistema com base nos requisitos e design, conectando todas as partes funcionais.</p>
+  <p><em>Exemplo:</em> O desenvolvedor back-end implementa o sistema de login e o front-end cuida da tela de entrada.</p>
+
+  
+  <p><strong>Profissionais envolvidos:</strong> Testadores (QA), Engenheiros de Teste, DevOps</p>
+  <p>Testam o sistema em busca de erros, garantindo que tudo funcione corretamente antes da entrega.</p>
+  <p><em>Exemplo:</em> Um QA testa se o botão “Reservar” envia corretamente os dados ao servidor.</p>
+
+  
+  <p><strong>Profissionais envolvidos:</strong> Engenheiros DevOps, Administradores de Sistemas</p>
+  <p>Responsáveis por colocar o sistema no ar, configurando servidores e publicando a aplicação.</p>
+  <p><em>Exemplo:</em> Um engenheiro faz o deploy do sistema em um servidor na nuvem.</p>
+
+  <p><strong>Profissionais envolvidos:</strong> Equipe de Suporte Técnico, Desenvolvedores de Manutenção</p>
+  <p>Corrigem erros, atualizam funcionalidades e dão suporte aos usuários após o sistema estar funcionando.</p>
+  <p><em>Exemplo:</em> Um dev ajusta uma função de pagamento após um chamado de erro vindo dos usuários.</p>
+</section>
+</main>
+
+<section class="flex">
+  
+</section>
+  <footer>
+    <p>&copy; 2025 - 2º Tec B - Grupo de Desenvolvimento de Sistema</p>
+  </footer>
+
+
+
+
+
+  <script>
+     function destacar(elemento) {
+  elemento.classList.add("destaque");
+}
+
+function removerDestaque(elemento) {
+  elemento.classList.remove("destaque");}
+  </script>
+</body>
+</html>

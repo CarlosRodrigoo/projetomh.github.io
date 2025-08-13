@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudar uma Linguagem de Programação</title>
+
+  <style>
+     * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+ header h1 {
+      color: white;
+    }
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    section.container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #004080;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    blockquote {
+      background: #e0f0ff;
+      padding: 10px;
+      border-left: 5px solid #004080;
+      font-style: italic;
+      margin: 20px 0;
+    }
+    figure {
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    .relogio-container {
+  text-align: center;
+}
+
+#data {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#hora {
+  font-size: 3rem;
+  font-weight: bold;
+}
+  </style>
+
+  
+</head>
+<body>
+  <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+<main>
+  <section class="container">
+    <h1>Como Estudar uma Linguaguem de Programação</h1>
+    <p>Programar é uma forma de resolver problemas, automatizar tarefas e criar soluções inovadoras. Ao estudar diferentes linguagens, desenvolvemos também nossa lógica e criatividade.</p>
+
+    <h2>Linguagens com as quais você pode se identificar:</h2>
+    <ul>
+      <li><strong>Python:</strong> ideal para automação, IA e ciência de dados. Muito utilizada por iniciantes.</li>
+      <li><strong>JavaScript:</strong> essencial para desenvolvimento web e interfaces interativas.</li>
+      <li><strong>Java:</strong> usada em grandes sistemas, apps Android e back-ends robustos.</li>
+      <li><strong>C#:</strong> muito usada em jogos (Unity) e sistemas corporativos.</li>
+      <li><strong>C++:</strong> linguagem poderosa para softwares que exigem desempenho, como jogos e sistemas operacionais.</li>
+      <li><strong>PHP:</strong> linguagem backend usada em muitos sites e sistemas web como WordPress.</li>
+      <li><strong>Ruby:</strong> simples e elegante, ótima para desenvolvimento web com Ruby on Rails.</li>
+    </ul>
+
+    <h3>Como estudar cada linguagem?</h3>
+    <ul>
+      <li><strong>Python:</strong> Use <a href="https://www.w3schools.com/python/" target="_blank">W3Schools</a>, crie scripts de automação e pratique no Replit.</li>
+      <li><strong>JavaScript:</strong> Explore o site <a href="https://javascript.info/" target="_blank">JavaScript.info</a> e faça mini-projetos como contadores e animações.</li>
+      <li><strong>Java:</strong> Use o <a href="https://www.codecademy.com/learn/learn-java" target="_blank">Codecademy</a> e editores como BlueJ ou Eclipse.</li>
+      <li><strong>C#:</strong> Experimente projetos no <a href="https://dotnet.microsoft.com/" target="_blank">.NET</a> e crie jogos simples com Unity.</li>
+      <li><strong>C++:</strong> Resolva problemas de lógica em sites como <a href="https://www.beecrowd.com.br" target="_blank">Beecrowd</a>.</li>
+      <li><strong>PHP:</strong> Treine usando o XAMPP e edite páginas em HTML com PHP embutido.</li>
+      <li><strong>Ruby:</strong> Use <a href="https://www.ruby-lang.org/pt/" target="_blank">ruby-lang.org</a> e explore o framework Rails.</li>
+    </ul>
+
+    <h2>Minha Jornada na Programação</h2>
+    <p>Sou curioso e gosto de criar soluções. A cada novo desafio, desenvolvo raciocínio lógico, paciência e autonomia. Programar é uma forma de me expressar no mundo digital.</p>
+
+    <figure>
+      <img src="https://horadecodar.com.br/wp-content/uploads/2022/04/programacao_00003.jpg" alt="Imagem representando a programação">
+      <figcaption>“Programar é como montar um quebra-cabeça invisível.”</figcaption>
+    </figure>
+
+    <h2>Rotina de Estudos Recomendada</h2>
+    <ol>
+      <li><strong>Segunda:</strong> Estudo teórico de uma linguagem</li>
+      <li><strong>Terça:</strong> Prática com exercícios simples</li>
+      <li><strong>Quarta:</strong> Mini-projetos ou desafios online</li>
+      <li><strong>Quinta:</strong> Revisão + anotações</li>
+      <li><strong>Sexta:</strong> Atividades em grupo ou dúvidas</li>
+      <li><strong>Sábado:</strong> Vídeos, cursos e novos experimentos</li>
+      <li><strong>Domingo:</strong> Pausa ou leitura leve sobre tecnologia</li>
+    </ol>
+
+    <blockquote>
+      “Aprender a programar é como aprender um novo idioma: quanto mais você pratica, mais fluente se torna.” — Desconhecido
+    </blockquote>
+
+    <h2>Links Úteis</h2>
+    <ul>
+      <li><a href="https://horadecodar.com.br/o-que-e-programacao/" target="_blank">O que é programação?</a></li>
+      <li><a href="https://www.w3schools.com/" target="_blank">W3Schools – Tutoriais de linguagens</a></li>
+      <li><a href="https://programae.org.br/" target="_blank">Programaê!</a></li>
+      <li><a href="https://replit.com/" target="_blank">Replit – Programar direto do navegador</a></li>
+    </ul>
+    <div class="relogio-container">
+    <h1 id="data"></h1>
+    <h2 id="hora"></h2>
+  </div>
+  <h3 style="color: #FFFFFF;
+           font-size: 32px; 
+           font-weight: bold; 
+           text-shadow: 2px 2px 5px #000000; 
+           background-color: #4169E1;
+           padding: 10px; 
+           border-radius: 8px; 
+           text-align: center;">
+  ESTÁ ESPERANDO O QUÊ PARA COMEÇAR A PROGRAMAR?
+</h3>
+
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 - 2º Tec B - Grupo "Jornada de Estudo de um Programador"</p>
+</footer>
+
+
+  <script>
+    function atualizarRelogio() {
+  const agora = new Date();
+
+  const opcoesData = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dataFormatada = agora.toLocaleDateString('pt-BR', opcoesData);
+
+  const hora = agora.toLocaleTimeString('pt-BR');
+
+  document.getElementById('data').textContent = dataFormatada;
+  document.getElementById('hora').textContent = hora;
+}
+
+// Atualiza a cada segundo
+setInterval(atualizarRelogio, 1000);
+
+// Chama a função ao carregar a página
+atualizarRelogio();
+
+  </script>
+</body>
+</html>

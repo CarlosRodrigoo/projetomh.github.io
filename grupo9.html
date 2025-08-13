@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quem sou eu na programação?</title>
+
+  <style>
+     * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    footer p{
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    a {
+      color: #2980b9;
+    }
+    .fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+  }
+  .fade.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  </style>
+
+  
+</head>
+<body>
+  
+<header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+     <section id="intro" class="intro fade">
+    <h2>O que é ser um programador?</h2>
+    <p>
+      Ser programador é usar lógica e criatividade para transformar ideias em soluções digitais.
+      Vai além de escrever linhas de código: envolve entender problemas, planejar, testar, corrigir
+      e comunicar. Programadores constroem sites, sistemas e aplicativos que as pessoas usam no dia a dia.
+      Cada área (front-end, back-end, full stack, desktop, etc.) tem responsabilidades diferentes —
+      e seu conteúdo abaixo apresenta essas áreas na prática.
+    </p>
+  </section>
+
+    <section>
+<div class="container">
+      <h1>Quem posso ser na programação?</h1>
+    <p>A programação é um universo repleto de possibilidades e caminhos a serem explorados. Mais do que escrever linhas de código, programar significa resolver problemas, criar soluções inovadoras e transformar ideias em realidade por meio da tecnologia.</p>
+    <p>Ao entrar nesse mundo, você pode seguir diferentes carreiras, de acordo com seus interesses e habilidades. Por exemplo, é possível atuar como <strong>desenvolvedor front-end</strong>, criando interfaces visuais e experiências interativas para sites e aplicativos; como <strong>desenvolvedor back-end</strong>, responsável pela lógica, segurança e funcionamento interno dos sistemas; ou ainda como <strong>desenvolvedor full stack</strong>, que domina tanto o front-end quanto o back-end.</p>
+    <p>Além disso, existem áreas mais específicas, como a <strong>programação de jogos</strong>, que envolve criar mundos virtuais e mecânicas de gameplay; a <strong>inteligência artificial</strong>, onde se desenvolvem sistemas capazes de aprender e tomar decisões; e a <strong>ciência de dados</strong>, que utiliza programação para analisar informações e apoiar decisões estratégicas.</p>
+    <img src="https://cdn.pixabay.com/photo/2016/09/23/08/28/code-1689066_1280.jpg"/>
+
+    <p>Independentemente da área escolhida, a programação oferece a oportunidade de aprender continuamente, trabalhar em projetos desafiadores e, muitas vezes, colaborar com pessoas de diferentes partes do mundo. O importante é identificar qual papel mais combina com você e investir em habilidades técnicas e criativas para se destacar.</p>
+      <p>
+ Na programação web, você é um desenvolvedor web ou programador web,alguém que cria e mantém
+ sites e aplicativos web, utilizando tecnologias
+como HTML, CSS, JavaScript e linguagens de back-end. Essa função envolve
+desde a criação de interfaces visuais atraentes até a implementação da lógica de funcionamento por trás de cada página e recurso online. </p>
+    <h2>Desenvolvedor Frontend</h2>
+    <img src="https://www.locaweb.com.br/blog/wp-content/uploads/2024/04/dom-javascript-1.jpg" alt="Exemplo DOM em JavaScript">
+      <p>
+O Desenvolvedor Frontend é o profissional responsável por transformar ideias e conceitos em interfaces visuais interativas e funcionais para o usuário. Ele trabalha diretamente com as tecnologias da web, como <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, criando páginas e aplicações que sejam atraentes, intuitivas e responsivas, adaptando-se a diferentes dispositivos e tamanhos de tela.  
+Além do design visual, o desenvolvedor frontend garante que a experiência do usuário seja fluida, aplicando boas práticas de acessibilidade, otimização de desempenho e usabilidade. Pode atuar em colaboração com designers, desenvolvedores backend e outros membros da equipe, sendo peça fundamental para transformar o projeto em um produto final que o usuário possa ver e utilizar.  
+Exemplos de áreas de atuação incluem a criação de sites, sistemas web, lojas virtuais, aplicações móveis híbridas e painéis administrativos.
+</p>
+<p>
+<p>Resumindo trabalha com a parte visual dos sites e aplicativos.
+Tecnologias: HTML, CSS, JavaScript, React, Vue, Angular.</p>
+
+<h2>Desenvolvedor Backend</h2>
+<img src="https://t4.ftcdn.net/jpg/05/46/10/15/360_F_546101577_7eZax3OCPZ1x8aST0oVsnDfX2OzjBsGr.jpg"/>
+<p>
+O Desenvolvedor Backend é o profissional responsável por criar e gerenciar a parte “invisível” de sistemas e aplicações, ou seja, tudo o que acontece por trás da interface que o usuário vê. Ele trabalha com linguagens e tecnologias como <strong>Java</strong>, <strong>Python</strong>, <strong>PHP</strong>, <strong>Node.js</strong> e bancos de dados como <strong>MySQL</strong> e <strong>MongoDB</strong>, garantindo que os dados sejam armazenados, processados e entregues de forma segura e eficiente.  
+Sua função envolve implementar regras de negócio, criar APIs, integrar serviços, gerenciar servidores e assegurar o desempenho, a escalabilidade e a segurança das aplicações. O backend é essencial para que o frontend possa funcionar corretamente, e esse profissional atua em colaboração com desenvolvedores frontend, designers e analistas para entregar soluções completas.  
+Exemplos de áreas de atuação incluem o desenvolvimento de sistemas de gestão, plataformas de e-commerce, aplicativos móveis, serviços em nuvem e APIs para integração de sistemas.
+</p>
+<p>Resumindo Cuida da lógica por trás dos sistemas, banco de dados, APIs.
+Tecnologias: Node.js, Python, PHP, Java, Ruby, SQL.</p>
+
+<h2>Denvolvedor Full Stack</h2>
+<img src="https://mundophp.com.br/wp-content/uploads/2024/04/fullstack.jpg"/>
+<p>
+O Desenvolvedor Full Stack é o profissional versátil capaz de atuar tanto no <strong>frontend</strong> quanto no <strong>backend</strong> de um sistema, dominando as tecnologias necessárias para desenvolver uma aplicação completa do início ao fim.  
+No frontend, ele cria interfaces visuais e interativas utilizando linguagens como <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, garantindo uma boa experiência ao usuário. Já no backend, ele desenvolve a lógica do sistema, integra bancos de dados, cria APIs e gerencia servidores, usando linguagens como <strong>Java</strong>, <strong>Python</strong>, <strong>PHP</strong> ou <strong>Node.js</strong>.  
+O Full Stack é frequentemente responsável por integrar todas as partes do sistema, desde a apresentação visual até o processamento e armazenamento de dados. Sua ampla visão permite trabalhar em projetos completos, como sites, sistemas corporativos, aplicativos web e plataformas online. Essa habilidade torna o Full Stack muito valorizado no mercado, especialmente em equipes pequenas ou startups.
+</p>
+<p>Resumindo Faz tanto frontend quanto backend.
+Muito valorizado pela versatilidade.</p>
+
+<h2>Desenvolvedor Desktop</h2>
+<img src="https://skillstecnologicas.com/wp-content/uploads/2024/06/Linguagens-de-Programacao-Comuns-no-Desenvolvimento-Desktop-1024x538.jpg"/>
+<p>
+O Desenvolvedor Desktop é o profissional responsável por criar aplicações que rodam diretamente no computador, seja em sistemas operacionais como <strong>Windows</strong>, <strong>Linux</strong> ou <strong>MacOS</strong>. Diferente do desenvolvimento web ou mobile, o foco aqui é construir programas que oferecem funcionalidades específicas, como editores de texto, softwares de gestão, jogos, ou ferramentas profissionais.  
+Para isso, ele utiliza linguagens e tecnologias como <strong>C#</strong>, <strong>C++</strong>, <strong>Java</strong>, <strong>Python</strong> e frameworks como <strong>Electron</strong>, que permitem criar aplicações robustas, rápidas e integradas ao sistema operacional.  
+Além da programação, o desenvolvedor desktop precisa considerar aspectos como performance, segurança, interface com o usuário e compatibilidade com diferentes versões do sistema. Essa área é essencial para setores que demandam softwares locais estáveis e eficientes.
+</p>
+<p>Resumindo cria programas para computador (Windows, Linux, Mac).
+Tecnologias: C#, C++, Java, Python, Electron.</p>
+<li>
+          <a href="https://pt.wikipedia.org/wiki/Computador" target="_blank"
+            ></a>          
+          
+ <div> Front-end é a parte de um site, aplicativo ou sistema que o usuário vê e com a qual interage diretamente. Também é chamado de camada de apresentação. Ele é responsável pela interface visual, como botões, menus, imagens, textos e toda a estrutura que aparece na tela.</div>
+<h2>Exemplos de elementos do front-end:</h2>
+<img src="https://uds.com.br/blog/wp-content/uploads/2024/09/Imagem-1-Comparativo-ilustrativo-das-diferencas-entre-front-end-e-back-end-1.jpg"/>
+<ul>
+<li>•	Layout do site (cores, tamanhos, posicionamento)</li>
+<li>•	Botões clicáveis</li>
+<li>•	Formulários para preencher</li>
+<li>•	Animações e transições</li>
+<li>•	Responsividade (ajuste da tela em celular, tablet ou computador)
+Tecnologias principais usadas no front-end:</li>
+<li>•	HTML (estrutura da página)</li>
+<li>•	CSS (estilo visual: cores, fontes, tamanhos)</li>
+<li>•	JavaScript (funcionalidades interativas)
+Profissionais de front-end</li>
+<p>Um desenvolvedor front-end é quem cria e mantém essas interfaces. Ele precisa entender tanto de design quanto de programação, garantindo que o site seja bonito, funcional e fácil de usar.</p>
+
+<p>Back-end é a parte de um site, aplicativo ou sistema que não é visível para o usuário, mas que faz tudo funcionar por trás da interface. Ele é responsável pelo processamento de dados, regras de negócio, acesso a bancos de dados e integração com outras tecnologias.</p>
+
+O que o back-end faz:
+<li>•	Recebe os dados enviados pelo front-end (ex: formulário preenchido)</li>
+<li>•	Processa e armazena informações em bancos de dados</li>
+<li>•	Aplica regras e lógicas (ex: verificar login e senha)</li>
+<li>•	Se comunica com APIs (serviços externos, como sistemas de pagamento</li>
+<li>•	Garante a segurança e a performance do sistema
+Tecnologias comuns no back-end:</li>
+<li>•	Linguagens: JavaScript (Node.js), Python, PHP, Java, Ruby, entre outras</li>
+<li>•	Banco de dados: MySQL, PostgreSQL, MongoDB, SQLite</li>
+<li>•	Frameworks: Express.js, Django, Laravel, Spring Boot</li>
+
+<p>O que faz um profissional de back-end:</p>
+O desenvolvedor back-end cria e mantém toda essa estrutura “invisível” que sustenta o funcionamento do sistema. Ele:
+<li>•	Programa o sistema para funcionar corretamente</li>
+<li>•	Constrói e organiza bancos de dados</li>
+<li>•	Garante que o sistema responda rapidamente</li>
+<li>•	Protege dados dos usuários (segurança)</li>
+<li>•	Trabalha junto com o front-end para que tudo esteja conectado</li>
+
+<p>Full Stack é o termo usado para descrever um profissional ou desenvolvedor que trabalha tanto com o front-end quanto com o back-end de um site, sistema ou aplicativo. Ou seja, ele entende todas as camadas do desenvolvimento: desde o que o usuário vê até o que acontece nos bastidores.</p>
+
+ <p>O que significa ser um desenvolvedor Full Stack?</p>
+É saber:
+<li>•	Criar a interface visual (como um desenvolvedor front-end)</li>
+<li>•	Programar a lógica do sistema e gerenciar bancos de dados (como um desenvolvedor back-end)</li>
+
+ O que um profissional Full Stack faz?
+Um desenvolvedor full stack pode:
+<li>•	Criar sites e sistemas completos do zero</li>
+<li>•	Desenvolver páginas web interativas e responsivas</li>
+<li>•	Criar e conectar o sistema ao banco de dados</li>
+<li>•	Configurar servidores e APIs
+<li>•	Testar e corrigir erros em todas as partes do projeto</li>
+<li>•	Trabalhar em equipe com outros devs, ou sozinho em projetos menores</li>
+
+ <li>Habilidades comuns de um Full Stack:</li>
+<Front-end:>
+•	HTML, CSS, JavaScript
+•	Frameworks: React, Vue.js, Angular
+Back-end:
+•	Linguagens como Node.js, Python, PHP, Java
+•	Frameworks: Express.js, Django, Laravel
+•	Banco de dados: MySQL, PostgreSQL, MongoDB
+
+<h1 class="titulo1">Perfil profissional e autoconhecimento</h1>
+<img src="https://blog.grougp.com.br/hubfs/Imported_Blog_Media/autoconhecimento-profissional-importancia.jpg"/>
+<p>
+O autoconhecimento profissional é a capacidade de compreender suas próprias habilidades, pontos fortes, limitações e motivações no contexto do trabalho. Ele envolve identificar o que te move profissionalmente, como você trabalha melhor e quais são seus objetivos de carreira. Essa compreensão permite tomar decisões mais assertivas sobre seu desenvolvimento, oportunidades de crescimento e alinhamento com o ambiente de trabalho ideal.
+Como o programador trabalhador. </p>
+
+<h2 class="titulo1">Características pessoais se destacam</h2>
+<p>
+1.	Escreve código
+Cria linhas de código para fazer o sistema funcionar — isso inclui lógica, interface, banco de dados etc.</p>
+<p>
+2.	Corrige erros (debugging)
+Identifica e resolve problemas no código que impedem o funcionamento correto do sistema.</p>
+<p>
+3.	Trabalha em equipe
+Normalmente colabora com designers, analistas e outros desenvolvedores.</p>
+<p>
+4.	Usa ferramentas e plataformas
+Utiliza editores de código (como VS Code), sistemas de controle de versão (como Git/GitHub) e plataformas de testes e deploy (como Netlify, Firebase, AWS etc.).</p>
+<p>
+5.	Segue metodologias ágeis
+Participa de reuniões diárias (como o Scrum) e cumpre prazos em sprints de desenvolvimento.
+Para descobrir com qual área uma pessoa mais se identifica — se ela tem um perfil mais criativo, lógico, prático, emocional, comunicativo, entre outros — você pode utilizar perguntas reflexivas que exploram como ela age, pensa e se sente em diferentes situações. Abaixo, listo sugestões de perguntas organizadas por perfis, mas que podem ser feitas de forma aberta para que a própria pessoa vá se percebendo:</p>
+<hr>
+<h2 class="titulo1">Perguntas gerais para autodescoberta:</h2>
+<p>
+1.	Em que tipo de atividade você se sente mais motivado(a) e engajado(a)?</p>
+<p>
+2.	Quando você tem um problema, o que costuma fazer primeiro?</p>
+<p>
+3.	Que tipo de tarefa faz o tempo passar rápido sem você perceber?</p>
+<p>
+4.	Em grupo, qual papel você costuma assumir naturalmente?</p>
+<p>
+5.Quando está sozinho(a), que tipo de atividade você escolhe fazer?</p>
+<p>
+6.	Como você se sente ao seguir regras ou padrões fixos?</p>
+<p>
+7.	Prefere criar algo novo ou melhorar algo que já existe?</p>
+<p>
+8.	Você se sente mais confortável com certezas ou com possibilidades?</p>
+<p>
+9.	O que te dá mais prazer: imaginar, planejar ou realizar?</p>
+<p>
+10.	O que mais te frustra: falta de liberdade, desorganização ou rotina?</p>
+    </div>
+    </section>
+  </main>
+
+  <footer >
+    <p>&copy; 2025 - 2º Tec B - Grupo Quem sou eu na Programação!</p>
+  </footer>
+
+
+
+
+
+
+
+
+
+  <script>
+    
+  // Efeito de fade-in com JavaScript ao rolar a página
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.fade').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add('show');
+      }
+    });
+  });
+
+  </script>
+</body>
+</html>

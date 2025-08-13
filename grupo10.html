@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>História das Linguagens</title>
+
+  <style>
+        * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+main section h1 {
+    transition: color 1.5s ease;
+  }
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    footer p{
+      text-align: center;
+    }
+  .logo {
+  color: #f0f5f8;
+  font-size: 24px;
+  font-weight: bold;
+}
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 300px;
+      height: 200px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    a {
+      color: #2980b9;
+    }
+
+
+section {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.linha-do-tempo {
+    position: relative;
+    padding-left: 50px; 
+}
+
+
+.evento {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    margin-bottom: 20px; 
+    padding: 15px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.evento:before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 15px; 
+    width: 16px; 
+    height: 16px; 
+    background-color: #4CAF50;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+   line-height: 1.4; 
+    font-size: 0.95em;
+}
+.linha-do-tempo:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #4CAF50;
+    z-index: -1;
+}
+
+.evento {
+    margin-left: 30px; 
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+
+    .linha-do-tempo {
+        padding-left: 30px;
+    }
+
+    .evento {
+        padding: 12px; 
+    }
+
+    h3 {
+        font-size: 1em; 
+    }
+
+    p {
+        font-size: 0.9em; 
+    }
+}
+
+
+  </style>
+
+  
+</head>
+<body>
+  <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+  <section>
+    <h1>Um pouco sobre a Historia e Evolução das linguagens de programação</h1>
+    <p>
+      A história das linguagens de programação é uma evolução contínua desde os primeiros conceitos de algoritmo até as complexas linguagens modernas, refletindo avanços tecnológicos e necessidades de desenvolvimento.
+    </p>
+
+    <h2 style="color:#2c3e50; font-size: 18px;">Tudo sobre:</h2>
+    <img
+      src="https://devsfullstack.com/wp-content/uploads/2024/06/A-evolucao-das-linguagens-de-programacao-3-1-1024x576.png"
+      alt="Componentes do computador"
+    />
+    <p>
+      A história das linguagens de programação é uma trajetória que vai desde os primórdios da computação, quando as instruções eram escritas diretamente em códigos binários, até as ferramentas modernas e sofisticadas que temos hoje.</p>
+      <p> Inicialmente, as linguagens de máquina eram extremamente complexas e de difícil compreensão, limitando o acesso apenas a especialistas. Com o avanço tecnológico, surgiram as linguagens de alto nível, como Fortran, COBOL e ALGOL, que tornaram a programação mais acessível e eficiente ao utilizar uma sintaxe mais próxima da linguagem humana.</p> <p>Ao longo do tempo, novos paradigmas foram introduzidos para ampliar a forma como pensamos e estruturamos os programas, destacando-se a orientação a objetos (exemplificada por linguagens como Simula, Smalltalk e C++) e a programação funcional (como Lisp e Haskell). Mais recentemente, a evolução se manifestou na criação de plataformas low-code, que facilitam o desenvolvimento por meio de interfaces visuais, e na integração com inteligência artificial, que está transformando profundamente o desenvolvimento de software, preparando o terreno para as próximas gerações de inovação tecnológica.
+    </p>
+    <a href="https://www.atra.com.br/2023/04/05/historia-das-linguagens-de-programacao/">Saiba Mais!</a>
+
+    <center><h2>Primeiros Passos em uma linha do tempo da programação:</h2></center>
+
+    <section>
+      <div class="linha-do-tempo">
+        <!-- Anos 1950 -->
+        <div class="evento">
+          <h3>1957 - Fortran</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg" alt="Fortran" />
+          <p>
+            Fortran (1957) — Fortran, abreviação de Formula Translation, foi uma das primeiras linguagens de programação de alto nível criadas na história da computação. Desenvolvida pela IBM, seu principal objetivo era facilitar cálculos científicos e aplicações de engenharia que envolviam grande volume de processamento numérico. Antes do Fortran, os programadores tinham que trabalhar diretamente com código de máquina, o que era complexo e sujeito a muitos erros. Com sua sintaxe mais próxima da matemática e da linguagem humana, o Fortran tornou possível escrever programas de forma mais rápida, eficiente e menos propensa a erros, revolucionando a forma como cálculos complexos eram feitos em computadores. Até hoje, o Fortran ainda é usado em áreas que exigem alto desempenho computacional, como simulações científicas e meteorologia.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1959 - COBOL</h3>
+          <img src="https://abes.com.br/wp-content/uploads/2024/06/cobol-interon.jpg" alt="Cobol" />
+          <p>
+            COBOL, que significa Common Business-Oriented Language, foi criada para atender às necessidades do setor empresarial, facilitando o desenvolvimento de sistemas voltados para processos administrativos, financeiros e comerciais. Desenvolvida por uma equipe liderada por Grace Hopper, a linguagem foi projetada para ser fácil de ler e entender, com uma sintaxe próxima ao inglês, o que possibilitou que profissionais não técnicos também pudessem compreender o código. Isso ajudou a popularizar o COBOL em bancos, seguradoras, governos e grandes corporações, onde sistemas robustos de processamento de dados eram essenciais. Apesar do surgimento de linguagens mais modernas, o COBOL ainda é amplamente utilizado em sistemas legados que demandam alta confiabilidade e processamento de grandes volumes de dados transacionais.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1958 - LISP</h3>
+          <img
+            src="https://as2.ftcdn.net/jpg/15/61/25/65/1000_F_1561256562_gQCYfHXnNncMs240j1px1W4H4e048gu3.webp"
+            alt="Lisp"
+          />
+          <p>
+            LISP, que significa LISt Processing, foi criada por John McCarthy e é uma das linguagens de programação mais antigas ainda em uso. Projetada inicialmente para pesquisa em inteligência artificial, LISP introduziu conceitos inovadores como a programação funcional, o uso extensivo de listas como estrutura de dados fundamental e a manipulação de código como dados (homoiconicidade).</p><p> Sua sintaxe baseada em parênteses e expressões prefixadas pode parecer incomum, mas ela proporciona grande flexibilidade para criar programas que manipulam símbolos e realizam cálculos simbólicos. LISP influenciou muitas outras linguagens e continua relevante em áreas que exigem processamento avançado de dados, como IA, linguagens de script e desenvolvimento de protótipos.
+          </p>
+        </div>
+
+        <!-- Anos 1960 -->
+        <div class="evento">
+          <h3>1964 - BASIC</h3>
+          <img src="https://files.tecnoblog.net/wp-content/uploads/2024/05/linguagem-programacao-basic-1060x559.jpg" alt="Basic" />
+          <p>
+            BASIC (Beginner's All-purpose Symbolic Instruction Code) foi criada para tornar a programação acessível a iniciantes. Sua sintaxe simples fez dela uma das primeiras linguagens de uso em massa em computadores pessoais.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1967 - Logo</h3>
+          <img src="https://www.adrianofreitas.com/media/k2/items/cache/245effadf41c6129f4fe7accc564ef86_M.jpg?t=20220910_143808" alt="Logo" />
+          <p>
+            Logo foi criada com o objetivo de ensinar programação para crianças, utilizando a famosa "tartaruga" para desenhar gráficos, o que ajudava a entender conceitos de geometria e lógica de programação.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1969 - Unix</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Man-man.png" alt="Unix" />
+          <p>
+            Embora não seja uma linguagem de programação propriamente dita, o sistema operacional Unix teve uma grande influência na criação de linguagens de programação como C, que foi usado para desenvolvê-lo.
+          </p>
+        </div>
+
+        <!-- Anos 1970 -->
+        <div class="evento">
+          <h3>1970 - Pascal</h3>
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZXgigro694UoxdxFEb3FzkC5TsnPLbxIxZRFn-e7MOeeC-uumjx74p6fjgO50b9dIMiQ9bJLxRwquEzFnVKWutJyJ4kkzGDt66SZtVY6DdMfcVOifOIAvFxY3TcnfqBhc-tYSg0pbcrA/s1600/pascal-50-anos-02.jpg"
+            alt="Pascal"
+          />
+          <p>
+            Criada por Niklaus Wirth, a linguagem Pascal foi projetada com foco no ensino de programação estruturada e boas práticas de desenvolvimento. Seu objetivo principal era oferecer uma sintaxe clara e organizada, facilitando o aprendizado de conceitos fundamentais como variáveis, estruturas de controle, procedimentos e funções. Durante as décadas de 1970 e 1980, Pascal foi amplamente utilizada em universidades e escolas técnicas, além de servir como base para o desenvolvimento de software comercial em seus primeiros anos. A linguagem influenciou fortemente outras, como Modula-2 e Delphi, e ainda é lembrada por seu papel essencial na formação de programadores.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1972 - C</h3>
+          <img src="https://avatars.githubusercontent.com/u/25699522?s=200&v=4" alt="C" />
+          <p>
+            A linguagem C foi criada por Dennis Ritchie para desenvolver o sistema operacional Unix. Tornou-se uma das linguagens mais influentes devido à sua flexibilidade e controle baixo sobre o hardware.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1973 - ML</h3>
+          <img src="https://frantic.im/assets/meta-language/flow.png" alt="ML" />
+          <p>
+            MetaLanguage (ML) surgiu em 1973 no contexto do projeto LCF (Logic for Computable Functions), liderado por Robin Milner na Universidade de Edimburgo. Originalmente desenvolvida para manipulação de provas formais e verificação de teoremas, ML se destacou por introduzir conceitos revolucionários, como sistema de tipos com inferência automática e funções de ordem superior, características fundamentais da programação funcional. Sua sintaxe clara e forte tipagem influenciaram diversas linguagens posteriores, incluindo OCaml, F# e Haskell. Ainda hoje, a família ML é valorizada em ambientes acadêmicos e na indústria para aplicações que exigem segurança e robustez no código.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1978 - SQL</h3>
+          <img src="https://ignicaodigital.com.br/wp-content/uploads/2020/10/o-que-e-SQL-768x512.jpg" alt="SQL" />
+          <p>
+            SQL (Structured Query Language) foi criada para gerenciar e manipular dados em sistemas de gerenciamento de banco de dados relacionais. Sua criação revolucionou o uso de bases de dados e se tornou o padrão da indústria.
+          </p>
+        </div>
+
+        <!-- Anos 1980 -->
+        <div class="evento">
+          <h3>1983 - C++</h3>
+          <img src="https://cdn-wcsm.alura.com.br/2025/04/img-01-20.png" alt="C++" />
+          <p>
+            C++ foi criada como uma extensão de C, com suporte para programação orientada a objetos. Tornou-se amplamente utilizada para o desenvolvimento de sistemas de alto desempenho e jogos.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1987 - Perl</h3>
+          <img src="https://assets-blog.hostgator.com.br/wp-content/uploads/2021/07/38_Perl_BLOG_BR-1.webp" alt="Perl" />
+          <p>
+            Perl foi criado por Larry Wall como uma linguagem de manipulação de texto e automação de tarefas. Tornou-se popular para administração de sistemas e programação web, principalmente nos anos 90 e 2000.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1988 - Tcl</h3>
+          <img src="https://computerlanguagesite.wordpress.com/wp-content/uploads/2018/09/tcl.png" alt="Tcl" />
+          <p>
+            Tcl (Tool Command Language) foi projetada para ser uma linguagem simples e extensível, focada em integração de sistemas e automação de tarefas. Tornou-se popular no uso de aplicativos gráficos e GUI.
+          </p>
+        </div>
+
+        <!-- Anos 1990 -->
+        <div class="evento">
+          <h3>1991 - Python</h3>
+          <img src="https://lginfo.com.br/site/wp-content/uploads/2023/10/Python-Symbol.png" alt="Python" />
+          <p>
+            Python foi criada por Guido van Rossum com o objetivo de ser uma linguagem fácil de ler e escrever. Tornou-se uma das mais populares linguagens devido à sua versatilidade, usada em web, ciência de dados, IA, automação, entre outros.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1993 - Java</h3>
+          <img src="https://www.infoescola.com/wp-content/uploads/2011/03/java.jpg" alt="Java" />
+          <p>
+            Java foi criada por James Gosling na Sun Microsystems. A promessa da linguagem era "escreva uma vez, execute em qualquer lugar". Sua portabilidade se tornou um dos maiores atrativos, especialmente para grandes sistemas corporativos.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1995 - JavaScript</h3>
+          <img src="https://sujeitoprogramador.com/wp-content/uploads/2019/08/jsjsjs.png" alt="JavaScript" />
+          <p>
+            JavaScript foi criada por Brendan Eich para adicionar interatividade às páginas web. Inicialmente desenvolvida para navegadores, a linguagem se expandiu para o lado do servidor com Node.js, sendo uma das mais populares até hoje.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1995 - PHP</h3>
+          <img src="https://cdn-wcsm.alura.com.br/2025/04/php-uma-introducao-linguagem.png" alt="PHP" />
+          <p>
+            PHP (Hypertext Preprocessor) foi criado por Rasmus Lerdorf, inicialmente para dinamizar sites na web. Com o tempo, se tornou uma das linguagens de programação mais utilizadas para desenvolvimento web, especialmente com CMS como WordPress.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>1995 - Ruby</h3>
+          <img
+            src="https://23521922.fs1.hubspotusercontent-na1.net/hub/23521922/hubfs/Imported_Blog_Media/Ruby-conhe%C3%A7a-essa-linguagem-de-programa%C3%A7%C3%A3o-1.jpg?width=1450&name=Ruby-conhe%C3%A7a-essa-linguagem-de-programa%C3%A7%C3%A3o-1.jpg"
+            alt="Ruby"
+          />
+          <p>
+            Ruby foi criada por Yukihiro Matsumoto com a filosofia de tornar a programação divertida e produtiva. Sua framework Ruby on Rails ajudou a popularizar a linguagem no desenvolvimento web.
+          </p>
+        </div>
+
+        <!-- Anos 2000+ -->
+        <div class="evento">
+          <h3>2000 - C#</h3>
+          <img src="https://juliafernanda146.github.io/DesbravaCode/img/csharp.webp" alt="C#" />
+          <p>
+            C# foi criada pela Microsoft como parte da plataforma .NET. Tornou-se a principal linguagem para desenvolvimento de aplicativos de desktop, web, jogos (Unity), entre outros, sendo amplamente usada no ecossistema Windows.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>2007 - Objective-C</h3>
+          <img src="https://beecrowd.com/wp-content/uploads/2024/04/2023-05-23-Objective-C.jpg" alt="Objective-C" />
+          <p>
+            Objective-C foi a principal linguagem de programação utilizada para desenvolvimento de software para sistemas iOS e macOS, antes da introdução do Swift pela Apple em 2014.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>2009 - Go</h3>
+          <img src="https://deinfo.uepg.br/~alunoso/2020/SO/GO/GO/1_Ifpd_HtDiK9u6h68SZgNuA.png" alt="Go" />
+          <p>
+            Go, também conhecida como Golang, foi criada pelo Google para atender a requisitos de sistemas distribuídos e de alto desempenho. A linguagem ganhou popularidade rapidamente devido à sua simplicidade e performance.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>2014 - Swift</h3>
+          <img src="https://beecrowd.com/wp-content/uploads/2024/04/2022-09-29-Swift.jpg" alt="Swift" />
+          <p>
+            Swift foi criada pela Apple para substituir Objective-C. Focada em segurança e desempenho, a linguagem se tornou a principal escolha para o desenvolvimento de aplicativos iOS e macOS.
+          </p>
+        </div>
+
+        <div class="evento">
+          <h3>2015 - TypeScript</h3>
+          <img src="https://beecrowd.com/wp-content/uploads/2024/04/2022-06-02-TypeScript.jpg" alt="TypeScript" />
+          <p>
+            TypeScript, desenvolvido pela Microsoft, é um superset de JavaScript que adiciona tipagem estática. Ele foi criado para melhorar a manutenção de grandes projetos JavaScript, e tem ganhado popularidade no desenvolvimento frontend moderno.
+          </p>
+        </div>
+
+        <h5>
+          <strong>
+            <center>
+              Em resumo, a história das linguagens de programação é marcada por constantes inovações que buscam tornar a computação mais acessível, poderosa e adaptada às mudanças no cenário tecnológico.
+            </center>
+          </strong>
+        </h5>
+      </div>
+    </section>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 - 2º Tec B - Grupo História e Evolução das Linguaguens</p>
+  </footer>
+
+  <script>
+    
+window.addEventListener('load', () => {
+    const titulo = document.querySelector('main section h1');
+    if(titulo) {
+      titulo.style.color = '#e67e22'; // cor laranja para destaque
+      setTimeout(() => {
+        titulo.style.color = ''; // volta para a cor original definida no CSS ou navegador
+      }, 2000);
+    }
+  });
+  </script>
+</body>
+</html>
