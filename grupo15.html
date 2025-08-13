@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enciclopedia web desenvolvedor</title>
+
+  <style>
+         * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #1f2d3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    #menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #menu li {
+      position: relative;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background-color: #34495e;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    #menu a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #2c3e50;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #2c3e50;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1abc9c;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #1f2d3d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+ .logo {
+  color: #FFFAF0
+  font-sinze: 24px;
+  font-weight: bold;
+ }
+ 
+    h1 {
+      color: #FFFAF0
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    nav .ordem{
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+    button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+.content {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        .hidden {
+            display: none;
+        }
+ .conteudoCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha se não couberem */
+  justify-content: flex-start; /* Alinha os cards à esquerda */
+}
+ .card {
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	margin: 20px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+  //justify-content: center;
+	text-align: center;
+}
+.card a{
+  color: #ffff;
+
+}
+.card h2 {
+    font-family: helvetica;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.card p {
+    font-family: helvetica;
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+.card button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+}
+.img-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}.img-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}.img-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}.img-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}
+.conteudoCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+  .card{
+     background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+ }
+  .card h2{
+    font-size:18px;
+    margin-bottom:8px;
+  }
+  .card p{
+    color:var(--muted);
+    margin:0;
+  }
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+
+  </style>
+
+  
+</head>
+<body>
+  <header>
+    <h1>Projeto Conhecendo a Informática - 2º Tec A e B</h1>
+  </header>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">2ºTecnico A ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo1.html">História da Informática</a>
+          <a href="grupo2.html">Componentes do Computador</a>
+          <a href="grupo3.html">Softwares Essenciais</a>
+          <a href="grupo4.html">Sistemas e Redes</a>
+          <a href="grupo5.html">Segurança da Informação</a>
+          <a href="grupo6.html">Internet e IA</a>
+          <a href="grupo7.html">Profissões TI</a>
+          <a href="grupo8.html">Montagem e Manutenção</a>
+        </div>
+      </li>
+       <li class="dropdown">
+        <a href="#">2ºTecnico B ▾</a>
+        <div class="dropdown-content">
+          <a href="grupo9.html">Eu na Programação</a>
+          <a href="grupo10.html"> História das Linguagens de Programação</a>
+          <a href="grupo11.html">Jornada de Estudos</a>
+          <a href="grupo12.html">Suporte Técnico</a>
+          <a href="grupo13.html">Desenvolvimento de Sistema</a>
+          <a href="grupo14.html">Banco de Questões</a>
+          <a href="grupo15.html">Enciclopédia Web do Desenvolvedor</a>          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div>
+      <div class="container">
+      <h1 style="color:#2c3e50;">Enciclopedia Web</h1>
+      <p> Um desenvolvedor web é um profissional que cria e mantém sites e aplicativos na internet. Eles utilizam diversas linguagens de programação, como HTML, CSS e JavaScript, para transformar designs e ideias em experiências digitais interativas e funcionais. e existem diferentes áreas de atuação, como desenvolvimento.</p>  
+ <p>
+      Em desenvolvimento web, uma "enciclopédia" refere-se a um recurso abrangente e organizado que serve como fonte de conhecimento e informações essenciais para desenvolvedores. Geralmente, é uma coleção de documentos, guias, tutoriais e referências que cobrem diversas áreas e tecnologias relacionadas ao desenvolvimento web. Pode ser uma coleção de páginas da web, um repositório de código, ou até mesmo um conjunto de documentos físicos ou digitais.</p> 
+      <p> A proposta desse site é trabalhar os termos utilizados em HTML, CSS E JAVASCRIPT e suas definições para melhor compreender e utilizar dentro das linguagens. 
+    </p>
+    <p> HTML (HyperText Markup Language) é usado para estruturar o conteúdo de uma página web.
+    O HTML define o que aparece na página, como títulos, parágrafos e imagens, enquanto o CSS controla como esses elementos são exibidos, incluindo cores, fontes, espaçamento e layout. 
+  </p> 
+    <p>CSS (Cascading Style Sheets) é usado para estilizar a aparência desse conteúdo.</p>
+<nav class="ordem">
+        <button onclick="showSection('html')">HTML</button>
+        <button onclick="showSection('css')">CSS</button>
+        <button onclick="showSection('js')">JavaScript</button>
+    </nav>
+    <div class="content">
+        <section id="html">
+            <h2>HTML (HyperText Markup Language)</h2>
+            <table>
+                <tr><th>Termo (PT)</th><th>Termo (EN)</th><th>Descrição</th></tr>
+                <tr><td>HTML</td><td>HTML</td><td>Linguagem de marcação usada para estruturar páginas web.</td></tr>
+                <tr><td>Tag</td><td>Tag</td><td>Comando usado para marcar elementos (ex: &lt;p&gt;, &lt;a&gt;).</td></tr>
+                <tr><td>Atributo</td><td>Attribute</td><td>Informação extra dentro da tag (ex: href, alt).</td></tr>
+                <tr><td>Elemento</td><td>Element</td><td>Conjunto da tag de abertura, conteúdo e tag de fechamento.</td></tr>
+                <tr><td>Cabeçalho</td><td>Head</td><td>Parte do HTML com metadados (title, links, etc).</td></tr>
+                <tr><td>Corpo</td><td>Body</td><td>Parte visível do site (conteúdo principal).</td></tr>
+                <tr><td>Comentário</td><td>Comment</td><td>Texto ignorado pelo navegador (&lt;!-- comentario --&gt;).</td></tr>
+                <tr><td>Divisão</td><td>Div</td><td>Contêiner genérico para agrupar elementos.</td></tr>
+                <tr><td>Linha (inline)</td><td>Span</td><td>Tag para estilizar partes de texto em linha.</td></tr>
+                <tr><td>Semântica</td><td>Semantic Tags</td><td>Tags que indicam o tipo de conteúdo (article, section).</td></tr>
+            </table>
+			<table>
+                <tr><th>Tag / Atributo (EN)</th><th>Descrição (PT)</th></tr>
+                <tr><td>&lt;html&gt;</td><td>Elemento raiz de um documento HTML.</td></tr>
+                <tr><td>&lt;head&gt;</td><td>Contém metadados como título e links externos.</td></tr>
+                <tr><td>&lt;body&gt;</td><td>Parte visível da página.</td></tr>
+                <tr><td>&lt;a href=""&gt;</td><td>Cria um link clicável para outra página.</td></tr>
+                <tr><td>&lt;img src="" alt=""&gt;</td><td>Exibe uma imagem.</td></tr>
+                <tr><td>&lt;h1&gt; até &lt;h6&gt;</td><td>Títulos, do mais importante (h1) ao menos importante (h6).</td></tr>
+                <tr><td>&lt;p&gt;</td><td>Parágrafo de texto.</td></tr>
+                <tr><td>&lt;div&gt;</td><td>Contêiner genérico para agrupamento de conteúdo.</td></tr>
+                <tr><td>&lt;span&gt;</td><td>Contêiner em linha para aplicar estilo a parte do texto.</td></tr>
+                <tr><td>&lt;input type=""&gt;</td><td>Campo de entrada de dados (texto, senha, etc.).</td></tr>
+            </table>
+        </section>
+        <section id="css" class="hidden">
+            <h2>CSS (Cascading Style Sheets)</h2>
+            <table>
+                <tr><th>Termo (PT)</th><th>Termo (EN)</th><th>Descrição</th></tr>
+                <tr><td>CSS</td><td>CSS</td><td>Linguagem para definir o estilo dos elementos HTML.</td></tr>
+                <tr><td>Seletor</td><td>Selector</td><td>Determina quais elementos serão estilizados.</td></tr>
+                <tr><td>Propriedade</td><td>Property</td><td>Tipo de estilo aplicado (ex: color, font-size).</td></tr>
+                <tr><td>Valor</td><td>Value</td><td>Valor atribuído à propriedade (ex: red, 16px).</td></tr>
+                <tr><td>Classe</td><td>Class</td><td>Estilo compartilhado por vários elementos.</td></tr>
+                <tr><td>ID</td><td>ID</td><td>Estilo exclusivo de um elemento.</td></tr>
+                <tr><td>Modelo de Caixa</td><td>Box Model</td><td>Estrutura de margin, border, padding e content.</td></tr>
+                <tr><td>Layout Flexível</td><td>Flexbox</td><td>Modelo para organizar itens de forma responsiva.</td></tr>
+                <tr><td>Grade (CSS Grid)</td><td>Grid</td><td>Sistema de layout com linhas e colunas.</td></tr>
+                <tr><td>Consulta de Mídia</td><td>Media Query</td><td>Adapta estilos conforme largura da tela.</td></tr>
+                <tr><td>Hereditariedade</td><td>Inheritance</td><td>Estilos herdados de elementos pai.</td></tr>
+            </table>
+			<table>
+                <tr><th>Propriedade (EN)</th><th>Descrição (PT)</th></tr>
+                <tr><td>color</td><td>Define a cor do texto.</td></tr>
+                <tr><td>background-color</td><td>Define a cor de fundo de um elemento.</td></tr>
+                <tr><td>font-size</td><td>Tamanho da fonte do texto.</td></tr>
+                <tr><td>font-family</td><td>Tipo de letra usada no texto.</td></tr>
+                <tr><td>margin</td><td>Espaço externo ao redor do elemento.</td></tr>
+                <tr><td>padding</td><td>Espaço interno entre o conteúdo e a borda do elemento.</td></tr>
+                <tr><td>border</td><td>Define a borda do elemento.</td></tr>
+                <tr><td>display</td><td>Controla o tipo de exibição (ex: block, inline, flex).</td></tr>
+                <tr><td>flex-direction</td><td>Direção dos itens em um contêiner flexível (linha ou coluna).</td></tr>
+                <tr><td>justify-content</td><td>Alinhamento horizontal dos itens dentro de um contêiner flex.</td></tr>
+            </table>
+        </section>
+        <section id="js" class="hidden">
+            <h2>JavaScript</h2>
+            <table>
+                <tr><th>Termo (PT)</th><th>Termo (EN)</th><th>Descrição</th></tr>
+                <tr><td>JavaScript</td><td>JavaScript</td><td>Linguagem para interatividade em páginas web.</td></tr>
+                <tr><td>Variável</td><td>Variable</td><td>Espaço para guardar valores (let, const, var).</td></tr>
+                <tr><td>Função</td><td>Function</td><td>Bloco de código que executa uma ação.</td></tr>
+                <tr><td>Evento</td><td>Event</td><td>Ação do usuário ou navegador (click, load).</td></tr>
+                <tr><td>Ouvidor de Eventos</td><td>Event Listener</td><td>Método que escuta eventos (addEventListener).</td></tr>
+                <tr><td>Condicional</td><td>Conditional</td><td>Decisão lógica (if, else).</td></tr>
+                <tr><td>Laço de Repetição</td><td>Loop</td><td>Repetição de ações (for, while).</td></tr>
+                <tr><td>Objeto</td><td>Object</td><td>Conjunto de propriedades e métodos.</td></tr>
+                <tr><td>Array (Vetor)</td><td>Array</td><td>Lista de dados indexados.</td></tr>
+                <tr><td>DOM</td><td>DOM</td><td>Modelo de Objetos do Documento (estrutura HTML via JS).</td></tr>
+                <tr><td>Manipulação de DOM</td><td>DOM Manipulation</td><td>Alterar elementos usando JavaScript.</td></tr>
+            </table>
+			<table>
+                <tr><th>Comando / Método (EN)</th><th>Descrição (PT)</th></tr>
+                <tr><td>document.querySelector()</td><td>Seleciona o primeiro elemento que combina com o seletor CSS.</td></tr>
+                <tr><td>addEventListener()</td><td>Adiciona uma função para responder a um evento (ex: clique).</td></tr>
+                <tr><td>console.log()</td><td>Imprime uma mensagem no console do navegador (debug).</td></tr>
+                <tr><td>let / const / var</td><td>Declaração de variáveis.</td></tr>
+                <tr><td>function nome() { }</td><td>Declaração de uma função.</td></tr>
+                <tr><td>if / else</td><td>Executa condições baseadas em verdadeiro ou falso.</td></tr>
+                <tr><td>for / while</td><td>Executa um bloco de código várias vezes.</td></tr>
+                <tr><td>innerText</td><td>Define ou obtém o texto de um elemento.</td></tr>
+                <tr><td>innerHTML</td><td>Define ou obtém o HTML interno de um elemento.</td></tr>
+                <tr><td>alert()</td><td>Exibe uma caixa de alerta para o usuário.</td></tr>
+            </table>
+        </section>
+    </div>
+       <h2 style="text-align:center;">Glossário de Termos de Programação e TI</h2>
+<div class="conteudoCards">
+      <div class= "card">
+	    <h2>Web Design</h2>
+	    <p> È a área responsável pela criação e desenvolvimento da aparência visual e da estrutura de um site na internet.</p>
+    </div>
+    <div class="card"> <h2>Algoritmo</h2> 
+      <p>É m conjunto de passos lógicos para resolver um problema.</p></div>
+      <div class="card">
+        <h2>API (Application Programming Interface)</h2>
+        <p>Um conjunto de regras e definições que permite que diferentes softwares se comuniquem, trocando dados e funcionalidades de forma padronizada.</p>
+      </div>
+      <div class="card">
+        <h2>Application (Aplicativo)</h2>
+        <p>Programa de computador projetado para executar tarefas específicas para o usuário, como editores de texto, navegadores ou jogos.</p>
+      </div>
+      <div class="card">
+        <h2>Array (Vetor ou Matriz)</h2>
+        <p>Coleção de elementos do mesmo tipo, armazenados em posições sequenciais de memória, acessados por índices numéricos.</p>
+      </div>
+      <div class="card">
+        <h2>Backend</h2>
+        <p>Parte do software responsável pela lógica, processamento e gerenciamento de dados, geralmente executada no servidor e invisível para o usuário final.</p>
+      </div>
+      <div class="card">
+        <h2>Bug</h2>
+        <p>Erro ou falha em um programa que provoca comportamento incorreto, falhas ou travamentos inesperados.</p>
+      </div>
+      <div class="card">
+        <h2>Class (Classe)</h2>
+        <p>Estrutura ou modelo que define as propriedades e comportamentos de objetos, usada na programação orientada a objetos.</p>
+      </div>
+      <div class="card">
+        <h2>Compiler (Compilador)</h2>
+        <p>Programa que converte código-fonte de uma linguagem de programação para linguagem de máquina compreendida pelo computador.</p>
+      </div>
+      <div class="card">
+        <h2>Database (Banco de Dados)</h2>
+        <p>Coleção estruturada de dados, organizada para facilitar o armazenamento, recuperação e gerenciamento de informações.</p>
+      </div>
+      <div class="card">
+        <h2>Debugging (Depuração)</h2>
+        <p>Processo de identificar, analisar e corrigir erros ou falhas em um programa.</p>
+      </div>
+      <div class="card">
+        <h2>Deployment (Implantação)</h2>
+        <p>Ação de disponibilizar um software ou aplicação para uso real em um ambiente de produção.</p>
+      </div>
+      <div class="card">
+        <h2>Framework</h2>
+        <p>Estrutura pré-definida com ferramentas, bibliotecas e padrões que facilitam e aceleram o desenvolvimento de software.</p>
+      </div>
+      <div class="card">
+        <h2>Function (Função)</h2>
+        <p>Bloco de código que executa uma tarefa específica, podendo ser reutilizado em diferentes partes de um programa.</p>
+      </div>
+      <div class="card">
+        <h2>Frontend</h2>
+        <p>Parte do software que interage diretamente com o usuário, englobando elementos visuais e a interface gráfica.</p>
+      </div>
+      <div class="card">
+        <h2>Full-stack</h2>
+        <p>Profissional ou abordagem de desenvolvimento que engloba tanto o frontend quanto o backend de uma aplicação.</p>
+      </div>
+</div>
+  </main>
+  <footer>
+    <p>&copy; 2025 - 2º Tec B - Grupo de Enciclopédia Web</p>
+  </footer>
+  
+
+  <script>
+       function showSection(id) {
+            document.querySelectorAll("section").forEach(s => s.classList.add("hidden"));
+            document.getElementById(id).classList.remove("hidden");
+        }
+        
+  </script>
+</body>
+</html>
