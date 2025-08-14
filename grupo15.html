@@ -157,10 +157,18 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+		.table-container {
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch; /* rolagem suave em mobile */
+			margin-top: 20px;
+		}
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+			min-width: 600px; /* evita que a tabela fique espremida demais */
         }
         th, td {
             padding: 10px;
@@ -349,6 +357,7 @@
     <div class="content">
         <section id="html">
             <h2>HTML (HyperText Markup Language)</h2>
+			<div class="table-container">
             <table>
                 <tr><th>Termo (PT)</th><th>Termo (EN)</th><th>Descrição</th></tr>
                 <tr><td>HTML</td><td>HTML</td><td>Linguagem de marcação usada para estruturar páginas web.</td></tr>
@@ -362,6 +371,7 @@
                 <tr><td>Linha (inline)</td><td>Span</td><td>Tag para estilizar partes de texto em linha.</td></tr>
                 <tr><td>Semântica</td><td>Semantic Tags</td><td>Tags que indicam o tipo de conteúdo (article, section).</td></tr>
             </table>
+			
 			<table>
                 <tr><th>Tag / Atributo (EN)</th><th>Descrição (PT)</th></tr>
                 <tr><td>&lt;html&gt;</td><td>Elemento raiz de um documento HTML.</td></tr>
@@ -375,9 +385,11 @@
                 <tr><td>&lt;span&gt;</td><td>Contêiner em linha para aplicar estilo a parte do texto.</td></tr>
                 <tr><td>&lt;input type=""&gt;</td><td>Campo de entrada de dados (texto, senha, etc.).</td></tr>
             </table>
+			</div>
         </section>
         <section id="css" class="hidden">
             <h2>CSS (Cascading Style Sheets)</h2>
+			<div class="table-container">
             <table>
                 <tr><th>Termo (PT)</th><th>Termo (EN)</th><th>Descrição</th></tr>
                 <tr><td>CSS</td><td>CSS</td><td>Linguagem para definir o estilo dos elementos HTML.</td></tr>
@@ -405,10 +417,12 @@
                 <tr><td>flex-direction</td><td>Direção dos itens em um contêiner flexível (linha ou coluna).</td></tr>
                 <tr><td>justify-content</td><td>Alinhamento horizontal dos itens dentro de um contêiner flex.</td></tr>
             </table>
+			</div>
         </section>
         <section id="js" class="hidden">
             <h2>JavaScript</h2>
-            <table>
+            <div class="table-container">
+			<table>
                 <tr><th>Termo (PT)</th><th>Termo (EN)</th><th>Descrição</th></tr>
                 <tr><td>JavaScript</td><td>JavaScript</td><td>Linguagem para interatividade em páginas web.</td></tr>
                 <tr><td>Variável</td><td>Variable</td><td>Espaço para guardar valores (let, const, var).</td></tr>
@@ -435,6 +449,7 @@
                 <tr><td>innerHTML</td><td>Define ou obtém o HTML interno de um elemento.</td></tr>
                 <tr><td>alert()</td><td>Exibe uma caixa de alerta para o usuário.</td></tr>
             </table>
+			</div>
         </section>
     </div>
        <h2 style="text-align:center;">Glossário de Termos de Programação e TI</h2>
